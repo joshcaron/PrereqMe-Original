@@ -1,0 +1,21 @@
+#MAIN_CONTAINER { min-width:1000px; }
+
+.fl { float:left; }
+.fr { float:right; }
+
+/* Header */
+#HEADER { height:74px; padding:8px 15px 0px; }
+#HEADER #logo { margin-top:16px; font-size:32px;}
+#HEADER #logo a { color:#000; text-decoration:none; }
+#HEADER #logo a:hover { color:#000; text-decoration:none; } 
+#HEADER #login #forgot { font-size:14px; }
+
+/* Body */
+#BODY_CONTAINER { min-height:500px; padding:25px; }
+
+/* Footer */
+#FOOTER { height:32px; padding:10px; }
+
+/* Search Results */
+#SEARCH_RESULTS #content { width:700px; margin:auto; }
+#SEARCH_RESULTS #content .course { margin:8px 0px; padding:10px; border:1px solid #000000; cursor:pointer; }
