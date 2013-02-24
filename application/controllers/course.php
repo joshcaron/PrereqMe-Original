@@ -53,7 +53,8 @@ class Course extends CI_Controller
             {
                 $data = array(
                     'title' => 'Search Results - PrereqMe',
-                    'results' => $results
+                    'results' => $results,
+                    'query' => $query
                 );
 
                 $this->load->view('templates/header', $data);
