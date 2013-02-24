@@ -7,8 +7,6 @@ class Course extends CI_Controller
         parent::__construct();
     }
 
-    //View the course detail page for the course
-    //course - a full course object
     public function view($course = NULL)
     {
         if($course === NULL)
@@ -23,9 +21,12 @@ class Course extends CI_Controller
         }
         else
         {
+
+            $course->prereqs = $this->course_model->get_prereqs($course);
+
             $data = array(
                 'title' => 'Course detail - PrereqMe',
-                'course' => $results[0]
+                'course' => $course
             );
 
             $this->load->view('templates/header', $data);
@@ -34,8 +35,6 @@ class Course extends CI_Controller
         }
     }
 
-    //Search for courses matching a string
-    //Required params in GET: collegeId, query
     public function search()
     {
         $collegeId = $this->input->get('collegeId');
