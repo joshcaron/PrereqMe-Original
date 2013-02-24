@@ -2,6 +2,7 @@
 
 class Course_model extends CI_Model
 {
+    //Returns a course based on its id
     public function get_by_id($courseId = -1)
     {
         if($courseId === -1)
@@ -18,6 +19,7 @@ class Course_model extends CI_Model
         }
     }
 
+    //Returns the courses that contain the query string
     public function get_like_title($collegeId = -1, $courseTitle = '')
     {
         if ($collegeId === -1 OR $courseTitle === '')
@@ -34,7 +36,6 @@ class Course_model extends CI_Model
         }
     }
 }
-
 
 
 /* End of course_model.php */
