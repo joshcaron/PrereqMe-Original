@@ -38,7 +38,7 @@ class Dashboard extends CI_Controller
         else
         {
             $data['title'] = 'PrereqMe';
-            
+            $data['schools'] = $this->school_model->get_all();
             $this->load->view('templates/header', $data);
             $this->load->view('pages/index', $data);
             $this->load->view('templates/footer');
