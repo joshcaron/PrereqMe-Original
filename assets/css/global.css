@@ -2,7 +2,7 @@
 
 .fl { float:left; }
 .fr { float:right; }
-.required { color:#FF0000; }
+.required { color:#FF0000; font-weight:normal; }
 .error { color:#FF0000; font-size:13px; }
 
 /* Header */
