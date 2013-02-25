@@ -24,7 +24,7 @@ class User_model extends CI_Model
     }
 
     //Gets user by user id
-    public function get_by_id($userId === -1)
+    public function get_by_id($userId = -1)
     {
         if($userId === -1)
         {
