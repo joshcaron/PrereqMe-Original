@@ -28,10 +28,8 @@ class Dashboard extends CI_Controller
             $userId = $this->user_model->sign_up_user($firstName, $lastName, $email, $password);
             $user = $this->user_model->get_user($userId);
 
-            $data = array(
-                'title' => 'Dashboard - PrereqMe',
-                'user' => $user
-            );
+            $data['title'] = 'Dashboard - PrereqMe';
+            $data['user'] = $user;
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/my_plan', $data);
@@ -39,6 +37,8 @@ class Dashboard extends CI_Controller
         }
         else
         {
+            $data['title'] = 'PrereqMe';
+            
             $this->load->view('templates/header', $data);
             $this->load->view('pages/index', $data);
             $this->load->view('templates/footer');
