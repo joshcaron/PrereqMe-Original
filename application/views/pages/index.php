@@ -19,7 +19,7 @@
     </div>
 
     <div id="sign_up" class="fr">
-        <?php echo form_open('dashboard/signup'); ?>
+        <?php echo form_open('home/signup'); ?>
             <table>
                 <tr>
                     <td><label for="first_name">First Name</label></td>
