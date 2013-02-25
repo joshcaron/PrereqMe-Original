@@ -34,7 +34,7 @@ class Dashboard extends CI_Controller
             );
 
             $this->load->view('templates/header', $data);
-            $this->load->view('pages/signup', $data);
+            $this->load->view('pages/my_plan', $data);
             $this->load->view('templates/footer');
         }
         else
