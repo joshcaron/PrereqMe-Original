@@ -2,7 +2,7 @@
     <div id="search_large" class='fl'>
 
         <form action=<?php echo base_url('index.php/course/search') ?> >
-            <select name="collegeId">
+            <select id="college_id" name="collegeId">
                 <option value="0">Select a school</option>
 
                 <?php foreach($schools as $school): ?>
@@ -11,8 +11,8 @@
             </select>
 
             <div>
-                <input id="query" type="text" name="query" class="search" />
-                <input type="submit" value="Search"/>
+                <input id="query" class="fl" type="text" name="query" class="search" />
+                <input type="submit" class="fr" value="Search"/>
             </div>
         </form>
 

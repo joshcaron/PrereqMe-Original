@@ -17,6 +17,7 @@
 #FOOTER { height:32px; padding:10px; }
 
 /* Home */
+#HOME #search_large #college_id { font-size:26px; }
 #HOME #search_large #query { width:500px; height:50px; padding:5px 15px; font-size:32px; }
 
 /* Search Results */
