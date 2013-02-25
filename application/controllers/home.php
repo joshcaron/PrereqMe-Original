@@ -5,12 +5,17 @@ class Home extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('school_model');
     }
 
+    // Displays the home page
     public function index()
     {
+        $schools = $this->school_model->get_all();
+
         $data = array(
-            'title' => 'PrereqMe'
+            'title' => 'PrereqMe',
+            'schools' => $schools
         );
 
         $this->load->view('templates/header', $data);

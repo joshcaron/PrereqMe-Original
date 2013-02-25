@@ -16,6 +16,9 @@
 /* Footer */
 #FOOTER { height:32px; padding:10px; }
 
+/* Home */
+#HOME #search_large #query { width:500px; height:50px; padding:5px 15px; font-size:32px; }
+
 /* Search Results */
 #SEARCH_RESULTS #content { width:700px; margin:auto; }
 #SEARCH_RESULTS #content .course { margin:8px 0px; padding:10px; border:1px solid #000000; cursor:pointer; }

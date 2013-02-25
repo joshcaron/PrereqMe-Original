@@ -4,11 +4,14 @@
         <form action=<?php echo base_url('index.php/course/search') ?> >
             <select name="collegeId">
                 <option value="0">Select a school</option>
-                <option value="1">Northeastern University</option>
+
+                <?php foreach($schools as $school): ?>
+                    <option value=<?php echo $school->id?> ><?php echo $school->title?></option>
+                <?php endforeach ?>
             </select>
 
             <div>
-                <input type="text" name="query" class="search" />
+                <input id="query" type="text" name="query" class="search" />
                 <input type="submit" value="Search"/>
             </div>
         </form>
@@ -34,10 +37,10 @@
                 <tr><td><input type="text" name="reenter_email" /></td></tr>
                 
                 <tr><td><label for="password">Password</label></td></tr>
-                <tr><td><input type="text" name="password" /></td></tr>
+                <tr><td><input type="password" name="password" /></td></tr>
                 
                 <tr><td><label for="reenter_password">Password again</label></td></tr>
-                <tr><td><input type="text" name="password_again" /></td></tr>
+                <tr><td><input type="password" name="password_again" /></td></tr>
 
                 <tr><td><input type="submit" value="Sign up" /></td></tr>
             </table>
