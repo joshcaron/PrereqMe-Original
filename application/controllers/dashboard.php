@@ -39,7 +39,9 @@ class Dashboard extends CI_Controller
         }
         else
         {
-            redirect('/home/', 'index');
+            $this->load->view('templates/header', $data);
+            $this->load->view('pages/index', $data);
+            $this->load->view('templates/footer');
         }
     }
 
