@@ -5,7 +5,7 @@ class School_model extends CI_Model
     //Returns all of the schools
     public function get_all()
     {
-        return $this->db->get('pm_course')->result();
+        return $this->db->get('pm_school')->result();
     }
 }
 
