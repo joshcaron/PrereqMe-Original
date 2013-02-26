@@ -14,12 +14,9 @@
                     echo '</div>';
                 }
                 ?>
-
             </div>
         <?php endforeach ?>
-    </div>
-
-                    <ul id="semester_1" class="connectedSortable">
+                        <ul id="semester_1" class="connectedSortable">
                     <li class="ui-state-default">Item 1</li>
                     <li class="ui-state-default">Item 2</li>
                     <li class="ui-state-default">Item 3</li>
@@ -37,6 +34,7 @@
 
                 <ul id="semester_3" class="connectedSortable">
                 </ul>
+    </div>
 
     <div class="fr">
         <div id="COURSE_DUMP">
@@ -59,9 +57,9 @@
 </div>
 
 <script type="text/javascript">
-/*$(function() {
+$(function() {
     $( "#semester_1, #semester_2, #semester_3" ).sortable({
       connectWith: ".connectedSortable"
     }).disableSelection();
-  });*/
+  });
 </script>
