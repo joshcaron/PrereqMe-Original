@@ -10,7 +10,7 @@
                 <?php endforeach ?>
             </select>
 
-            <div id="query_box" hidden>
+            <div id="query_box">
                 <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." disabled/>
                 <input type="submit" class="fr" value="Search"/>
             </div>
