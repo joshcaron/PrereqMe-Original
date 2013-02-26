@@ -9,11 +9,11 @@ body { background-color:#eaf0f5; margin:0px; }
 
 /* Header */
 #HEADER { height:74px; background-color:#3d7aa6; color:#FFF; }
-#HEADER_CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
-#HEADER_CONTENT #logo { margin-top:16px; font-size:32px;}
-#HEADER_CONTENT #logo a { color:#FFF; text-decoration:none; }
-#HEADER_CONTENT #logo a:hover { color:#FFF; text-decoration:none; } 
-#HEADER_CONTENT #login #forgot a { color:#FFF; font-size:14px; }
+#HEADER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
+#HEADER #CONTENT #logo { margin-top:16px; font-size:32px;}
+#HEADER #CONTENT #logo a { color:#FFF; text-decoration:none; }
+#HEADER #CONTENT #logo a:hover { color:#FFF; text-decoration:none; } 
+#HEADER #CONTENT #login #forgot a { color:#FFF; font-size:14px; }
 
 /* Body */
 #BODY_CONTAINER { min-height:500px; width:1250px; margin:0px auto; padding:8px 15px 0px; }
