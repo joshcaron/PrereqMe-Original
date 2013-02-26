@@ -9,19 +9,19 @@ body { background-color:#eaf0f5; margin:0px; }
 
 /* Header */
 #HEADER { height:82px; background-color:#3d7aa6; color:#FFF; }
-#HEADER #CONTENT { height:100%; width:1250px; margin:0px auto; padding:8px 15px 0px; }
+#HEADER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 #HEADER #CONTENT #logo { margin-top:16px; font-size:32px;}
 #HEADER #CONTENT #logo a { color:#FFF; text-decoration:none; }
 #HEADER #CONTENT #logo a:hover { color:#FFF; text-decoration:none; } 
 #HEADER #CONTENT #login #forgot a { color:#FFF; font-size:14px; }
 
 /* Body */
-#BODY_CONTAINER { min-height:500px; }
-#BODY_CONTAINER > div { height:100%; width:1250px; margin:0px auto; padding:8px 15px 0px; }
+#BODY_CONTAINER { min-height:650px; }
+#BODY_CONTAINER > div { height:100%; width:1250px; margin:0px auto; padding:42px 15px 0px; }
 
 /* Footer */
 #FOOTER { height:32px; background-color:#3d7aa6; color:#FFF; }
-#FOOTER #CONTENT { height:100%; width:1250px; margin:0px auto; padding:8px 15px 0px; }
+#FOOTER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Home */
 #HOME #search_large #college_id { font-size:26px; }
