@@ -10,7 +10,7 @@
 #HEADER #logo { margin-top:16px; font-size:32px;}
 #HEADER #logo a { color:#FFF; text-decoration:none; }
 #HEADER #logo a:hover { color:#FFF; text-decoration:none; } 
-#HEADER #login #forgot { color:#FFF; font-size:14px; }
+#HEADER #login a#forgot { color:#FFF; font-size:14px; }
 
 /* Body */
 #BODY_CONTAINER { min-height:500px; padding:25px; }
