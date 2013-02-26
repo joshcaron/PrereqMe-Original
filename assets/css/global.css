@@ -27,7 +27,10 @@ body { background-color:#eaf0f5; margin:0px; }
 #HOME #search_large { margin-top:126px; }
 #HOME #search_large #college_id { width:532px; margin:0px 0px 5px 31px; font-size:26px; border-color:#999; }
 #HOME #search_large #query_box { height:70px; margin-bottom:5px; padding:6px 29px; border-radius:35px; border:1px solid #000; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
-#HOME #search_large #query { width:500px; height:50px; padding:5px 15px; font-size:32px; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
+#HOME #search_large #query,
+#HOME #search_large #query:focus { width:500px; height:50px; padding:5px 15px; font-size:32px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
+
+
 #HOME #sign_up td { width:196px; }
 #HOME #sign_up input { font-size:16px; padding:5px; }
 #HOME #sign_up input.wide { width:364px; }
