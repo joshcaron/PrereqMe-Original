@@ -56,7 +56,7 @@ class User_model extends CI_Model
 
             $user =  $this->db->get_where('pm_user', $constraints)->row();
 
-            if($user->id)
+            if(is_object($user))
             {
                 return $user;
             }
