@@ -10,11 +10,9 @@ class Dashboard extends PM_Controller
     //Loads the homepage of the dashboard
     public function index()
     {
-        if( $this->_is_logged_in() )
+        if( parent::_is_logged_in() )
         {
-            $data = array(
-                'title' => 'Dashboard - PrereqMe'
-            );
+            $data['title'] => 'Dashboard - PrereqMe';
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/dashboard', $data);
@@ -29,11 +27,13 @@ class Dashboard extends PM_Controller
     //Loads the my plan page of the dashboard
     public function my_plan()
     {
-        if( $this->_is_logged_in() )
+        if( parent::_is_logged_in() )
         {
-            $data = array(
-                'title' => 'My Plan - PrereqMe'
-            );
+            $userId = $this->session->userdata('user_id');
+            $semesters = $this->course_model->get_semesters($userId);
+
+            $data['title'] = 'My Plan - PrereqMe';
+            $data['semesters'] = $semesters;
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/my_plan', $data);
@@ -48,11 +48,9 @@ class Dashboard extends PM_Controller
     //Loads the browse page of the dashboard
     public function browse()
     {
-        if( $this->_is_logged_in() )
+        if( parent::_is_logged_in() )
         {
-            $data = array(
-                'title' => 'Browse - PrereqMe'
-            );
+            $data['title'] => 'Browse - PrereqMe';
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/browse', $data);
@@ -67,11 +65,9 @@ class Dashboard extends PM_Controller
     //Loads the help page of the dashboard
     public function help()
     {
-        if( $this->_is_logged_in() )
+        if( parent::_is_logged_in() )
         {
-            $data = array(
-                'title' => 'Help - PrereqMe'
-            );
+            $data['title'] => 'Help - PrereqMe';
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/help', $data);
@@ -81,12 +77,6 @@ class Dashboard extends PM_Controller
         {
             redirect('/home/', 'logout');
         }
-    }
-
-    //Is user logged in?
-    private function _is_logged_in()
-    {
-        return $this->session->userdata('is_logged_in');
     }
 }
 

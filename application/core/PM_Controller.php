@@ -18,11 +18,17 @@ class PM_Controller extends CI_Controller
         {
             $user['id'] = $this->session->userdata('user_id');
             $user['email'] = $this->session->userdata('email');
-            $user['firstName'] = $this->session->userdata('firstName');
+            $user['firstName'] = $this->session->userdata('first_name');
             $data['user'] = $user;
 
             $this->load->vars($data);
         }
+    }
+
+    //Is user logged in?
+    public function _is_logged_in()
+    {
+        return $this->session->userdata('is_logged_in');
     }
 }
 

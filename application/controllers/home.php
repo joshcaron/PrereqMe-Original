@@ -12,10 +12,8 @@ class Home extends PM_Controller
     {
         $schools = $this->school_model->get_all();
 
-        $data = array(
-            'title' => 'PrereqMe',
-            'schools' => $schools
-        );
+        $data['title'] = 'PrereqMe';
+        $data['school'] = $schools;
 
         $this->load->view('templates/header', $data);
         $this->load->view('pages/index', $data);
@@ -74,7 +72,7 @@ class Home extends PM_Controller
                     'is_logged_in' => TRUE,
                     'user_id' => $user->id,
                     'email' => $user->email,
-                    'firstName' => $user->firstName
+                    'first_name' => $user->firstName
                 );
 
                 $this->session->set_userdata($user_data);

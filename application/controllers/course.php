@@ -29,10 +29,8 @@ class Course extends PM_Controller
             //Retrieve recursive prereqs for the course
             $course->prereqs = $this->course_model->get_prereqs($course);
 
-            $data = array(
-                'title' => 'Course detail - PrereqMe',
-                'course' => $course
-            );
+            $data['title'] = 'Course detail - PrereqMe';
+            $data['course'] = $course;
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/course', $data);
@@ -65,11 +63,9 @@ class Course extends PM_Controller
             else
             {
                 //Display search results page
-                $data = array(
-                    'title' => 'Search Results - PrereqMe',
-                    'results' => $results,
-                    'query' => $query
-                );
+                $data['title'] = 'Search Results - PrereqMe';
+                $data['results'] = $results;
+                $data['query'] = $query;
 
                 $this->load->view('templates/header', $data);
                 $this->load->view('pages/search_results', $data);

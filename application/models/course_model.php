@@ -54,6 +54,7 @@ class Course_model extends CI_Model
         }
     }
 
+    // Returns the recursive prereqs for the course
     public function get_prereqs($course = NULL) 
     {
         if ($courseId === NULL)
@@ -72,6 +73,53 @@ class Course_model extends CI_Model
                 $prereq->prereqs = $this->get_prereqs($prereq);
             }
             return $prereqs;
+        }
+    }
+
+    // Gets all the semesters with their respective courses
+    public function get_semesters($userId = -1)
+    {
+        if($userId === -1)
+        {
+            log_message('error', 'Not a valid userId sent to Course.get_semesters');
+            return array();
+        }
+        else
+        {
+            $constraints = array(
+                'userId' => $userId
+            );
+
+            $semesters = $this->db->get_where('pm_user_semester', $constraints)->results();
+
+            //Gets the courses for each semester
+            foreach($semesters as $semester)
+            {
+                $semester->courses = $this->get_courses_for_semester($semester->id);
+            }
+
+            return $semesters;
+        }
+    }
+
+    //Gets all the courses with the given semester id
+    public function get_courses_for_semester($semesterId = -1)
+    {
+        if($userId === -1)
+        {
+            log_message('error', 'Not a valid semesterId sent to Course.get_courses_for_semester');
+            return array();
+        }
+        else
+        {
+            $constraints = array(
+                'semesterId' => $semesterId
+            );
+
+            $this->db->select('pm_course.*');
+            $this->db->join('pm_course', 'pm_course.id = pm_user_course.courseId');
+            
+            return $this->db->get_where('pm_user_course', $constraints)->results();
         }
     }
 }
