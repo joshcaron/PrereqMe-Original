@@ -8,6 +8,7 @@ var home = {
         if(newValue != null && newValue > 0 && queryElement !== null)
         {
             queryElement.prop('disabled', false);
+            queryElement.focus();
         }
         else
         {
