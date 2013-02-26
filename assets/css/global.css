@@ -24,10 +24,10 @@ body { background-color:#eaf0f5; margin:0px; }
 #FOOTER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Home */
-#HOME #search_large #college_id { font-size:26px; }
+#HOME #search_large #college_id { font-size:26px; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; }
 #HOME #search_large #query { width:500px; height:50px; padding:5px 15px; font-size:32px; }
 #HOME #sign_up td { width:196px; }
-#HOME #sign_up input { font-size:16px; padding:5px; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; }
+#HOME #sign_up input { font-size:16px; padding:5px; }
 #HOME #sign_up input.wide { width:364px; }
 
 /* Search Results */
