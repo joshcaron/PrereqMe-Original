@@ -31,7 +31,7 @@ class User_course_model extends CI_Model
     //Gets all the courses with the given semester id
     private function _get_courses_for_semester($semesterId = -1)
     {
-        if($userId === -1)
+        if($semesterId === -1)
         {
             log_message('error', 'Not a valid semesterId sent to Course.get_courses_for_semester');
             return array();
