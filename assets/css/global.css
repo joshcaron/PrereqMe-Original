@@ -1,3 +1,5 @@
+body { background-color:#eaf0f5; }
+
 #MAIN_CONTAINER { min-width:1000px; }
 
 .fl { float:left; }
@@ -16,7 +18,7 @@
 #BODY_CONTAINER { min-height:500px; padding:25px; }
 
 /* Footer */
-#FOOTER { height:32px; padding:10px; }
+#FOOTER { height:32px; padding:10px; background-color:#3d7aa6; color:#FFF; }
 
 /* Home */
 #HOME #search_large #college_id { font-size:26px; }
