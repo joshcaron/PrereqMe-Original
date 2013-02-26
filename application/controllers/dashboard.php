@@ -32,11 +32,49 @@ class Dashboard extends PM_Controller
         if( $this->_is_logged_in() )
         {
             $data = array(
-                'title' => 'Dashboard - PrereqMe'
+                'title' => 'My Plan - PrereqMe'
             );
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/my_plan', $data);
+            $this->load->view('templates/footer');
+        }
+        else
+        {
+            redirect('/home/', 'logout');
+        }
+    }
+
+    //Loads the browse page of the dashboard
+    public function browse()
+    {
+        if( $this->_is_logged_in() )
+        {
+            $data = array(
+                'title' => 'Browse - PrereqMe'
+            );
+
+            $this->load->view('templates/header', $data);
+            $this->load->view('pages/browse', $data);
+            $this->load->view('templates/footer');
+        }
+        else
+        {
+            redirect('/home/', 'logout');
+        }
+    }
+
+    //Loads the help page of the dashboard
+    public function help()
+    {
+        if( $this->_is_logged_in() )
+        {
+            $data = array(
+                'title' => 'Help - PrereqMe'
+            );
+
+            $this->load->view('templates/header', $data);
+            $this->load->view('pages/help', $data);
             $this->load->view('templates/footer');
         }
         else
