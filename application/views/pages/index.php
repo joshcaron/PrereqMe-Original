@@ -11,7 +11,7 @@
             </select>
 
             <div id="query_box" hidden>
-                <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..."/>
+                <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." disabled/>
                 <input type="submit" class="fr" value="Search"/>
             </div>
         </form>
