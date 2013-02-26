@@ -32,7 +32,7 @@
         <div id="CONTENT">
             <div id="logo" class="fl"><a href=<?php echo base_url('index.php')?>>PrereqMe</a></div>
 
-            <?php if($user !== NULL): ?>
+            <?php if(isset($user)): ?>
                 <div id="userInfo" class="fr">
                     <h4>Hi, <?php echo $user['firstName']?></h4>
                     <p><?php echo $user['email']?></p>
