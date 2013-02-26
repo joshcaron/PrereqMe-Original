@@ -19,13 +19,14 @@
     </div>
 
     <div class="fr">
-        <div id="COURSE_DUMP" class="box">
+        <div id="COURSE_DUMP">
             <div class="header">Courses without a semester</div>
             <div class="helper_text">Drag a course to one of your semeseters to add it, or make a new semester below</div>
             <div class="box">THIS IS WHERE COURSE DUMP WILL GO</div>
         </div>
 
         <div id="ADD_SEMESTER" class="box">
+            <div class="header">Add a semester</div>
             <?php echo form_open('dashboard/add_semester'); ?>
                 <label for="title">Semester title:</label>
                 <input type="text" name="title" value="<?php echo set_value('title'); ?>"/></td>
