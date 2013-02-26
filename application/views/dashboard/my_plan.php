@@ -1,6 +1,6 @@
 <div id="MY_PLAN">
-    <div id="semesters" class="fl">
-
+    <div id="SEMESTERS" class="fl">
+        <div>Your semesters:</div>
         <?php foreach($semesters as $semester): ?>
             <div class="semester">
                 <div class="semester_title"><?php echo $semester->title?></div>
@@ -16,11 +16,23 @@
                 ?>
             </div>
         <?php endforeach ?>
-
     </div>
 
+    <div class="fr">
+        <div id="COURSE_DUMP">
+            <div>Courses without a semester</div>
+            <div>Drag a course to one of your semeseters to add it, or make a new semester below</div>
+            THIS IS WHERE COURSE DUMP WILL GO
+        </div>
 
+        <div id="ADD_SEMESTER">
+            <?php echo form_open('dashboard/add_semester'); ?>
+                <label for="title">Semester title:</label>
+                <input type="text" name="title" value="<?php echo set_value('title'); ?>"/></td>
+                <input type="submit" value="Add"></td>
+            </form>
+        </div>
 
-
+    </div>
 
 </div>

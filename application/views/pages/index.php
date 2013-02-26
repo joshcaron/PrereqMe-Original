@@ -30,7 +30,7 @@
                 <table>
                     <tr><td><label for="first_name">First Name<span class="required">*</span></label></td></tr>
 
-                    <tr><td><input type="text" class="}de" name="first_name" value="<?php echo set_value('first_name'); ?>" /></td></tr>
+                    <tr><td><input type="text" class="wide" name="first_name" value="<?php echo set_value('first_name'); ?>" /></td></tr>
 
                     <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
 
