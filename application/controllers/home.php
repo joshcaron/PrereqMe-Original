@@ -1,11 +1,10 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class Home extends Base
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('school_model');
     }
 
     // Displays the home page
@@ -78,7 +77,8 @@ class Home extends CI_Controller
                     'firstName' => $user->firstName
                 );
 
-                $this->session->set_userdata($user_data); 
+                $this->session->set_userdata($user_data);
+                parent::add_user(); 
                 redirect('/dashboard/', 'index');
             }
             else
@@ -92,6 +92,7 @@ class Home extends CI_Controller
     public function logout()
     {
         $this->session->unset_userdata('is_logged_in');
+        unset($user);
         $this->index();
     }
 }

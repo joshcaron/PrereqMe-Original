@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Course extends CI_Controller
+class Course extends Base
 {
     public function __construct()
     {

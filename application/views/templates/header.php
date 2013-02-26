@@ -1,14 +1,3 @@
-<?php
-    $is_logged_in = $this->session->userdata('is_logged_in');
-
-    if($is_logged_in)
-    {
-        $user['id'] = $this->session->userdata('user_id');
-        $user['email'] = $this->session->userdata('email');
-        $user['firstName'] = $this->session->userdata('firstName');
-    }
-?>
-
 <!DOCTYPE html>
 <html>
 
