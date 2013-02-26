@@ -49,4 +49,13 @@
         </div>
     </div>
 
+    <?php if(isset($user)): ?>
+        <div id = "DASHBOARD_LINKS">
+            <a href=<?php echo base_url('index.php/dashboard')?>>Dashboard</a> |
+            <a href=<?php echo base_url('index.php/dashboard/my_plan')?>>My Plan</a> |
+            <a href=<?php echo base_url('index.php/dashboard/browse')?>>Browse Courses</a>
+            <a href=<?php echo base_url('index.php/dashboard/help')?>>Help</a>
+        </div>
+    <?php endif; ?>
+
     <div id="BODY_CONTAINER">

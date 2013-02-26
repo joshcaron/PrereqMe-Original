@@ -15,6 +15,10 @@ body { background-color:#eaf0f5; margin:0px; }
 #HEADER #CONTENT #logo a:hover { color:#FFF; text-decoration:none; } 
 #HEADER #CONTENT #login #forgot a { color:#FFF; font-size:14px; }
 
+/* Dashboard Links */
+#DASHBOARD_LINKS { background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
+#DASHBOARD_LINKS a { font-size:16px; }
+
 /* Body */
 #BODY_CONTAINER { min-height:650px; }
 #BODY_CONTAINER > div { height:100%; width:1250px; margin:0px auto; padding:42px 15px 0px; }
