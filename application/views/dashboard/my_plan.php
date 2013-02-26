@@ -25,7 +25,11 @@
         <div id="COURSE_DUMP">
             <div class="header">Courses without a semester</div>
             <div class="helper_text">Drag a course to one of your semeseters to add it, or make a new semester below</div>
-            <div class="box">THIS IS WHERE COURSE DUMP WILL GO</div>
+            <div class="box">
+                <ul id="dump" class="connectedSortable">
+
+                </ul>
+            </div>
         </div>
 
         <div id="ADD_SEMESTER" class="box">
@@ -43,7 +47,7 @@
 
 <script type="text/javascript">
 $(function() {
-    $( "#semester_1, #semester_2, #semester_3" ).sortable({
+    $( "#semester_1, #semester_2, #semester_3, #dump" ).sortable({
       connectWith: ".connectedSortable"
     }).disableSelection();
   });
