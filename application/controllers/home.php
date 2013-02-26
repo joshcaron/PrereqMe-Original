@@ -40,9 +40,9 @@ class Home extends CI_Controller
 
             //Sign up user
             $userId = $this->user_model->sign_up_user($firstName, $email, $password);
-            $user = $this->user_model->get_user($userId);
+            $user = $this->user_model->get_by_id($userId);
 
-            $data['title'] = 'Dashboard - PrereqMe';
+            $data['title'] = 'My Plan - PrereqMe';
             $data['user'] = $user;
 
             $this->load->view('templates/header', $data);

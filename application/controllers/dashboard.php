@@ -6,15 +6,6 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
     }
-
-    //Displays the My Plan page
-    public function my_plan($user = NULL)
-    {
-        if($user === NULL)
-        {
-            log_message('error', 'user not sent to Dashboard.my_plan');
-        }
-    }
 }
 
 /* End of file signup.php */
