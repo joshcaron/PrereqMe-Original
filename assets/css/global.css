@@ -6,10 +6,10 @@
 .error { color:#FF0000; font-size:13px; }
 
 /* Header */
-#HEADER { height:74px; padding:8px 15px 0px; }
+#HEADER { height:74px; padding:8px 15px 0px; background-color:#3d7aa6; color:#FFF; }
 #HEADER #logo { margin-top:16px; font-size:32px;}
-#HEADER #logo a { color:#000; text-decoration:none; }
-#HEADER #logo a:hover { color:#000; text-decoration:none; } 
+#HEADER #logo a { color:#FFF; text-decoration:none; }
+#HEADER #logo a:hover { color:#FFF; text-decoration:none; } 
 #HEADER #login #forgot { font-size:14px; }
 
 /* Body */
