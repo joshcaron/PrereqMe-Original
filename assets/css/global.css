@@ -17,7 +17,7 @@ body { background-color:#eaf0f5; margin:0px; }
 
 /* Dashboard Links */
 #DASHBOARD_LINKS { padding:8px 15px; font-size:32px; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
-#DASHBOARD_LINKS #CONTENT { width:740px; margin:0px auto; }
+#DASHBOARD_LINKS #CONTENT { width:717px; margin:0px auto; }
 #DASHBOARD_LINKS a { color:#000; text-decoration:none; }
 
 /* Body */
