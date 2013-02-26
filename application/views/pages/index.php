@@ -11,7 +11,7 @@
             </select>
 
             <div id="query_box">
-                <img class="magnifying_large"></img>
+                <img class="magnifying_large"/>
                 <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." disabled/>
             </div>
             <div>
