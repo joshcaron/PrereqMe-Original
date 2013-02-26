@@ -12,7 +12,9 @@
 
             <div id="query_box">
                 <div class="magnifying_large"></div>
-                <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." disabled/>
+                <div>
+                    <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." disabled/>
+                </div>
             </div>
             <div>
                 <input type="submit" value="Search"/>
