@@ -15,10 +15,10 @@ body { background-color:#eaf0f5; margin:0px; }
 #HEADER #login #forgot a { color:#FFF; font-size:14px; }
 
 /* Body */
-#BODY_CONTAINER { min-height:500px; width:1250px; margin:0px auto; padding:25px; }
+#BODY_CONTAINER { min-height:500px; width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Footer */
-#FOOTER { height:32px; width:1250px; margin:0px auto; padding:10px; background-color:#3d7aa6; color:#FFF; }
+#FOOTER { height:32px; width:1250px; margin:0px auto; padding:8px 15px 0px; background-color:#3d7aa6; color:#FFF; }
 
 /* Home */
 #HOME #search_large #college_id { font-size:26px; }
