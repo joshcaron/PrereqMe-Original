@@ -3,7 +3,7 @@
         <div class="header">Your semesters:</div>
         <?php foreach($semesters as $semester): ?>
             <div class="semester box">
-                <ul id="semester_<?php echo $semester->id?>" class="connectedSortable">
+                <ul id="semester_<?php echo $semester->id?>" class="connectedSortable droptrue">
                 <div class="semester_title"><?php echo $semester->title?></div>
                 <?php 
                 for($courseIndex = 0; $courseIndex < count($semester->courses); $courseIndex++)
@@ -26,7 +26,7 @@
             <div class="header">Courses without a semester</div>
             <div class="helper_text">Drag a course to one of your semeseters to add it, or make a new semester below</div>
             <div class="box">
-                <ul id="dump" class="connectedSortable">
+                <ul id="dump" class="connectedSortable droptrue">
 
                 </ul>
             </div>
