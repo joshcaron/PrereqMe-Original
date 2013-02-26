@@ -49,7 +49,7 @@ class Home extends CI_Controller
 
     //Logs in the user
     //Expected params in POST: email, password
-    public function logIn($email = '', $password = '')
+    public function login($email = '', $password = '')
     {
         if($email === '')
         {
@@ -89,7 +89,7 @@ class Home extends CI_Controller
     }
 
     //Logs out the user and loads homepage
-    public function logOut()
+    public function logout()
     {
         $this->session->unset_userdata();
         $this->index();

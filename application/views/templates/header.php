@@ -36,7 +36,7 @@
                 <div id="userInfo" class="fr">
                     <h4>Hi, <?php echo $user['firstName']?></h4>
                     <p><?php echo $user['email']?></p>
-                    <button class="logOut" onclick="window.location.href= '<?php echo base_url('index.php/home/logOut')?>'">Log Out</button>
+                    <button class="logOut" onclick="window.location.href= '<?php echo base_url('index.php/home/logout')?>'">Log Out</button>
                 </div>
             <?php else: ?>
                 <div id="login" class="fr">

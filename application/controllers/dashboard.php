@@ -22,7 +22,7 @@ class Dashboard extends CI_Controller
         }
         else
         {
-            redirect('/home/', 'logOut');
+            redirect('/home/', 'logout');
         }
     }
 
@@ -41,7 +41,7 @@ class Dashboard extends CI_Controller
         }
         else
         {
-            redirect('/home/', 'logOut');
+            redirect('/home/', 'logout');
         }
     }
 
