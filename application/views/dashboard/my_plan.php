@@ -14,7 +14,12 @@
                     echo '</div>';
                 }
                 ?>
-                <ul id="semester_1" class="connectedSortable">
+
+            </div>
+        <?php endforeach ?>
+    </div>
+
+                    <ul id="semester_1" class="connectedSortable">
                     <li class="ui-state-default">Item 1</li>
                     <li class="ui-state-default">Item 2</li>
                     <li class="ui-state-default">Item 3</li>
@@ -32,9 +37,6 @@
 
                 <ul id="semester_3" class="connectedSortable">
                 </ul>
-            </div>
-        <?php endforeach ?>
-    </div>
 
     <div class="fr">
         <div id="COURSE_DUMP">
