@@ -34,8 +34,8 @@
 
             <?php if(isset($user)): ?>
                 <div id="userInfo" class="fr">
-                    <h4>Hi, <?php echo $user['firstName']?></h4>
-                    <p><?php echo $user['email']?></p>
+                    <div>Hi, <?php echo $user['firstName']?></div>
+                    <div><?php echo $user['email']?></div>
                     <button class="logOut" onclick="window.location.href= '<?php echo base_url('index.php/home/logout')?>'">Log Out</button>
                 </div>
             <?php else: ?>
