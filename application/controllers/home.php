@@ -91,7 +91,7 @@ class Home extends CI_Controller
     //Logs out the user and loads homepage
     public function logout()
     {
-        $this->session->unset_userdata();
+        $this->session->unset_userdata('is_logged_in');
         $this->index();
     }
 }
