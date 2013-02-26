@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class PM_Base extends CI_Controller
+class PM_Controller extends CI_Controller
 {
     public function __construct()
     {
