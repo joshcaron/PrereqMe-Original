@@ -3,15 +3,15 @@ var home = {
 
     changedSchool : function(newValue)
     {
-        var queryElement = $('#HOME #search_large #query').first();
+        var queryElement = $('#HOME #search_large #query_box').first();
 
         if(newValue != null && newValue > 0 && queryElement !== null)
         {
-            queryElement.prop('disabled', false);
+            queryElement.prop('hidden', false);
         }
         else
         {
-            queryElement.prop('disabled', true);
+            queryElement.prop('hidden', true);
         }
     }
 };
