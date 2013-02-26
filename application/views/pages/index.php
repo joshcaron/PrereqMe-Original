@@ -3,7 +3,7 @@
 
         <form action=<?php echo base_url('index.php/course/search') ?> >
             <select id="college_id" name="collegeId">
-                <option value="0">Select a school</option>
+                <option value="0" onchange="home.changedSchool(this.value)">Select a school</option>
 
                 <?php foreach($schools as $school): ?>
                     <option value=<?php echo $school->id?> ><?php echo $school->title?></option>
@@ -11,7 +11,7 @@
             </select>
 
             <div>
-                <input id="query" class="fl" type="text" name="query" class="search" />
+                <input id="query" class="fl" type="text" name="query" class="search" disabled />
                 <input type="submit" class="fr" value="Search"/>
             </div>
         </form>
