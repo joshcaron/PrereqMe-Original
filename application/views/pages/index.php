@@ -19,7 +19,7 @@
     </div>
 
     <div id="sign_up" class="fr">
-        <h1>Sign up for an account:</h1>
+        <h2>Sign up for an account:</h2>
         <?php echo form_open('home/signup'); ?>
             <table>
                 <tr>
