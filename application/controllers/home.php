@@ -29,19 +29,17 @@ class Home extends CI_Controller
     {
         //Requires that the course title isn't blank and that the total percentage adds up to 100
         $this->form_validation->set_rules('first_name', 'First name', 'required|alpha');
-        $this->form_validation->set_rules('last_name', 'Last name', 'required|alpha');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique(pm_user.email)|matches[reenter_email]');
         $this->form_validation->set_rules('password', 'Password', 'required|matches[password]');
 
         if ($this->form_validation->run())
         {
             $firstName = $this->input->post('first_name');
-            $lastName = $this->input->post('last_name');
             $email = $this->input->post('email');
             $password = $this->input->post('password');
 
             //Sign up user
-            $userId = $this->user_model->sign_up_user($firstName, $lastName, $email, $password);
+            $userId = $this->user_model->sign_up_user($firstName, $email, $password);
             $user = $this->user_model->get_user($userId);
 
             $data['title'] = 'Dashboard - PrereqMe';

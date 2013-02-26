@@ -3,9 +3,9 @@
 class User_model extends CI_Model
 {
     //Signs up a user with the given params
-    public function sign_up_user($firstName = '', $lastName = '', $email = '', $password = '')
+    public function sign_up_user($firstName = '', $email = '', $password = '')
     {
-        if($firstName === '' OR $lastName === '' OR $email === '' OR $password === '')
+        if($firstName === '' OR $email === '' OR $password === '')
         {
             log_message('error', 'Necessary params were not sent to User_model.sign_up_user()');
         }
@@ -13,7 +13,6 @@ class User_model extends CI_Model
         {
             $data = array(
                 'firstName' => $firstName,
-                'lastName' => $lastName,
                 'email' => $email,
                 'password' => $password
             );
