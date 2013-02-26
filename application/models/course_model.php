@@ -90,7 +90,7 @@ class Course_model extends CI_Model
                 'userId' => $userId
             );
 
-            $semesters = $this->db->get_where('pm_user_semester', $constraints)->results();
+            $semesters = $this->db->get_where('pm_user_semester', $constraints)->result();
 
             //Gets the courses for each semester
             foreach($semesters as $semester)
@@ -119,7 +119,26 @@ class Course_model extends CI_Model
             $this->db->select('pm_course.*');
             $this->db->join('pm_course', 'pm_course.id = pm_user_course.courseId');
             
-            return $this->db->get_where('pm_user_course', $constraints)->results();
+            return $this->db->get_where('pm_user_course', $constraints)->result();
+        }
+    }
+
+    //Inserts the course into the semester
+    public function add_course_to_semester($courseId = -1, $semesterId = -1)
+    {
+        if($courseId === -1 OR $semesterId === -1)
+        {
+            log_message('error', 'Not valid params sent to Course.add_course_to_semester');
+        }
+        else
+        {
+            $data = array(
+                'id' => $semesterId,
+                'courseId' => $courseId
+            );
+
+            $this->db->insert('pm_user_course', $data);
+            return $this->db->insert_id();
         }
     }
 }
