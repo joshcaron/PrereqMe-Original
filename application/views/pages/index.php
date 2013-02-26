@@ -24,22 +24,22 @@
             <table>
                 <tr><td><label for="first_name">First Name<span class="required">*</span></label></td></tr>
 
-                <tr><td class="wide"><input type="text" name="first_name" value="<?php echo set_value('first_name'); ?>" /></td></tr>
+                <tr><td><input type="text" class="wide" name="first_name" value="<?php echo set_value('first_name'); ?>" /></td></tr>
 
                 <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
 
                 <tr><td><label for="email">Email<span class="required">*</span></label></td></tr>
-                <tr><td class="wide"><input class="wide" type="text" name="email" value="<?php echo set_value('email'); ?>"/></td></tr>
+                <tr><td><input class="wide" type="text" name="email" value="<?php echo set_value('email'); ?>"/></td></tr>
                 
                 <tr><td><label for="reenter_email">Email again<span class="required">*</span></label></td></tr>
-                <tr><td class="wide"><input class="wide" type="text" name="reenter_email" /></td></tr>
+                <tr><td><input class="wide" type="text" name="reenter_email" /></td></tr>
                 <tr><td class="error"><?php echo form_error('email'); ?></td></tr>
                 
                 <tr><td><label for="password">Password<span class="required">*</span></label></td></tr>
-                <tr><td class="wide"><input class="wide" type="password" name="password" /></td></tr>
+                <tr><td><input class="wide" type="password" name="password" /></td></tr>
                 
                 <tr><td><label for="reenter_password">Password again<span class="required">*</span></label></td></tr>
-                <tr><td class="wide"><input class="wide"  type="password" name="reenter_password" /></td></tr>
+                <tr><td><input class="wide"  type="password" name="reenter_password" /></td></tr>
                 <tr><td class="error" colspan = "2"><?php echo form_error('password'); ?></td></tr>
 
                 <tr><td><input type="submit" value="Sign up" /></td></tr>
