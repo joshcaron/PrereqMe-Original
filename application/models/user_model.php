@@ -54,7 +54,16 @@ class User_model extends CI_Model
                 'password' => $password
             );
 
-            return $this->db->get_where('pm_user', $constraints)->row();
+            $user =  $this->db->get_where('pm_user', $constraints)->row();
+
+            if($user->id)
+            {
+                return $user;
+            }
+            else
+            {
+                return NULL;
+            }
         }
     }
 }
