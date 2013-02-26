@@ -2,8 +2,8 @@
     <div id="search_large" class='fl'>
 
         <form action=<?php echo base_url('index.php/course/search') ?> >
-            <select id="college_id" name="collegeId">
-                <option value="0" onchange="home.changedSchool(this.value)">Select a school</option>
+            <select id="college_id" name="collegeId" onchange="home.changedSchool(this.value)">
+                <option value="0">Select a school</option>
 
                 <?php foreach($schools as $school): ?>
                     <option value=<?php echo $school->id?> ><?php echo $school->title?></option>
