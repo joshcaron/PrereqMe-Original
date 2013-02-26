@@ -40,7 +40,7 @@
                 </div>
             <?php else: ?>
                 <div id="login" class="fr">
-                    <form action=<?php echo base_url('index.php/login')?> method="post">
+                    <form action=<?php echo base_url('index.php/home/login')?> method="post">
                         <table>
                             <tr>
                                 <td><label for="email">Email:</label></td>
