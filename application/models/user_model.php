@@ -38,6 +38,25 @@ class User_model extends CI_Model
             return $this->db->get_where('pm_user', $data)->row();
         }
     }
+
+    //Verifies the email-password combination
+    public function get_by_email_password($email = '', $password = '')
+    {
+        if($email === '')
+        {
+            log_message('error','Email not sent to User_model.verify_login');
+            return NULL;
+        }
+        else
+        {
+            $constraints = array(
+                'email' => $email,
+                'password' => $password
+            );
+
+            return $this->db->get_where('pm_user', $constraints)->row();
+        }
+    }
 }
 
 /* End of file user_model.php */

@@ -38,21 +38,61 @@ class Home extends CI_Controller
             $email = $this->input->post('email');
             $password = $this->input->post('password');
 
-            //Sign up user
-            $userId = $this->user_model->sign_up_user($firstName, $email, $password);
-            $user = $this->user_model->get_by_id($userId);
-
-            $data['title'] = 'My Plan - PrereqMe';
-            $data['user'] = $user;
-
-            $this->load->view('templates/header', $data);
-            $this->load->view('pages/my_plan', $data);
-            $this->load->view('templates/footer');
+            //Logs new user in
+            $this->login();
         }
         else
         {
             $this->index();
         }
+    }
+
+    //Logs in the user
+    //Expected params in POST: email, password
+    public function logIn($email = '', $password = '')
+    {
+        if($email === '')
+        {
+            $email = $this->input->post('email');
+        }
+
+        if($password === '')
+        {
+            $password = $this->input->post('password');
+        }
+
+        if($email === FALSE OR $password === FALSE)
+        {
+            log_message('error', 'Necessary params not in POST for home.logIn');
+        }
+        else
+        {
+            $user = $this->user_model->get_by_email_password($email, $password);
+            if($user !== NULL)
+            {
+                //Adds the user data to the session and goes to the dashboard
+                $user_data = (
+                    'is_logged_in' => TRUE,
+                    'user_id' => $user->id,
+                    'email' => $user->email,
+                    'firstName' => $user->firstName
+                );
+
+                $this->session->set_userdata($user_data); 
+                redirect('/dashboard/', 'index');
+            }
+            else
+            {
+                $this->index();
+            }
+        }
+    }
+
+    //Logs out the user and loads homepage
+    public function logOut()
+    {
+        $this->session->unset_userdata();
+        $this->index();
     }
 }
 
