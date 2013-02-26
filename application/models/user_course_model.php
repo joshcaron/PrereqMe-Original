@@ -42,8 +42,9 @@ class User_course_model extends CI_Model
                 'semesterId' => $semesterId
             );
 
-            $this->db->select('pm_course.*');
+            $this->db->select('pm_course.*, pm_dept.code as deptCode');
             $this->db->join('pm_course', 'pm_course.id = pm_user_course.courseId');
+            $this->db->join('pm_dept', 'pm_course.deptId = pm_dept.id');
             
             return $this->db->get_where('pm_user_course', $constraints)->result();
         }
