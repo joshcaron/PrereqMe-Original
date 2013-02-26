@@ -1,11 +1,12 @@
 body { background-color:#eaf0f5; margin:0px; }
-
 #MAIN_CONTAINER { min-width:1000px; }
 
+/* Global classes */
 .fl { float:left; }
 .fr { float:right; }
 .required { color:#FF0000; font-weight:normal; }
 .error { color:#FF0000; font-size:13px; }
+.box { border:1px solid #000; }
 
 /* Header */
 #HEADER { height:82px; background-color:#3d7aa6; color:#FFF; }
@@ -45,3 +46,4 @@ body { background-color:#eaf0f5; margin:0px; }
 /* My Plan */
 #MY_PLAN div { margin-bottom:10px; }
 #MY_PLAN .header { margin-bottom:10px; font-size:25px; font-weight:bold; }
+#MY_PLAN
