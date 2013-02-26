@@ -11,8 +11,8 @@
             </select>
 
             <div id="search_box">
-                <div class="magnifying_large"></div>
-                <div id="query_container">
+                <div class="magnifying_large fl"></div>
+                <div class="fr">
                     <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." disabled/>
                 </div>
             </div>
