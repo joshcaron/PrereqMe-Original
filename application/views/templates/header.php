@@ -16,8 +16,8 @@
 <script src=<?php echo js_url(), 'global.js'?> ></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-<div id="MAIN_CONTAINER" style="border:1px dashed #FF2A00;">
-    <div id="HEADER" style="border:1px dashed #FF2A00;">
+<div id="MAIN_CONTAINER">
+    <div id="HEADER">
         <div id="CONTENT">
             <div id="logo" class="fl"><a href=<?php echo base_url('index.php')?>>PrereqMe</a></div>
 
@@ -42,4 +42,4 @@
 
     </div>
 
-    <div id="BODY_CONTAINER" style="border:1px dashed #FF2A00;">
+    <div id="BODY_CONTAINER">
