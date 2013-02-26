@@ -17,7 +17,7 @@ body { background-color:#eaf0f5; margin:0px; }
 
 /* Body */
 #BODY_CONTAINER { min-height:500px; }
-#BODY_CONTAINER div:first-child { height:100%; width:1250px; margin:0px auto; padding:8px 15px 0px; }
+#BODY_CONTAINER > div { height:100%; width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Footer */
 #FOOTER { height:32px; background-color:#3d7aa6; color:#FFF; }
