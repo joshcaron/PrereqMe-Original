@@ -1,6 +1,8 @@
     </div>
 
-    <div id="FOOTER">&copy; 2013 PrereqMe</div>
+    <div id="FOOTER">
+        <div id="CONTENT">&copy; 2013 PrereqMe</div>
+    </div>
 
 </div>
 

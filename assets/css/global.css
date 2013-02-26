@@ -8,7 +8,7 @@ body { background-color:#eaf0f5; margin:0px; }
 .error { color:#FF0000; font-size:13px; }
 
 /* Header */
-#HEADER { height:74px; background-color:#3d7aa6; color:#FFF; }
+#HEADER { height:82px; background-color:#3d7aa6; color:#FFF; }
 #HEADER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 #HEADER #CONTENT #logo { margin-top:16px; font-size:32px;}
 #HEADER #CONTENT #logo a { color:#FFF; text-decoration:none; }
@@ -20,7 +20,8 @@ body { background-color:#eaf0f5; margin:0px; }
 #BODY_CONTAINER div:first-child {  width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Footer */
-#FOOTER { height:32px; width:1250px; margin:0px auto; padding:8px 15px 0px; background-color:#3d7aa6; color:#FFF; }
+#FOOTER { height:32px; background-color:#3d7aa6; color:#FFF; }
+#FOOTER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Home */
 #HOME #search_large #college_id { font-size:26px; }
