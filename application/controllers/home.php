@@ -71,7 +71,7 @@ class Home extends CI_Controller
             if($user !== NULL)
             {
                 //Adds the user data to the session and goes to the dashboard
-                $user_data = (
+                $user_data = array(
                     'is_logged_in' => TRUE,
                     'user_id' => $user->id,
                     'email' => $user->email,
