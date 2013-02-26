@@ -12,7 +12,7 @@ class Dashboard extends PM_Controller
     {
         if( parent::_is_logged_in() )
         {
-            $data['title'] => 'Dashboard - PrereqMe';
+            $data['title'] = 'Dashboard - PrereqMe';
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/dashboard', $data);
@@ -67,7 +67,7 @@ class Dashboard extends PM_Controller
     {
         if( parent::_is_logged_in() )
         {
-            $data['title'] => 'Help - PrereqMe';
+            $data['title'] = 'Help - PrereqMe';
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/help', $data);
