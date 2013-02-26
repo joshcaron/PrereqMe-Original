@@ -1,8 +1,8 @@
 <div id="MY_PLAN">
-    <div id="SEMESTERS" class="fl box">
+    <div id="SEMESTERS" class="fl">
         <div class="header">Your semesters:</div>
         <?php foreach($semesters as $semester): ?>
-            <div class="semester">
+            <div class="semester box">
                 <div class="semester_title"><?php echo $semester->title?></div>
                 <?php 
                 for($courseIndex = 0; $courseIndex < count($semester->courses); $courseIndex++)
@@ -22,7 +22,7 @@
         <div id="COURSE_DUMP" class="box">
             <div class="header">Courses without a semester</div>
             <div class="helper_text">Drag a course to one of your semeseters to add it, or make a new semester below</div>
-            THIS IS WHERE COURSE DUMP WILL GO
+            <div class="box">THIS IS WHERE COURSE DUMP WILL GO</div>
         </div>
 
         <div id="ADD_SEMESTER" class="box">
