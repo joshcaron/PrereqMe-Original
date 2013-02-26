@@ -50,7 +50,7 @@ class Dashboard extends PM_Controller
     {
         if( parent::_is_logged_in() )
         {
-            $data['title'] => 'Browse - PrereqMe';
+            $data['title'] = 'Browse - PrereqMe';
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/browse', $data);
