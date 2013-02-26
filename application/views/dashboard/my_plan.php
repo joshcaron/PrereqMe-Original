@@ -57,9 +57,9 @@
 </div>
 
 <script type="text/javascript">
-$(function() {
+/*$(function() {
     $( "#semester_1, #semester_2, #semester_3" ).sortable({
       connectWith: ".connectedSortable"
     }).disableSelection();
-  });
+  });*/
 </script>
