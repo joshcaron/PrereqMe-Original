@@ -18,24 +18,26 @@
 
 <div id="MAIN_CONTAINER" style="border:1px dashed #FF2A00;">
     <div id="HEADER" style="border:1px dashed #FF2A00;">
-        <div id="logo" class="fl"><a href=<?php echo base_url('index.php')?>>PrereqMe</a></div>
+        <div id="CONTENT">
+            <div id="logo" class="fl"><a href=<?php echo base_url('index.php')?>>PrereqMe</a></div>
 
-        <div id="login" class="fr">
-            <form action=<?php echo base_url('index.php/login')?> method="post">
-                <table>
-                    <tr>
-                        <td><label for="email">Email:</label></td>
-                        <td><label for="password">Password:</label></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="email" /></td>
-                        <td><input type="password" name="password" /></td>
-                        <td><input type="submit" value="Log In" /></td>
-                    </tr>
-                    <tr>
-                        <td id="forgot"><a href="">Forgot your password?</a></td>
-                </table>
-            </form>
+            <div id="login" class="fr">
+                <form action=<?php echo base_url('index.php/login')?> method="post">
+                    <table>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><label for="password">Password:</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="email" /></td>
+                            <td><input type="password" name="password" /></td>
+                            <td><input type="submit" value="Log In" /></td>
+                        </tr>
+                        <tr>
+                            <td id="forgot"><a href="">Forgot your password?</a></td>
+                    </table>
+                </form>
+            </div>
         </div>
 
     </div>
