@@ -50,9 +50,9 @@ class User_course_model extends CI_Model
     }
 
     //Inserts the course into the semester
-    public function add_course_to_semester($courseId = -1, $semesterId = -1)
+    public function add_course_to_semester($courseId = -1, $semesterId = -1, $userId = -1)
     {
-        if($courseId === -1 OR $semesterId === -1)
+        if($courseId === -1 OR $semesterId === -1 OR $userId === -1)
         {
             log_message('error', 'Not valid params sent to Course.add_course_to_semester');
         }
@@ -60,7 +60,8 @@ class User_course_model extends CI_Model
         {
             $data = array(
                 'semesterId' => $semesterId,
-                'courseId' => $courseId
+                'courseId' => $courseId,
+                'userId' => $userId
             );
 
             $this->db->insert('pm_user_course', $data);
@@ -87,7 +88,34 @@ class User_course_model extends CI_Model
         }
     }
 
+    //Move course to semester
+    public function move_course($courseId = -1, $semesterId = -1, $userId = -1)
+    {
+        if($courseId === -1 OR $semesterId === -1 OR $userId === -1)
+        {
+            log_message('error', 'Not valid params sent to Course.move_course');
+        }
+        else
+        {
+            //Deletes the course from any current semester
+            $data = array(
+                'courseId' => $courseId,
+                'userId' => $userId
+            );
 
+            $this->db->delete('pm_user_course', $data);
+
+            //Adds the course to the new semester
+            $newData = array(
+                'semesterId' => $semesterId,
+                'courseId' => $courseId,
+                'userId' => $userId
+            );
+
+            $this->db->insert('pm_user_course', $newData);
+            return $this->db->insert_id();
+        }
+    }
 }
 
 /* End of file user_course_model.php
