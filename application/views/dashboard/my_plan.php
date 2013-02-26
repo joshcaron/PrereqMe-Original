@@ -1,6 +1,6 @@
 <div id="MY_PLAN">
     <div id="SEMESTERS" class="fl">
-        <div>Your semesters:</div>
+        <div class="header">Your semesters:</div>
         <?php foreach($semesters as $semester): ?>
             <div class="semester">
                 <div class="semester_title"><?php echo $semester->title?></div>
@@ -20,8 +20,8 @@
 
     <div class="fr">
         <div id="COURSE_DUMP">
-            <div>Courses without a semester</div>
-            <div>Drag a course to one of your semeseters to add it, or make a new semester below</div>
+            <div class="header">Courses without a semester</div>
+            <div class="helper_text">Drag a course to one of your semeseters to add it, or make a new semester below</div>
             THIS IS WHERE COURSE DUMP WILL GO
         </div>
 
