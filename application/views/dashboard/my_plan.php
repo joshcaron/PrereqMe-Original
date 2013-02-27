@@ -49,10 +49,8 @@
 <script type="text/javascript">
 $(function() {
     $( "#semester_1, #semester_2, #semester_3, #dump" ).sortable({
-      connectWith: ".connectedSortable"
-    }).disableSelection();
-    $( "#semester_1, #semester_2, #semester_3" ).sortable({
+      connectWith: ".connectedSortable",
       items: "li:not(.ui-state-highlight)"
-    });
+    }).disableSelection();
   });
 </script>
