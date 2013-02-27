@@ -2,7 +2,7 @@
 
 class User_course_model extends CI_Model
 {
-        // Gets all the semesters with their respective courses
+    // Gets all the semesters with their respective courses
     public function get_semesters($userId = -1)
     {
         if($userId === -1)
@@ -119,4 +119,4 @@ class User_course_model extends CI_Model
     }
 }
 
-/* End of file user_course_model.php
+/* End of file user_course_model.php */
