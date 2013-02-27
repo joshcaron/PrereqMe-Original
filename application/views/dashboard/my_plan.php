@@ -27,7 +27,7 @@
             <div class="helper_text">Drag a course to one of your semeseters to add it, or make a new semester below</div>
             <div class="box">
                 <ul id="dump" class="connectedSortable">
-
+                    <li class="empty_cell"></li>
                 </ul>
             </div>
         </div>
