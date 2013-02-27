@@ -16,7 +16,7 @@
                     echo '</li>';
                 }
                 ?>
-                <li class="empty_cell ui-state-highlight">Drag courses here</li>
+                <li class="empty_cell ui-state-highlight">Drag courses here to add to semester</li>
                 </ul>
             </div>
         <?php endforeach ?>
