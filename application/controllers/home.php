@@ -45,7 +45,7 @@ class Home extends PM_Controller
             $this->user_model->sign_up_user($firstName, $email, $password, $schoolId, $deptId);
 
             //Logs new user in
-            $this->login($email, $password, TRUE);
+            $this->login($email, $password);
         }
         else
         {
@@ -55,7 +55,7 @@ class Home extends PM_Controller
 
     //Logs in the user
     //Expected params in POST: email, password
-    public function login($email = '', $password = '', $isNew = FALSE)
+    public function login($email = '', $password = '')
     {
         if($email === '')
         {
@@ -89,14 +89,7 @@ class Home extends PM_Controller
                 parent::add_user(); 
 
                 //If user is new, go to my plan instead of dashboard index
-                if($isNew)
-                {
-                    redirect('/dashboard/', 'my_plan');
-                }
-                else
-                {
-                    redirect('/dashboard/', 'index');
-                }
+                redirect('/dashboard/', 'index');
             }
             else
             {
