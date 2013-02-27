@@ -13,7 +13,7 @@ class Home extends PM_Controller
         $schools = $this->school_model->get_all();
 
         $data['title'] = 'PrereqMe';
-        $data['school'] = $schools;
+        $data['schools'] = $schools;
 
         $this->load->view('templates/header', $data);
         $this->load->view('pages/index', $data);
