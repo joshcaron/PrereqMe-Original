@@ -50,7 +50,7 @@
                         <option value=<?php echo $year?> ><?php echo $year?></option>
                     <?php endforeach ?>
                 </select>
-                <input type="submit" value="Add"></td>
+                <input type="submit" value="Add">
             </form>
         </div>
 
