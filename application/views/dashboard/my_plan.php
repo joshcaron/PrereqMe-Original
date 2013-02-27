@@ -47,7 +47,7 @@
     <div class="fr">
         <div id="COURSE_DUMP">
             <div class="header">Courses without a semester</div>
-            <div class="helper_text">Drag a course to one of your semeseters to add it, or make a new semester below</div>
+            <div class="helper_text">Drag courses to a semester on the left</div>
             <div class="box">
                 <ul id="dump" class="connectedSortable">
 
