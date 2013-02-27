@@ -81,7 +81,7 @@
 
 <script type="text/javascript">
 $(function() { 
-    $( "#birds" ).autocomplete({
+    $( "#search_box #query" ).autocomplete({
       source: "<?php echo base_url('index.php/course/search') ?>",
       minLength: 2
     });
