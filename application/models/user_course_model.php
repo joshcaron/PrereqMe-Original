@@ -28,7 +28,8 @@ class User_course_model extends CI_Model
             {
                 $semester->courses = $this->_get_courses_for_semester($semester->id);
             }
-
+            echo "Semesters:";
+            print_r($semesters);
             return $semesters;
         }
     }
