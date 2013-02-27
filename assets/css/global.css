@@ -11,7 +11,7 @@ body { margin:0px; font-family:'Lato', sans-serif; background-color:#eaf0f5; }
 select { border-color:#999; }
 
 /* Autocomplete */
-.ui-autocomplete { max-height: 100px; overflow-y: auto; overflow-x: hidden; }
+.ui-autocomplete { max-height:200px; overflow-y:auto; overflow-x:hidden; }
 
 /* Header */
 #HEADER { height:82px; background-color:#3d7aa6; color:#FFF; }
