@@ -91,7 +91,7 @@ class User_course_model extends CI_Model
             );
 
             $this->db->insert('pm_user_semester', $data);
-            print "ID: ", $this->db->insert_id();
+            echo "ID: ", $this->db->insert_id();
             return $this->db->insert_id();
         }
     }
