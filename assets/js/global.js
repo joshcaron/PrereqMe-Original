@@ -38,7 +38,7 @@ var home = {
     {
 
         $( "#search_box #query" ).autocomplete({
-            source: "<?php echo base_url('index.php/course/search')?>" + "?schoolId=" + schoolId.toString() + "&query=" + $('#search_box #query').first().val(),
+            source: "index.php/course/search?schoolId=" + schoolId.toString() + "&query=" + $('#search_box #query').first().val(),
             minLength: 2
         });
     }
