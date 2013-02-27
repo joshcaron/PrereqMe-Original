@@ -1,6 +1,28 @@
 <div id="MY_PLAN">
     <div id="SEMESTERS" class="fl">
         <div class="header">Your semesters:</div>
+        
+        <div id="ADD_SEMESTER" class="box">
+            <div class="header">Add a semester</div>
+            <?php echo form_open('dashboard/add_semester'); ?>
+                <select id="semester_id" name="semesterId">
+                    <option value="0" selected>Select Semester</option>
+
+                    <?php foreach($schoolSemesters as $schoolSemester): ?>
+                        <option value=<?php echo $schoolSemester->id?> ><?php echo $schoolSemester->title?></option>
+                    <?php endforeach ?>
+                </select>
+                <select id="year" name="year">
+                    <option value="0" selected>Year</option>
+
+                    <?php foreach(range(2005, 2020) as $year): ?>
+                        <option value=<?php echo $year?> ><?php echo $year?></option>
+                    <?php endforeach ?>
+                </select>
+                <input type="submit" value="Add">
+            </form>
+        </div>
+
         <?php foreach($semesters as $semester): ?>
             <div class="semester box">
                 <ul id="semester_<?php echo $semester->id?>" class="connectedSortable">
@@ -32,28 +54,6 @@
                 </ul>
             </div>
         </div>
-
-        <div id="ADD_SEMESTER" class="box">
-            <div class="header">Add a semester</div>
-            <?php echo form_open('dashboard/add_semester'); ?>
-                <select id="semester_id" name="semesterId">
-                    <option value="0" selected>Select Semester</option>
-
-                    <?php foreach($schoolSemesters as $schoolSemester): ?>
-                        <option value=<?php echo $schoolSemester->id?> ><?php echo $schoolSemester->title?></option>
-                    <?php endforeach ?>
-                </select>
-                <select id="year" name="year">
-                    <option value="0" selected>Year</option>
-
-                    <?php foreach(range(2005, 2020) as $year): ?>
-                        <option value=<?php echo $year?> ><?php echo $year?></option>
-                    <?php endforeach ?>
-                </select>
-                <input type="submit" value="Add">
-            </form>
-        </div>
-
     </div>
 
 </div>
