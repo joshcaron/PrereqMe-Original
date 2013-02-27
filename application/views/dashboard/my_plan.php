@@ -16,7 +16,7 @@
                     echo '</li>';
                 }
                 ?>
-                <li class="empty_cell ui-state-highlighted">Drag courses here</li>
+                <li class="empty_cell ui-state-highlight">Drag courses here</li>
                 </ul>
             </div>
         <?php endforeach ?>
@@ -52,7 +52,7 @@ $(function() {
       connectWith: ".connectedSortable"
     }).disableSelection();
     $( "#semester_1, #semester_2, #semester_3" ).sortable({
-      items: "li:not(.ui-state-highlighted)"
+      items: "li:not(.ui-state-highlight)"
     });
   });
 </script>
