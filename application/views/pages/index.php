@@ -1,7 +1,7 @@
 <div id="HOME">
     <div id="search_large" class='fl'>
 
-        <form action=<?php echo base_url('index.php/course/search') ?> >
+        <form action=<?php echo base_url('index.php/course/search_results') ?> >
             <select id="college_id" name="collegeId" onchange="home.changedSearchSchool(this.value)">
                 <option value="0" selected>Select your school</option>
 

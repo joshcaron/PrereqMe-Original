@@ -41,7 +41,7 @@ class Course extends PM_Controller
     // Performs search
     // Displays course detail page if exactly one course was found
     // Otherwise, displays search results page
-    public function search()
+    public function search_results()
     {
         $collegeId = $this->input->get('collegeId');
         $query = $this->input->get('query');
@@ -71,6 +71,33 @@ class Course extends PM_Controller
                 $this->load->view('pages/search_results', $data);
                 $this->load->view('templates/footer');
             }
+        }
+    }
+
+    //Performs a search and prints an array of titles
+    //Used by an AJAX call for the search typeahead
+    public function search()
+    {
+        $collegeId = $this->input->get('collegeId');
+        $query = $this->input->get('query');
+
+        if($collegeId === FALSE || $query === FALSE)
+        {
+            log_message('error', 'GET Params were not received by search.index');
+        }
+        else
+        {
+            $fullCourses = $this->course_model->get_like_title($collegeId, $query);
+
+            $courseTitles = array();
+
+            foreach($fullCourses as $course)
+            {
+                $courseTitles[] = $course->title;
+            }
+
+            $data['response'] = $courseTitles;
+            $this->load->view('json', $data);
         }
     }
 }
