@@ -16,6 +16,11 @@ class User_course_model extends CI_Model
                 'userId' => $userId
             );
 
+            $this->db->select('pm_user_semester.*, pm_semester.title');
+            $this->db->join('pm_semester', 'pm_semester.id = pm_user_semester.semesterId');
+            $this->db->order_by('pm_user_semester.year', 'desc');
+            $this->db->order_by('pm_semester.id', 'desc'); 
+
             $semesters = $this->db->get_where('pm_user_semester', $constraints)->result();
 
             //Gets the courses for each semester
@@ -71,17 +76,18 @@ class User_course_model extends CI_Model
     }
 
     //Inserts the new semester
-    public function add_semester($title = '', $userId = -1)
+    public function add_semester($userId = -1, $semesterId = -1, $year = -1)
     {
-        if($title === '' OR $userId === -1)
+        if($userId === -1 OR $semesterId === -1 OR $year === -1)
         {
             log_message('error', 'Not valid params sent to Course.add_semester');
         }
         else
         {
             $data = array(
-                'title' => $title,
-                'userId' => $userId
+                'userId' => $userId,
+                'semesterId' => $semesterId,
+                'year' => $year
             );
 
             $this->db->insert('pm_user_semester', $data);

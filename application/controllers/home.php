@@ -28,18 +28,20 @@ class Home extends PM_Controller
         $this->form_validation->set_rules('first_name', 'First name', 'required|alpha');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique(pm_user.email)|matches[reenter_email]');
         $this->form_validation->set_rules('password', 'Password', 'required|matches[password]');
+        $this->form_validation->set_rules('collegeId', 'College', 'required|greater_than[0]');
 
         if ($this->form_validation->run())
         {
             $firstName = $this->input->post('first_name');
             $email = $this->input->post('email');
             $password = $this->input->post('password');
+            $schoolId = $this->input->post('collegeId');
 
             //Signs up user
-            $this->user_model->sign_up_user($firstName, $email, $password);
+            $this->user_model->sign_up_user($firstName, $email, $password, $schoolId);
 
             //Logs new user in
-            $this->login();
+            $this->login($email, $password);
         }
         else
         {
@@ -75,7 +77,8 @@ class Home extends PM_Controller
                     'is_logged_in' => TRUE,
                     'user_id' => $user->id,
                     'email' => $user->email,
-                    'first_name' => $user->firstName
+                    'first_name' => $user->firstName,
+                    'school_id' => $user->schoolId
                 );
 
                 $this->session->set_userdata($user_data);
@@ -94,7 +97,7 @@ class Home extends PM_Controller
     {
         $this->session->unset_userdata('is_logged_in');
         unset($user);
-        $this->index();
+        redirect('/home/', 'index');
     }
 }
 

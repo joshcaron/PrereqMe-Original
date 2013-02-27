@@ -28,12 +28,15 @@ class Dashboard extends PM_Controller
     public function my_plan()
     {
         if( parent::_is_logged_in() )
-        {
+        { 
             $userId = $this->session->userdata('user_id');
+            $schoolId = $this->session->userdata('school_id');
             $semesters = $this->user_course_model->get_semesters($userId);
+            $schoolSemesters = $this->school_model->get_semeseters($schoolId);
 
             $data['title'] = 'My Plan - PrereqMe';
             $data['semesters'] = $semesters;
+            $data['schoolSemesters'] = $schoolSemesters;
 
             $this->load->view('templates/header', $data);
             $this->load->view('dashboard/my_plan', $data);
@@ -87,9 +90,10 @@ class Dashboard extends PM_Controller
 
         if( $this->form_validation->run())
         {
-            $title = $this->input->post('title');
+            $semesterId = $this->input->post('semesterId');
+            $year = $this->input->post('year');
             $userId = $this->session->userdata('user_id');
-            $this->user_course_model->add_semester($title, $userId);
+            $this->user_course_model->add_semester($userId, $semesterId, $year);
         }
         $this->my_plan();
     }

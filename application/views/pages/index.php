@@ -3,7 +3,7 @@
 
         <form action=<?php echo base_url('index.php/course/search') ?> >
             <select id="college_id" name="collegeId" onchange="home.changedSchool(this.value)">
-                <option value="0" selected>Select a school</option>
+                <option value="0" selected>Select your school</option>
 
                 <?php foreach($schools as $school): ?>
                     <option value=<?php echo $school->id?> ><?php echo $school->title?></option>
@@ -31,6 +31,18 @@
                     <tr><td><label for="first_name">First Name<span class="required">*</span></label></td></tr>
 
                     <tr><td><input type="text" class="wide" name="first_name" value="<?php echo set_value('first_name'); ?>" /></td></tr>
+
+                    <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
+
+                    <tr><td>
+                        <select id="college_id" name="collegeId">
+                            <option value="0" selected>Select your school</option>
+
+                            <?php foreach($schools as $school): ?>
+                                <option value=<?php echo $school->id?> ><?php echo $school->title?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </td></tr>
 
                     <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
 

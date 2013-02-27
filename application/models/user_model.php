@@ -14,7 +14,8 @@ class User_model extends CI_Model
             $data = array(
                 'firstName' => $firstName,
                 'email' => $email,
-                'password' => $password
+                'password' => $password,
+                'schoolId' => $schoolId
             );
 
             $this->db->insert('pm_user', $data); 

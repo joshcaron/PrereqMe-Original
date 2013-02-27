@@ -36,8 +36,20 @@
         <div id="ADD_SEMESTER" class="box">
             <div class="header">Add a semester</div>
             <?php echo form_open('dashboard/add_semester'); ?>
-                <label for="title">Semester title:</label>
-                <input type="text" name="title" value="<?php echo set_value('title'); ?>"/></td>
+                <select id="semester_id" name="semeseterId">
+                    <option value="0" selected>Select Semester</option>
+
+                    <?php foreach($schoolSemesters as $schoolSemester): ?>
+                        <option value=<?php echo $schoolSemester->id?> ><?php echo $schoolSemester->title?></option>
+                    <?php endforeach ?>
+                </select>
+                <select id="year" name="year">
+                    <option value="0" selected>Year</option>
+
+                    <?php foreach(range(2005, 2020) as $year): ?>
+                        <option value=<?php echo $year?> ><?php echo $year?></option>
+                    <?php endforeach ?>
+                </select>
                 <input type="submit" value="Add"></td>
             </form>
         </div>

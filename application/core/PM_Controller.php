@@ -19,6 +19,7 @@ class PM_Controller extends CI_Controller
             $user['id'] = $this->session->userdata('user_id');
             $user['email'] = $this->session->userdata('email');
             $user['firstName'] = $this->session->userdata('first_name');
+            $user['schoolId'] = $this->session->userdata('school_id');
             $data['user'] = $user;
 
             $this->load->vars($data);
