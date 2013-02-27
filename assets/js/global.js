@@ -32,7 +32,7 @@ var home = {
         {
             submit_buttom.prop('disabled', true);
         }
-    }
+    },
 
     initializeSearchAutocomplete : function(schoolId)
     {
