@@ -9,6 +9,7 @@ var home = {
         {
             queryElement.prop('disabled', false);
             queryElement.focus();
+            home.initializeSearchAutocomplete(newValue);
         }
         else
         {
@@ -31,5 +32,14 @@ var home = {
         {
             submit_buttom.prop('disabled', true);
         }
+    }
+
+    initializeSearchAutocomplete : function(schoolId)
+    {
+
+        $( "#search_box #query" ).autocomplete({
+            source: "<?php echo base_url('index.php/course/search')?>" + "?schoolId=" + schoolId.toString() + "&query=" + $('#search_box #query').first().val();
+            minLength: 2
+        });
     }
 };
