@@ -86,9 +86,12 @@ class Dashboard extends PM_Controller
     //Expected params in post: title
     public function add_semester()
     {
+        $this->form_validation->set_rules('semesterId', 'Semester', 'required');
+        $this->form_validation->set_rules('year', 'Year', 'required');
+
         if( $this->form_validation->run())
         {
-            echo "YAYYYYY";
+            echo "YAYYY";
             $semesterId = $this->input->post('semesterId');
             $year = $this->input->post('year');
             $userId = $this->session->userdata('user_id');
