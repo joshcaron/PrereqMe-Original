@@ -14,7 +14,7 @@ var home = {
         {
             queryElement.prop('disabled', true);
         }
-    }
+    },
 
     changedSchool : function()
     {
