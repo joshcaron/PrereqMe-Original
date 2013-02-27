@@ -9,6 +9,9 @@
 
 <body>
 
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
 <!-- CSS sources -->
 <link rel="stylesheet" type="text/css" href=<?php echo css_url(), 'global.css'?> >
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
