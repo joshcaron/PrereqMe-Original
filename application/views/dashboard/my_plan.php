@@ -16,7 +16,7 @@
                     echo '</li>';
                 }
                 ?>
-                <li class="empty_cell ui-state-highlight">Drag classes here</li>
+                <li class="empty_cell ui-state-disabled">Drag courses here</li>
                 </ul>
             </div>
         <?php endforeach ?>
@@ -51,5 +51,8 @@ $(function() {
     $( "#semester_1, #semester_2, #semester_3, #dump" ).sortable({
       connectWith: ".connectedSortable"
     }).disableSelection();
+    $( "#semester_1, #semester_2, #semester_3" ).sortable({
+      items: "li:not(.ui-state-disabled)"
+    });
   });
 </script>
