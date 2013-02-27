@@ -2,7 +2,7 @@
     <div id="search_large" class='fl'>
 
         <form action=<?php echo base_url('index.php/course/search') ?> >
-            <select id="college_id" name="collegeId" onchange="home.changedSchool(this.value)">
+            <select id="college_id" name="collegeId" onchange="home.changedSearchSchool(this.value)">
                 <option value="0" selected>Select your school</option>
 
                 <?php foreach($schools as $school): ?>
@@ -35,7 +35,7 @@
                     <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
 
                     <tr><td>
-                        <select id="college_id" name="collegeId">
+                        <select id="college_id" name="collegeId" onchange="home.changedSchoolOrDept()">
                             <option value="0" selected>Select your school</option>
 
                             <?php foreach($schools as $school): ?>
@@ -46,7 +46,7 @@
                     <tr><td class="error"><?php echo form_error('collegeId'); ?></td></tr>
 
                     <tr><td>
-                        <select id="dept_id" name="deptId">
+                        <select id="dept_id" name="deptId" onchange="home.changedSchoolOrDept()">
                             <option value="0" selected>Select your department</option>
 
                             <?php foreach($departments as $department): ?>
@@ -72,7 +72,7 @@
                     <tr><td><input class="wide"  type="password" name="reenter_password" /></td></tr>
                     <tr><td class="error" colspan = "2"><?php echo form_error('password'); ?></td></tr>
 
-                    <tr><td><input type="submit" value="Sign up" /></td></tr>
+                    <tr><td><input class="submit" type="submit" value="Sign up" disabled /></td></tr>
                 </table>
             </form>
         </div>

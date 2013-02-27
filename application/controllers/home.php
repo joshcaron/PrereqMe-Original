@@ -30,8 +30,6 @@ class Home extends PM_Controller
         $this->form_validation->set_rules('first_name', 'First name', 'required|alpha');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique(pm_user.email)|matches[reenter_email]');
         $this->form_validation->set_rules('password', 'Password', 'required|matches[password]');
-        $this->form_validation->set_rules('collegeId', 'College', 'required|greater_than[0]');
-        $this->form_validation->set_rules('deptId', 'Department', 'required|greater_than[0]');
 
         if ($this->form_validation->run())
         {
