@@ -36,7 +36,7 @@ class Home extends PM_Controller
             $password = $this->input->post('password');
 
             //Signs up user
-            $this->sign_up_user($firstName, $email, $password);
+            $this->user_model->sign_up_user($firstName, $email, $password);
 
             //Logs new user in
             $this->login();
