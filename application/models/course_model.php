@@ -12,9 +12,11 @@ class Course_model extends CI_Model
         else
         {
             $constraints = array(
-                'id' => $courseId
+                'pm_course.id' => $courseId
             );
 
+            $this->db->select('pm_course.*, pm_dept.code as deptCode');
+            $this->db->join('pm_dept', 'pm_dept.id = pm_course.deptId');
             return $this->db->get_where('pm_course', $constraints)->row();
         }
     }
@@ -57,7 +59,7 @@ class Course_model extends CI_Model
     // Returns the recursive prereqs for the course
     public function get_prereqs($course = NULL) 
     {
-        if ($courseId === NULL)
+        if ($course === NULL)
         {
             log_message('error', 'Not a valid course sent to Course.get_prereqs');
             return array();
