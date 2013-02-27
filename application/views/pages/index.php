@@ -43,6 +43,18 @@
                             <?php endforeach ?>
                         </select>
                     </td></tr>
+                    <tr><td class="error"><?php echo form_error('collegeId'); ?></td></tr>
+
+                    <tr><td>
+                        <select id="dept_id" name="deptId">
+                            <option value="0" selected>Select your department</option>
+
+                            <?php foreach($departments as $department): ?>
+                                <option value=<?php echo $department->id?> ><?php echo $department->code?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </td></tr>
+                    <tr><td class="error"><?php echo form_error('deptId'); ?></td></tr>
 
                     <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
 

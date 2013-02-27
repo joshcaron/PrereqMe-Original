@@ -11,9 +11,11 @@ class Home extends PM_Controller
     public function index()
     {
         $schools = $this->school_model->get_all();
+        $departments = $this->school_model->get_departments(1);
 
         $data['title'] = 'PrereqMe';
         $data['schools'] = $schools;
+        $data['departments'] = $departments;
 
         $this->load->view('templates/header', $data);
         $this->load->view('pages/index', $data);
@@ -29,6 +31,7 @@ class Home extends PM_Controller
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique(pm_user.email)|matches[reenter_email]');
         $this->form_validation->set_rules('password', 'Password', 'required|matches[password]');
         $this->form_validation->set_rules('collegeId', 'College', 'required|greater_than[0]');
+        $this->form_validation->set_rules('deptId', 'Department', 'required|greater_than[0]');
 
         if ($this->form_validation->run())
         {
@@ -36,12 +39,13 @@ class Home extends PM_Controller
             $email = $this->input->post('email');
             $password = $this->input->post('password');
             $schoolId = $this->input->post('collegeId');
+            $deptId = $this->input->post('deptId');
 
             //Signs up user
-            $this->user_model->sign_up_user($firstName, $email, $password, $schoolId);
+            $this->user_model->sign_up_user($firstName, $email, $password, $schoolId, $deptId);
 
             //Logs new user in
-            $this->login($email, $password);
+            $this->login($email, $password, TRUE);
         }
         else
         {
@@ -51,7 +55,7 @@ class Home extends PM_Controller
 
     //Logs in the user
     //Expected params in POST: email, password
-    public function login($email = '', $password = '')
+    public function login($email = '', $password = '', $isNew = FALSE)
     {
         if($email === '')
         {
@@ -83,7 +87,16 @@ class Home extends PM_Controller
 
                 $this->session->set_userdata($user_data);
                 parent::add_user(); 
-                redirect('/dashboard/', 'index');
+
+                //If user is new, go to my plan instead of dashboard index
+                if($isNew)
+                {
+                    redirect('/dashboard/', 'my_plan');
+                }
+                else
+                {
+                    redirect('/dashboard/', 'index');
+                }
             }
             else
             {

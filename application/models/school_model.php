@@ -9,7 +9,7 @@ class School_model extends CI_Model
     }
 
     //Returns all of the departments for the school
-    public function get_categories($schoolId = -1)
+    public function get_departments($schoolId = -1)
     {
         if($schoolId === -1)
         {
