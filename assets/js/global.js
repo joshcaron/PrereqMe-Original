@@ -36,9 +36,9 @@ var home = {
 
     initializeSearchAutocomplete : function(schoolId)
     {
-
+        var searchUrl = "index.php/course/search?schoolId=" + schoolId.toString() + "&query=" + $('#search_box #query').first().val();
         $( "#search_box #query" ).autocomplete({
-            source: "index.php/course/search?schoolId=" + schoolId.toString() + "&query=" + $('#search_box #query').first().val(),
+            source: searchUrl,
             minLength: 2
         });
     }
