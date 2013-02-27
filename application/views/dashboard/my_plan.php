@@ -36,7 +36,7 @@
         <div id="ADD_SEMESTER" class="box">
             <div class="header">Add a semester</div>
             <?php echo form_open('dashboard/add_semester'); ?>
-                <select id="semester_id" name="semeseterId">
+                <select id="semester_id" name="semesterId">
                     <option value="0" selected>Select Semester</option>
 
                     <?php foreach($schoolSemesters as $schoolSemester): ?>
