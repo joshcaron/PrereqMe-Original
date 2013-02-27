@@ -78,3 +78,12 @@
         </div>
     <?php endif ?>
 </div>
+
+<script type="text/javascript">
+$(function() { 
+    $( "#birds" ).autocomplete({
+      source: "<?php echo base_url('index.php/course/search') ?>",
+      minLength: 2
+    });
+  });
+</script>
