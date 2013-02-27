@@ -16,7 +16,7 @@ var home = {
         }
     },
 
-    changedSchool : function()
+    changedSchoolOrDept : function()
     {
         var school_id = $('#HOME #sign_up #college_id').first().value;
         var dept_id = $('#HOME #sign_up #dept_id').first().value;
