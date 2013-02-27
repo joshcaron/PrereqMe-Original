@@ -18,8 +18,8 @@ var home = {
 
     changedSchoolOrDept : function()
     {
-        var school_id = $('#HOME #sign_up #college_id').first().value;
-        var dept_id = $('#HOME #sign_up #dept_id').first().value;
+        var school_id = parseInt($('#HOME #sign_up #college_id').first().val());
+        var dept_id = parseInt($('#HOME #sign_up #dept_id').first().val());
 
         var submit_buttom = $('#HOME #sign_up .submit').first();
 
