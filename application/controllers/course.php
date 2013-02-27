@@ -79,7 +79,7 @@ class Course extends PM_Controller
     public function search()
     {
         $collegeId = $this->input->get('collegeId');
-        $query = $this->input->get('query');
+        $query = $this->input->get('term'); //use 'term' instead of 'query' here because it is automatically set by jQueryUI
 
         if($collegeId === FALSE || $query === FALSE)
         {
