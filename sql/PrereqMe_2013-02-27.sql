@@ -7,7 +7,7 @@
 #
 # Host: prereqme.cdxj1iemkunh.us-east-1.rds.amazonaws.com (MySQL 5.5.27-log)
 # Database: PrereqMe
-# Generation Time: 2013-02-24 20:39:13 +0000
+# Generation Time: 2013-02-27 14:04:53 +0000
 # ************************************************************
 
 
@@ -212,6 +212,57 @@ CREATE TABLE `pm_prereq` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `pm_prereq` WRITE;
+/*!40000 ALTER TABLE `pm_prereq` DISABLE KEYS */;
+
+INSERT INTO `pm_prereq` (`id`, `courseId`, `prereqId`)
+VALUES
+	(1,11,9),
+	(2,13,11),
+	(3,14,7),
+	(4,14,9),
+	(5,18,5),
+	(6,18,11),
+	(7,19,11),
+	(8,20,11),
+	(9,20,5),
+	(10,21,19),
+	(11,21,20),
+	(12,22,21),
+	(13,23,13),
+	(14,23,20),
+	(15,26,14),
+	(16,26,19),
+	(17,27,18),
+	(18,27,53),
+	(19,28,23),
+	(20,28,44),
+	(21,29,5),
+	(22,29,11),
+	(23,29,19),
+	(24,30,19),
+	(25,30,24),
+	(26,31,30),
+	(27,31,61),
+	(28,32,19),
+	(29,33,19),
+	(30,34,19),
+	(31,35,19),
+	(32,36,19),
+	(33,36,23),
+	(34,37,19),
+	(35,39,23),
+	(36,40,23),
+	(37,41,23),
+	(38,42,23),
+	(39,42,64),
+	(40,43,42),
+	(41,44,19),
+	(42,46,19),
+	(43,46,24);
+
+/*!40000 ALTER TABLE `pm_prereq` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table pm_school
@@ -234,6 +285,92 @@ VALUES
 	(1,'Northeastern University');
 
 /*!40000 ALTER TABLE `pm_school` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table pm_user
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `pm_user`;
+
+CREATE TABLE `pm_user` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(128) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `pm_user` WRITE;
+/*!40000 ALTER TABLE `pm_user` DISABLE KEYS */;
+
+INSERT INTO `pm_user` (`id`, `firstName`, `email`, `password`)
+VALUES
+	(2,'Brian','kracoff.b@husky.neu.edu','1234');
+
+/*!40000 ALTER TABLE `pm_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table pm_user_course
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `pm_user_course`;
+
+CREATE TABLE `pm_user_course` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `courseId` bigint(20) NOT NULL,
+  `semesterId` bigint(20) NOT NULL,
+  `userId` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `pm_user_course` WRITE;
+/*!40000 ALTER TABLE `pm_user_course` DISABLE KEYS */;
+
+INSERT INTO `pm_user_course` (`id`, `courseId`, `semesterId`, `userId`)
+VALUES
+	(2,5,1,2),
+	(3,6,1,2),
+	(4,7,1,2),
+	(5,8,1,2),
+	(6,9,1,2),
+	(7,10,1,2),
+	(8,15,2,2),
+	(9,16,2,2),
+	(10,17,2,2),
+	(11,18,2,2),
+	(12,19,2,2),
+	(13,20,2,2);
+
+/*!40000 ALTER TABLE `pm_user_course` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table pm_user_semester
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `pm_user_semester`;
+
+CREATE TABLE `pm_user_semester` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `userId` bigint(20) NOT NULL,
+  `title` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `pm_user_semester` WRITE;
+/*!40000 ALTER TABLE `pm_user_semester` DISABLE KEYS */;
+
+INSERT INTO `pm_user_semester` (`id`, `userId`, `title`)
+VALUES
+	(1,2,'Semester 1'),
+	(2,2,'Semester 2');
+
+/*!40000 ALTER TABLE `pm_user_semester` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
