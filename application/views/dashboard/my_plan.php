@@ -71,7 +71,8 @@ $(function() {
         ?>
     ).sortable({
         connectWith: ".connectedSortable",
-        items: "li:not(.ui-state-highlight)"
+        items: "li:not(.ui-state-highlight)",
+        placeholder: "ui-state-highlight"
     }).disableSelection();
   });
 </script>
