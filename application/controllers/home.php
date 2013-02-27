@@ -35,6 +35,9 @@ class Home extends PM_Controller
             $email = $this->input->post('email');
             $password = $this->input->post('password');
 
+            //Signs up user
+            $this->sign_up_user($firstName, $email, $password);
+
             //Logs new user in
             $this->login();
         }
