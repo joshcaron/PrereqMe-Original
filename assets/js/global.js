@@ -36,7 +36,7 @@ var home = {
 
     initializeSearchAutocomplete : function(schoolId)
     {
-        var searchUrl = "index.php/course/search?schoolId=" + schoolId.toString();
+        var searchUrl = "index.php/course/search?collegeId=" + schoolId.toString();
         $( "#search_box #query" ).autocomplete({
             source: searchUrl,
             minLength: 2
