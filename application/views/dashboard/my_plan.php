@@ -16,6 +16,7 @@
                     echo '</li>';
                 }
                 ?>
+                <li class="empty_cell ui-state-highlight">Drag classes here</li>
                 </ul>
             </div>
         <?php endforeach ?>
@@ -27,7 +28,7 @@
             <div class="helper_text">Drag a course to one of your semeseters to add it, or make a new semester below</div>
             <div class="box">
                 <ul id="dump" class="connectedSortable">
-                    <li class="empty_cell"></li>
+
                 </ul>
             </div>
         </div>
