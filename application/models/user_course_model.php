@@ -28,8 +28,7 @@ class User_course_model extends CI_Model
             {
                 $semester->courses = $this->_get_courses_for_semester($semester->id);
             }
-            echo "Semesters:";
-            print_r($semesters);
+
             return $semesters;
         }
     }
@@ -92,6 +91,7 @@ class User_course_model extends CI_Model
             );
 
             $this->db->insert('pm_user_semester', $data);
+            print "ID: ", $this->db->insert_id();
             return $this->db->insert_id();
         }
     }
