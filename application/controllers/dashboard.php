@@ -88,7 +88,7 @@ class Dashboard extends PM_Controller
     {
         if( $this->form_validation->run())
         {
-            echo "YAYYYYY"
+            echo "YAYYYYY";
             $semesterId = $this->input->post('semesterId');
             $year = $this->input->post('year');
             $userId = $this->session->userdata('user_id');
