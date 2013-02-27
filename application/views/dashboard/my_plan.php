@@ -60,9 +60,18 @@
 
 <script type="text/javascript">
 $(function() {
-    $( "#semester_1, #semester_2, #semester_3, #dump" ).sortable({
-      connectWith: ".connectedSortable",
-      items: "li:not(.ui-state-highlight)"
+    $( 
+        <?php 
+            echo"'";
+            foreach($semesters as $semester) 
+            {
+                echo '#semester_', $semester->id, ',';
+            }
+            echo "#dump'";
+        ?>
+    ).sortable({
+        connectWith: ".connectedSortable",
+        items: "li:not(.ui-state-highlight)"
     }).disableSelection();
   });
 </script>
