@@ -1,12 +1,14 @@
 body { margin:0px; font-family:'Lato', sans-serif; background-color:#eaf0f5; }
 #MAIN_CONTAINER { min-width:1000px; }
 
-/* Global classes */
+
+/* Global styles */
 .fl { float:left; }
 .fr { float:right; }
 .required { color:#FF0000; font-weight:normal; }
 .error { color:#FF0000; font-size:13px; }
 .clear { clear:both; }
+select { border-color:#999; }
 
 /* Header */
 #HEADER { height:82px; background-color:#3d7aa6; color:#FFF; }
@@ -31,13 +33,14 @@ body { margin:0px; font-family:'Lato', sans-serif; background-color:#eaf0f5; }
 
 /* Home */
 #HOME #search_large { margin-top:126px; }
-#HOME #search_large #college_id { width:532px; margin:0px 0px 5px 31px; font-size:26px; border-color:#999; }
+#HOME #search_large #college_id { width:532px; margin:0px 0px 5px 31px; font-size:26px; }
 #HOME #search_large #search_box { height:66px; margin-bottom:5px; padding:10px 24px 4px 24px; border-radius:35px; border:1px solid #000; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
 #HOME #search_large .magnifying_large { width:36px; height:56px; border:1px dotted #FF0000; }
 #HOME #search_large #query { width:500px; height:50px; padding:5px 15px; font-size:32px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
 #HOME #sign_up td { width:196px; }
 #HOME #sign_up input { font-size:16px; padding:5px; }
 #HOME #sign_up input.wide { width:364px; }
+#HOME #sign_up select { font-size:19px; }
 
 /* Search Results */
 #SEARCH_RESULTS #content { width:700px; margin:auto; }
