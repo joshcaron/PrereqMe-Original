@@ -81,7 +81,7 @@ $(function() {
     }).disableSelection();
 
     //Creates autocomplete for "add course" input
-    common.initializeSearchAutocomplete("<?php echo $user['school_id']?>", $("#COURSE_DUMP #search"));
+    common.initializeSearchAutocomplete(<?php echo "'", $user['school_id'], "'"?>, $("#COURSE_DUMP #search"));
 });
 
 </script>
