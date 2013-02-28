@@ -12,7 +12,6 @@ var home = {
             queryElement.prop('disabled', false);
             queryElement.focus();
 
-            //If coming from base url
             var searchUrl = "index.php/home/search_home?collegeId=" + newValue.toString();
 
             //Setup autocomplete
@@ -29,8 +28,9 @@ var home = {
 
     changedSchoolOrDept : function()
     {
+        dept_select = $('#HOME #sign_up #dept_id').first();
         var school_id = parseInt($('#HOME #sign_up #college_id').first().val());
-        var dept_id = parseInt($('#HOME #sign_up #dept_id').first().val());
+        var dept_id = parseInt(dept_select.val());
 
         var submit_buttom = $('#HOME #sign_up .submit').first();
 
@@ -40,6 +40,30 @@ var home = {
         }
         else
         {
+            var dynamic_results = $('#HOME #sign_up #dept_id .dynamic_results').first();
+            if(school_id === 0)
+            {
+                //Remove departments and disable department button 
+                dynamic_results.html("");
+                dept_select.prop('disabled', true);
+            }
+            else
+            {
+                /*//Make an ajax call to insert departments for the school and enable department button
+                xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+                    }
+                }
+
+                var searchUrl = "index.php/home/get_departments?collegeId=" + school_id.toString();
+                xmlhttp.open("GET", searchUrl, true);
+                xmlhttp.send();*/
+            }
+
             submit_buttom.prop('disabled', true);
         }
     }

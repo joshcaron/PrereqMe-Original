@@ -48,10 +48,9 @@
                     <tr><td>
                         <select id="dept_id" name="deptId" onchange="home.changedSchoolOrDept()">
                             <option value="0" selected>Select your department</option>
-
-                            <?php foreach($departments as $department): ?>
-                                <option value=<?php echo $department->id?> ><?php echo $department->code?></option>
-                            <?php endforeach ?>
+                                <span class="dynamic_results">
+  
+                                </span>
                         </select>
                     </td></tr>
                     <tr><td class="error"><?php echo form_error('deptId'); ?></td></tr>

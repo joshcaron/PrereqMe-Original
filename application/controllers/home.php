@@ -11,15 +11,32 @@ class Home extends PM_Controller
     public function index()
     {
         $schools = $this->school_model->get_all();
-        $departments = $this->school_model->get_departments(1);
 
         $data['title'] = 'PrereqMe';
         $data['schools'] = $schools;
-        $data['departments'] = $departments;
 
         $this->load->view('templates/header', $data);
         $this->load->view('pages/index', $data);
         $this->load->view('templates/footer');
+    }
+
+    //Called by an ajax request to get the categories for a school
+    public function get_categories()
+    {
+        $schoolId = $this->input->get('collegeId');
+
+        if($schoolId === FALSE)
+        {
+            log_message('error', 'SchoolId not sent to home.get_categories');
+        }
+        else
+        {
+            //Get departments for the school and send back the JSON array
+            $departments = $this->school_model->get_departments($schoolId);
+
+            $data['response'] = $departments;
+            $this->load->view('json', $data);
+        }
     }
 
     //Signs a user up and sends the user to the dashboard to add classes
