@@ -12,7 +12,23 @@ var home = {
             queryElement.prop('disabled', false);
             queryElement.focus();
 
-            var searchUrl = "index.php/home/search_home?collegeId=" + newValue.toString();
+            //Makes sure it routes to the correct place
+            if (window.location.href.indexOf("home") !== -1)
+            {
+                if(window.location.href.indexOf("home/index") !== -1)
+                {
+                    var searchUrl = "search_home?collegeId=" + newValue.toString();
+                }
+                else
+                {
+                    var searchUrl = "home/search_home?collegeId=" + newValue.toString();
+                }
+            }
+            else
+            {
+                var searchUrl = "index.php/home/search_home?collegeId=" + newValue.toString();
+            }
+            
 
             //Setup autocomplete
             queryElement.autocomplete({
