@@ -158,11 +158,12 @@ var myplan = {
         var parentLi = deleteButtonElement.parent();
         var parentUl = parentLi.parent();
 
+        //Executes delete
         var deleteUrl = "delete_course_from_user?courseId=" + courseId + "&semesterId=" + myplan.semesterIdFromSemesterUL(parentUl);
-        $.getJSON(deleteUrl ,function(response){
-            //Hide list element
-            parentLi.hide('blind', {}, 250, null);       
-        });
+        $.getJSON(deleteUrl ,null);
+
+        //Hide list element
+        parentLi.hide('blind', {}, 250, null);       
     },
 
     semesterIdFromSemesterUL : function(semesterULElement)
