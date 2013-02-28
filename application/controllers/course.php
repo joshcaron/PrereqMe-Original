@@ -78,6 +78,7 @@ class Course extends PM_Controller
     //Used by an AJAX call for the search typeahead
     public function search()
     {
+        echo "YAYYYY";
         $collegeId = $this->input->get('collegeId');
         $query = $this->input->get('term'); //use 'term' instead of 'query' here because it is automatically set by jQueryUI
 
