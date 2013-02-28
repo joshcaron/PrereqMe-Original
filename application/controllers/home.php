@@ -104,6 +104,59 @@ class Home extends PM_Controller
         unset($user);
         redirect('/home/', 'index');
     }
+
+    //Search
+    public function search()
+    {
+        $collegeId = $this->input->get('collegeId');
+        $query = $this->input->get('term'); //use 'term' instead of 'query' here because it is automatically set by jQueryUI
+
+        if($collegeId === FALSE || $query === FALSE)
+        {
+            log_message('error', 'GET Params were not received by search.index');
+        }
+        else
+        {
+            $fullCourses = $this->course_model->get_like_title($collegeId, $query);
+
+            $courseTitles = array();
+
+            foreach($fullCourses as $course)
+            {
+                $courseTitles[] = $course->title;
+            }
+
+            $data['response'] = $courseTitles;
+            $this->load->view('json', $data);
+        }
+    }
+
+    //Performs a search and prints an array of titles
+    //Used by an AJAX call for the search typeahead
+    public function search()
+    {
+        $collegeId = $this->input->get('collegeId');
+        $query = $this->input->get('term'); //use 'term' instead of 'query' here because it is automatically set by jQueryUI
+
+        if($collegeId === FALSE || $query === FALSE)
+        {
+            log_message('error', 'GET Params were not received by search.index');
+        }
+        else
+        {
+            $fullCourses = $this->course_model->get_like_title($collegeId, $query);
+
+            $courseTitles = array();
+
+            foreach($fullCourses as $course)
+            {
+                $courseTitles[] = $course->title;
+            }
+
+            $data['response'] = $courseTitles;
+            $this->load->view('json', $data);
+        }
+    }
 }
 
 

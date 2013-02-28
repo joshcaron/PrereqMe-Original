@@ -1,18 +1,4 @@
 
-//Functions methods
-var common = {
-
-    //Expects a school ID and the searchElement (which is the input element)
-    initializeSearchAutocomplete : function(searchElement, schoolId)
-    {
-        var searchUrl = "index.php/course/search?collegeId=" + schoolId.toString();
-        searchElement.autocomplete({
-            source: searchUrl,
-            minLength: 2
-        });
-    }
-
-}
 
 //Functions for home page
 var home = {
@@ -26,6 +12,21 @@ var home = {
             queryElement.prop('disabled', false);
             queryElement.focus();
             common.initializeSearchAutocomplete($("#search_box #query"), newValue);
+
+            if(window.location.href.indexOf("index.php") === -1)
+            {
+                //If coming from base url
+                var searchUrl = "index.php/home/search?collegeId=" + schoolId.toString();
+            }
+            else
+            {
+                //If coming from home controller
+                var searchUrl = "search?collegeId=" + schoolId.toString();
+            }
+            searchElement.autocomplete({
+            source: searchUrl,
+            minLength: 2
+            });
         }
         else
         {
@@ -58,7 +59,11 @@ var myplan = {
     clickedSearch : function(inputField, schoolId)
     {
         //Initializes autocomplete
-        common.initializeSearchAutocomplete(inputField, schoolId);
+        var searchUrl = "search?collegeId=" + schoolId.toString();
+        searchElement.autocomplete({
+            source: searchUrl,
+            minLength: 2
+        });
 
         //Removes on-click so this method is only executed once
         inputField.removeAttr("onclick");
