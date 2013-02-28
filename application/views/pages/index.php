@@ -1,7 +1,7 @@
 <div id="HOME">
     <div id="search_large" class='fl'>
 
-        <?php echo form_open('course/search_results'); ?>
+        <?php echo form_open('course/search_results', array('method' => 'get')); ?>
             <select id="college_id" name="collegeId" onchange="home.changedSearchSchool(this.value)">
                 <option value="0" selected>Select your school</option>
 
