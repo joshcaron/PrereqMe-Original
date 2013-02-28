@@ -1,4 +1,20 @@
 
+//Functions methods
+var common = {
+
+    //Expects a school ID and the searchElement (which is the input element)
+    initializeSearchAutocomplete : function(searchElement, schoolId)
+    {
+        var searchUrl = "index.php/course/search?collegeId=" + schoolId.toString();
+        searchElement.autocomplete({
+            source: searchUrl,
+            minLength: 2
+        });
+    }
+
+}
+
+//Functions for home page
 var home = {
 
     changedSearchSchool : function(newValue)
@@ -35,7 +51,9 @@ var home = {
     }
 };
 
-var my_plan = {
+
+//Functions for my plan page
+var myplan = {
 
     clickedSearch : function(inputField, schoolId)
     {
@@ -47,17 +65,3 @@ var my_plan = {
     }
 
 };
-
-var common = {
-
-    //Expects a school ID and the searchElement (which is the input element)
-    initializeSearchAutocomplete : function(searchElement, schoolId)
-    {
-        var searchUrl = "index.php/course/search?collegeId=" + schoolId.toString();
-        searchElement.autocomplete({
-            source: searchUrl,
-            minLength: 2
-        });
-    }
-
-}

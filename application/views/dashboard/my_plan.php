@@ -50,7 +50,7 @@
             <div class="helper_text">Drag courses to a semester on the left</div>
             <div class="box">
                 <form onsubmit="">
-                    <input type="text" id="search" onclick="clickedSearch(this, <?php echo "'", $user['schoolId'], "'"?>)" placeholder="Add course..." />
+                    <input type="text" id="search" onclick="myplan.clickedSearch(this, <?php echo "'", $user['schoolId'], "'"?>)" placeholder="Add course..." />
                     <input type="submit" value="Add"/>
                 </form>
                 <ul id="dump" class="connectedSortable">
