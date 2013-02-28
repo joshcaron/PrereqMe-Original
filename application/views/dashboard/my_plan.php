@@ -48,11 +48,11 @@
         <div id="COURSE_DUMP">
             <div class="header">Courses without a semester</div>
             <div class="helper_text">Drag courses to a semester on the left</div>
-            <form onsubmit="">
-                <input type="text" id="search" placeholder="Add course..." />
-                <input type="submit" value="Add"/>
-            </form>
             <div class="box">
+                <form onsubmit="">
+                    <input type="text" id="search" placeholder="Add course..." />
+                    <input type="submit" value="Add"/>
+                </form>
                 <ul id="dump" class="connectedSortable">
 
                 </ul>
