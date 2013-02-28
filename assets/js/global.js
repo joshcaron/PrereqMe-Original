@@ -43,7 +43,7 @@ var home = {
             if(school_id === 0)
             {
                 //Remove departments and disable department button 
-                dynamic_results.html("<option value=\"0\" selected>Select your department</option>");
+                dept_select.html("<option value=\"0\" selected>Select your department</option>");
                 dept_select.prop('disabled', true);
             }
             else
