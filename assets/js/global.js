@@ -58,7 +58,7 @@ var myplan = {
     clickedSearch : function(inputField, schoolId)
     {
         //Initializes autocomplete
-        common.initializeSearchAutocomplete(schoolId, inputField);
+        common.initializeSearchAutocomplete(inputField, schoolId);
 
         //Removes on-click so this method is only executed once
         inputField.removeAttr("onclick");
