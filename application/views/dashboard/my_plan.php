@@ -51,7 +51,7 @@
             <div class="box">
                 <input type="text" id="search" onclick="myplan.clickedSearch($(this), <?php echo "'", $user['schoolId'], "'"?>)" placeholder="Add course..." />
                 <ul id="dump" class="connectedSortable">
-
+                    
                 </ul>
             </div>
         </div>

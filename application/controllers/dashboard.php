@@ -138,8 +138,14 @@ class Dashboard extends PM_Controller
         }
         else
         {
-            //Retrieves the course and sends back the JSON
+            //Retrieves the course
             $course = $this->course_model->get_by_title($title);
+
+            //Adds the course to the user
+            $userId = $this->session->userdata('user_id');
+            $this->user_course_model->add_course_to_semester($course->id, 0, $userId);
+
+            //Sends back the JSON of the course
             $data['response'] = $course;
             $this->load->view('json', $data);
         }
