@@ -115,7 +115,7 @@ var myplan = {
 
         //Removes on-click so this method is only executed once
         inputField.removeAttr("onclick");
-    }
+    },
 
     addCourseToDump : function(courseTitle)
     {
