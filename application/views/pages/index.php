@@ -16,6 +16,7 @@
                     <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." disabled/>
                 </div>
             </div>
+            <div class="error"><?php echo form_error('query'); ?></div>
             <div>
                 <input type="submit" value="Search"/>
             </div>

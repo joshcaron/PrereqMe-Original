@@ -43,15 +43,14 @@ class Course extends PM_Controller
     // Otherwise, displays search results page
     public function search_results()
     {
-        $collegeId = $this->input->get('collegeId');
-        $query = $this->input->get('query');
+        $this->form_validation->set_rules('collegeId', 'College id', 'required');
+        $this->form_validation->set_rules('query', 'Search Query', 'required');
 
-        if($collegeId === FALSE || $query === FALSE)
+        if ($this->form_validation->run())
         {
-            log_message('error', 'GET Params were not received by search.index');
-        }
-        else
-        {
+            $collegeId = $this->input->get('collegeId');
+            $query = $this->input->get('query');
+
             //Performs search
             $results = $this->course_model->get_like_title($collegeId, $query);
 
