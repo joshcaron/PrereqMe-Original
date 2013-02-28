@@ -149,6 +149,35 @@ var myplan = {
     shouldHideDeleteButton : function(listElement)
     {
         listElement.find('.delete').last().prop('hidden', true);
+    },
+
+    shouldDeleteCourse : function(deleteButtonElement)
+    {
+        //Get course id from inner div
+        var courseId = deleteButtonElement.find('div').first().val();
+        var parentLi = deleteButtonElement.parent();
+        var parentUl = parentLi.parent();
+
+        var deleteUrl = "delete_course_from_user?courseId=" + courseId + "&semesterId=" + myplan.semesterIdFromSemesterUL(parentUl);
+        $.getJSON(deleteUrl ,function(response){
+            //Hide list element
+            parentLi.hide('blind', {}, 250, null);       
+        });
+    },
+
+    semesterIdFromSemesterUL : function(semesterULElement)
+    {
+        var id = semesterULElement.attr('id');
+
+        if(id.indexOf('dump') !== -1)
+        {
+            //Dump is semester 0
+            return "0";
+        }
+        else
+        {
+            return id.replace("semester_",'');
+        }
     }
 
 };

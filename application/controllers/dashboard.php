@@ -152,6 +152,24 @@ class Dashboard extends PM_Controller
             $this->load->view('json', $data);
         }
     }
+
+    //Removes the course from the user
+    public function delete_course_from_user()
+    {
+        $courseId = $this->input->get('courseId');
+        $semesterId = $this->input->get('semesterId');
+
+        if($courseId === FALSE OR $semesterId === FALSE)
+        {
+            log_message('error', 'Necessary params were not received by dasboard.delete_course_by_id');
+        }
+        else
+        {
+            $userId = $this->session->userdata('user_id');
+
+            $this->user_course_model->delete_course_from_user($courseId, $semesterId, $userId);
+        }
+    }
 }
 
 /* End of file signup.php */

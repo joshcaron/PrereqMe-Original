@@ -76,6 +76,25 @@ class User_course_model extends CI_Model
         }
     }
 
+    //Deletes the course from the user
+    public function delete_course_from_user($courseId = -1, $semesterId = -1, $userId = -1)
+    {
+        if($courseId === -1 OR $semesterId === -1 OR $userId === -1)
+        {
+            log_message('error', 'Not valid params sent to Course.delete_course_from_user');
+        }
+        else
+        {
+            $constraints = array(
+                'semesterId' => $semesterId,
+                'courseId' => $courseId,
+                'userId' => $userId
+            );
+
+            $this->db->delete('pm_user_course', $constraints);
+        }
+    }
+
     //Inserts the new semester
     public function add_semester($userId = -1, $semesterId = -1, $year = -1)
     {
