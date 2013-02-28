@@ -51,7 +51,16 @@
             <div class="box">
                 <input type="text" id="search" onclick="myplan.clickedSearch($(this), <?php echo "'", $user['schoolId'], "'"?>)" placeholder="Add course..." />
                 <ul id="dump" class="connectedSortable">
-                    
+                    <?php 
+                    foreach($courseDump as $course)
+                    {
+                        echo '<li class="ui-state-default">';
+                        echo '<input type="hidden" value="', $course->id, '"\>';
+                        echo $course->deptCode, $course->code, ' - ';
+                        echo $course->title, ' (', $course->credits, ')'; 
+                        echo '</li>';
+                    } 
+                    ?>
                 </ul>
             </div>
         </div>

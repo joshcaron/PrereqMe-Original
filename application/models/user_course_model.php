@@ -26,7 +26,7 @@ class User_course_model extends CI_Model
             //Gets the courses for each semester
             foreach($semesters as $semester)
             {
-                $semester->courses = $this->_get_courses_for_semester($semester->id);
+                $semester->courses = $this->get_courses_for_semester($userId, $semester->id);
             }
 
             return $semesters;
@@ -34,9 +34,9 @@ class User_course_model extends CI_Model
     }
 
     //Gets all the courses with the given semester id
-    private function _get_courses_for_semester($semesterId = -1)
+    private function get_courses_for_semester($userId = -1, $semesterId = -1)
     {
-        if($semesterId === -1)
+        if($userId = -1, $semesterId === -1)
         {
             log_message('error', 'Not a valid semesterId sent to Course.get_courses_for_semester');
             return array();
@@ -44,7 +44,8 @@ class User_course_model extends CI_Model
         else
         {
             $constraints = array(
-                'semesterId' => $semesterId
+                'semesterId' => $semesterId,
+                'userId' => $userId
             );
 
             $this->db->select('pm_course.*, pm_dept.code as deptCode');

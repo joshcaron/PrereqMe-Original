@@ -33,10 +33,12 @@ class Dashboard extends PM_Controller
             $schoolId = $this->session->userdata('school_id');
             $semesters = $this->user_course_model->get_semesters($userId);
             $schoolSemesters = $this->school_model->get_semeseters($schoolId);
+            $courseDump = $this->user_course_model->get_courses_for_semester($userId, 0);
 
             $data['title'] = 'My Plan - PrereqMe';
             $data['semesters'] = $semesters;
             $data['schoolSemesters'] = $schoolSemesters;
+            $data['courseDump'] = $courseDump;
 
             $this->load->view('templates/header', $data);
             $this->load->view('dashboard/my_plan', $data);
