@@ -154,7 +154,7 @@ var myplan = {
     shouldDeleteCourse : function(deleteButtonElement)
     {
         //Get course id from inner div
-        var courseId = deleteButtonElement.find('div').first().val();
+        var courseId = deleteButtonElement.find('input').first().val();
         var parentLi = deleteButtonElement.parent();
         var parentUl = parentLi.parent();
 
