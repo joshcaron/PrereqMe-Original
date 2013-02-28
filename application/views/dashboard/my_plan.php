@@ -31,10 +31,10 @@
                 for($courseIndex = 0; $courseIndex < count($semester->courses); $courseIndex++)
                 {
                     $course = $semester->courses[$courseIndex];
-                    echo '<li class="ui-state-default">';
-                    echo '<input type="hidden" value="', $course->id, '"\>';
+                    echo '<li class="ui-state-default" onmouseover="myplan.shouldShowDeleteButton($(this))" onmouseout="myplan.shouldHideDeleteButton($(this))">';
                     echo $course->deptCode, $course->code, ' - ';
                     echo $course->title, ' (', $course->credits, ')'; 
+                    echo '<div class="delete" onclick="myplan.shouldDeleteCourse($(this));" hidden><input type="hidden" value="', $course->id, '"\></div>';
                     echo '</li>';
                 }
                 ?>
