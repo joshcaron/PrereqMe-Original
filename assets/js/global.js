@@ -22,7 +22,7 @@ var home = {
                 //If coming from home controller
                 var searchUrl = "search?collegeId=" + schoolId.toString();
             }
-            ]
+
             //Setup autocomplete
             queryElement.autocomplete({
             source: searchUrl,
