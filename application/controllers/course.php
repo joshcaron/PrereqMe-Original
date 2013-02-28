@@ -93,7 +93,7 @@ class Course extends PM_Controller
 
             foreach($fullCourses as $course)
             {
-                $courseTitles[] = $course->deptCode.$course->code.' - '.$course->title;
+                $courseTitles[] = $course->title;
             }
 
             $data['response'] = $courseTitles;
