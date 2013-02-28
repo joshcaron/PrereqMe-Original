@@ -21,7 +21,7 @@ class Home extends PM_Controller
     }
 
     //Called by an ajax request to get the categories for a school
-    public function get_categories()
+    public function get_departments()
     {
         $schoolId = $this->input->get('collegeId');
 
