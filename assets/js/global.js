@@ -46,7 +46,7 @@ var common = {
     //Expects a school ID and the searchElement (which is the input element)
     initializeSearchAutocomplete : function(schoolId, searchElement)
     {
-        var searchUrl = "index.php/dashboard/search?collegeId=" + schoolId.toString();
+        var searchUrl = "index.php/course/search?collegeId=" + schoolId.toString();
         searchElement.autocomplete({
             source: searchUrl,
             minLength: 2
