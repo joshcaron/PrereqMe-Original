@@ -65,7 +65,23 @@ var home = {
             else
             {
                 //Make an ajax call to insert departments for the school and enable department button
-                var searchUrl = "index.php/home/get_departments?collegeId=" + school_id.toString();
+
+                //Makes sure it routes to the correct place
+                if (window.location.href.indexOf("home") !== -1)
+                {
+                    if(window.location.href.indexOf("home/index") !== -1)
+                    {
+                        var searchUrl = "get_departments?collegeId=" + school_id.toString();
+                    }
+                    else
+                    {
+                        var searchUrl = "home/get_departments?collegeId=" + school_id.toString();
+                    }
+                }
+                else
+                {
+                    var searchUrl = "index.php/home/get_departments?collegeId=" + school_id.toString();
+                }
                 $.getJSON(searchUrl ,function(result){
                     
                     dept_select.html("<option value=\"0\" selected>Select your department</option>");
