@@ -1,4 +1,4 @@
-body { margin:0px; font-family:'Lato', sans-serif; background-color:#eaf0f5; }
+body { margin:0px; font-family:'Lato', sans-serif; background-color:#FFFDEB; }
 #MAIN_CONTAINER { min-width:1000px; }
 
 
@@ -14,7 +14,7 @@ select { border-color:#999; }
 .ui-autocomplete { max-height:200px; overflow-y:auto; overflow-x:hidden; }
 
 /* Header */
-#HEADER { height:82px; background-color:#3d7aa6; color:#FFF; }
+#HEADER { height:82px; background-color:#0C6BA1; color:#FFF; }
 #HEADER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 #HEADER #CONTENT #logo { margin-top:16px; font-size:32px;}
 #HEADER #CONTENT #logo a { color:#FFF; text-decoration:none; }
@@ -22,7 +22,7 @@ select { border-color:#999; }
 #HEADER #CONTENT #login #forgot a { color:#FFF; font-size:14px; }
 
 /* Dashboard Links */
-#DASHBOARD_LINKS { padding:8px 15px; font-size:32px; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
+#DASHBOARD_LINKS { padding:8px 15px; font-size:32px; background-color:#D4D6D4; }
 #DASHBOARD_LINKS #CONTENT { width:717px; margin:0px auto; }
 #DASHBOARD_LINKS a { color:#000; text-decoration:none; }
 
@@ -31,7 +31,7 @@ select { border-color:#999; }
 #BODY_CONTAINER > div { height:100%; width:1250px; margin:0px auto; padding:42px 15px 0px; }
 
 /* Footer */
-#FOOTER { height:32px; background-color:#3d7aa6; color:#FFF; }
+#FOOTER { height:32px; background-color:#0C6BA1; color:#FFF; }
 #FOOTER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Home */
