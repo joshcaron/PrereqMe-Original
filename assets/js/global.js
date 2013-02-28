@@ -50,7 +50,7 @@ var home = {
             else
             {
                 //Make an ajax call to insert departments for the school and enable department button
-                var searchUrl = "index.php/home/get_categories?collegeId=" + school_id.toString();
+                var searchUrl = "index.php/home/get_departments?collegeId=" + school_id.toString();
                 $.getJSON(searchUrl ,function(result){
 
                     $.each(result, function(i, field){
