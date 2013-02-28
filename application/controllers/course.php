@@ -51,8 +51,6 @@ class Course extends PM_Controller
             $collegeId = $this->input->get('collegeId');
             $query = $this->input->get('query');
 
-            log_message('info', 'validation was a success');
-
             //Performs search
             $results = $this->course_model->get_like_title($collegeId, $query);
 
@@ -75,7 +73,7 @@ class Course extends PM_Controller
         }
         else
         {
-            redirect('/home/', 'index');
+            //redirect('/home/', 'index');
         }
     }
 }
