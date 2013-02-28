@@ -133,7 +133,7 @@ var myplan = {
                 dumpList.append(newListItem);
 
                 //Animates in object
-                dumpList.find('li').last().show('slide', {}, 500, null);
+                dumpList.find('li').last().show('slide', {}, 250, null);
 
                 //Resets the value of the search bar
                 $('#COURSE_DUMP #search').first().val('');
