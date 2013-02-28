@@ -78,11 +78,8 @@ class Course extends PM_Controller
     //Used by an AJAX call for the search typeahead
     public function search()
     {
-        echo "YAYYYY";
         $collegeId = $this->input->get('collegeId');
         $query = $this->input->get('term'); //use 'term' instead of 'query' here because it is automatically set by jQueryUI
-
-        log_message('error', 'made it to search: collegeId->'.$collegeId.' query:'.$query);
 
         if($collegeId === FALSE || $query === FALSE)
         {
@@ -98,8 +95,6 @@ class Course extends PM_Controller
             {
                 $courseTitles[] = $course->title;
             }
-
-            log_message('error', 'Got courses:'.count($courseTitles));
 
             $data['response'] = $courseTitles;
             $this->load->view('json', $data);
