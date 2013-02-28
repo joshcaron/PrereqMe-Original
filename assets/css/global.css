@@ -54,5 +54,6 @@ select { border-color:#999; }
 #MY_PLAN .box { padding:20px; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#FFF; }
 #MY_PLAN .header { font-size:25px; font-weight:bold; }
 #MY_PLAN ul { min-height:30px; padding:0px; }
-#MY_PLAN li { margin:8px; padding:10px; list-style-type:none; cursor:move; }
+#MY_PLAN li { position:relative; margin:8px; padding:10px; list-style-type:none; cursor:move; }
+#MY_PLAN li .delete { position:absolute; top:4px; right:4px; width:20px; height:20px; background-color:#000; }
 #MY_PLAN li.ui-state-highlight { cursor:default; }
