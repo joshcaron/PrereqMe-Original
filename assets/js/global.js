@@ -12,22 +12,8 @@ var home = {
             queryElement.prop('disabled', false);
             queryElement.focus();
 
-            if(window.location.href.indexOf("home") === -1)
-            {
-                if(window.location.href.indexOf("index.php") === -1)
-                {
-                    var searchUrl = "index.php/home/search_home?collegeId=" + newValue.toString();
-                }
-                else
-                {
-                    var searchUrl = "home/search_home?collegeId=" + newValue.toString();
-                }
-            }
-            else
-            {
-                //If coming from home controller
-                var searchUrl = "search_home?collegeId=" + newValue.toString();
-            }
+            //If coming from base url
+            var searchUrl = "index.php/home/search_home?collegeId=" + newValue.toString();
 
             //Setup autocomplete
             queryElement.autocomplete({
