@@ -49,19 +49,15 @@ var home = {
             }
             else
             {
-                /*//Make an ajax call to insert departments for the school and enable department button
-                xmlhttp=new XMLHttpRequest();
-                xmlhttp.onreadystatechange=function()
-                {
-                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                    {
-                        document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
-                    }
-                }
-
+                //Make an ajax call to insert departments for the school and enable department button
                 var searchUrl = "index.php/home/get_departments?collegeId=" + school_id.toString();
-                xmlhttp.open("GET", searchUrl, true);
-                xmlhttp.send();*/
+                $.getJSON(searchUrl ,function(result){
+
+                    $.each(result, function(i, field){
+                        dynamic_results.append(field + " ");
+                    });
+                    
+                });
             }
 
             submit_buttom.prop('disabled', true);
