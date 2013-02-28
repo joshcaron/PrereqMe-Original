@@ -58,7 +58,7 @@
                         echo '<input type="hidden" value="', $course->id, '"\>';
                         echo $course->deptCode, $course->code, ' - ';
                         echo $course->title, ' (', $course->credits, ')'; 
-                        echo '<div class="delete"></div>';
+                        echo '<div class="delete" hidden></div>';
                         echo '</li>';
                     } 
                     ?>

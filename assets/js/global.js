@@ -126,7 +126,7 @@ var myplan = {
             if(course !== null)
             {
                 var newListItem = "<li class=\"ui-state-default\" hidden onmouseover=\"myplan.shouldShowDeleteButton($(this))\" onmouseout=\"myplan.shouldHideDeleteButton($(this))\"><input type=\"hidden\" value=\"" + course.id + "\"/>" +
-                                    course.deptCode + course.code + " - " + course.title + " (" + course.credits + ")";
+                                    course.deptCode + course.code + " - " + course.title + " (" + course.credits + ")" + "\n<div class=\"delete\" hidden></div>" + "\n</li>";
 
                 //Adds the new div
                 var dumpList = $("#COURSE_DUMP #dump").first();
