@@ -9,7 +9,7 @@ var home = {
         {
             queryElement.prop('disabled', false);
             queryElement.focus();
-            home.initializeSearchAutocomplete(newValue);
+            common.initializeSearchAutocomplete(newValue, $("#search_box #query"));
         }
         else
         {
@@ -32,14 +32,25 @@ var home = {
         {
             submit_buttom.prop('disabled', true);
         }
-    },
+    }
+};
 
-    initializeSearchAutocomplete : function(schoolId)
+var my_plan = {
+
+    
+
+};
+
+var common = {
+
+    //Expects a school ID and the searchElement (which is the input element)
+    initializeSearchAutocomplete : function(schoolId, searchElement)
     {
-        var searchUrl = "index.php/course/search?collegeId=" + schoolId.toString();
-        $( "#search_box #query" ).autocomplete({
+        var searchUrl = "index.php/dashboard/search?collegeId=" + schoolId.toString();
+        searchElement.autocomplete({
             source: searchUrl,
             minLength: 2
         });
     }
-};
+
+}

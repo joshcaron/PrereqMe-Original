@@ -48,6 +48,10 @@
         <div id="COURSE_DUMP">
             <div class="header">Courses without a semester</div>
             <div class="helper_text">Drag courses to a semester on the left</div>
+            <form onsubmit="">
+                <input type="text" id="search" placeholder="Add course..." />
+                <input type="submit" value="Add"/>
+            </form>
             <div class="box">
                 <ul id="dump" class="connectedSortable">
 
@@ -60,6 +64,7 @@
 
 <script type="text/javascript">
 $(function() {
+    //Make the semesters sortable
     $( 
         <?php 
             echo"'";
@@ -74,5 +79,9 @@ $(function() {
         items: "li:not(.ui-state-highlight)",
         placeholder: "ui-state-highlight"
     }).disableSelection();
-  });
+
+    //Creates autocomplete for "add course" input
+    common.initializeSearchAutocomplete("<?php echo $user['school_id']?>", $("#COURSE_DUMP #search"));
+});
+
 </script>

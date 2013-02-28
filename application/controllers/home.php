@@ -80,7 +80,8 @@ class Home extends PM_Controller
                     'user_id' => $user->id,
                     'email' => $user->email,
                     'first_name' => $user->firstName,
-                    'school_id' => $user->schoolId
+                    'school_id' => $user->schoolId,
+                    'dept_id' => $user->deptId
                 );
 
                 $this->session->set_userdata($user_data);
