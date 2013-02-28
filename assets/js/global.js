@@ -125,11 +125,15 @@ var myplan = {
                 
             if(course !== null)
             {
-                var newListItem = "<li class=\"ui-state-default\"><input type=\"hidden\" value=\"" + course.id + "\"/>" +
+                var newListItem = "<li class=\"ui-state-default\" hidden><input type=\"hidden\" value=\"" + course.id + "\"/>" +
                                     course.deptCode + course.code + " - " + course.title + " (" + course.credits + ")";
 
                 //Adds the new div
-                $("#COURSE_DUMP #dump").first().append(newListItem);
+                var dumpList = $("#COURSE_DUMP #dump").first();
+                dumpList.append(newListItem);
+
+                //Animates in object
+                dumpList.find('li').last().show('slide', {}, 500, null);
 
                 //Resets the value of the search bar
                 $('#COURSE_DUMP #search').first().val('');
