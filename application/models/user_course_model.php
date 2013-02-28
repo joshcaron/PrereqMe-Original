@@ -34,7 +34,7 @@ class User_course_model extends CI_Model
     }
 
     //Gets all the courses with the given semester id
-    private function get_courses_for_semester($userId = -1, $semesterId = -1)
+    public function get_courses_for_semester($userId = -1, $semesterId = -1)
     {
         if($userId = -1 OR $semesterId === -1)
         {
