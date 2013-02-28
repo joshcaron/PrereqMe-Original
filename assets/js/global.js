@@ -119,7 +119,7 @@ var myplan = {
 
     addCourseToDump : function(courseTitle)
     {
-        var getUrl = "get_course?title=" + courseTitle;
+        var getUrl = "get_course_by_title?title=" + courseTitle;
 
         $.getJSON(getUrl ,function(course){
                 

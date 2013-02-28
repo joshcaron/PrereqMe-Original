@@ -108,7 +108,7 @@ class Dashboard extends PM_Controller
 
         if($collegeId === FALSE || $query === FALSE)
         {
-            log_message('error', 'GET Params were not received by search.index');
+            log_message('error', 'GET Params were not received by dashboard.search');
         }
         else
         {
@@ -123,6 +123,22 @@ class Dashboard extends PM_Controller
 
             $data['response'] = $courseTitles;
             $this->load->view('json', $data);
+        }
+    }
+
+    //Gets a course based on its title
+    //Used by an AJAX call to add courses to your dump
+    public function get_course_by_title()
+    {
+        $title = $this->input->get('title');
+
+        if($title === FALSE)
+        {
+            log_message('error', 'Title was not received by dashboard.get_course_by_title');
+        }
+        else
+        {
+            $this->course_model
         }
     }
 }
