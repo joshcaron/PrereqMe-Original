@@ -125,7 +125,7 @@ var myplan = {
                 
             if(course !== null)
             {
-                var newListItem = "<li class=\"ui-state-default\" hidden onmouseover=\"myplan.shouldShowDeleteButton()\" onmouseout=\"myplan.shouldHideDeleteButton()\"><input type=\"hidden\" value=\"" + course.id + "\"/>" +
+                var newListItem = "<li class=\"ui-state-default\" hidden onmouseover=\"myplan.shouldShowDeleteButton($(this))\" onmouseout=\"myplan.shouldHideDeleteButton($(this))\"><input type=\"hidden\" value=\"" + course.id + "\"/>" +
                                     course.deptCode + course.code + " - " + course.title + " (" + course.credits + ")";
 
                 //Adds the new div
