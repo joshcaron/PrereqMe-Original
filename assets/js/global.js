@@ -40,11 +40,10 @@ var home = {
         }
         else
         {
-            var dynamic_results = $('#HOME #sign_up #dept_id .dynamic_results').first();
             if(school_id === 0)
             {
                 //Remove departments and disable department button 
-                dynamic_results.html("");
+                dynamic_results.html("<option value=\"0\" selected>Select your department</option>");
                 dept_select.prop('disabled', true);
             }
             else
@@ -52,11 +51,12 @@ var home = {
                 //Make an ajax call to insert departments for the school and enable department button
                 var searchUrl = "index.php/home/get_departments?collegeId=" + school_id.toString();
                 $.getJSON(searchUrl ,function(result){
-
-                    $.each(result, function(i, field){
-                        dynamic_results.append(field + " ");
-                    });
                     
+                    dept_select.html("<option value=\"0\" selected>Select your department</option>");
+                    $.each(result, function(i, field){
+                        dept_select.append(field + " ");
+                    });
+
                 });
             }
 
