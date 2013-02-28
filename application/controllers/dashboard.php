@@ -138,7 +138,10 @@ class Dashboard extends PM_Controller
         }
         else
         {
-            $this->course_model
+            //Retrieves the course and sends back the JSON
+            $course = $this->course_model->get_by_title($title);
+            $data['response'] = $course;
+            $this->load->view('json', $data);
         }
     }
 }
