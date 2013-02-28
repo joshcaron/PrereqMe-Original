@@ -54,7 +54,8 @@ var home = {
                     
                     dept_select.html("<option value=\"0\" selected>Select your department</option>");
                     $.each(result, function(i, field){
-                        dept_select.append(field.code);
+                        optionTag = "<option class=\"department\" value=\"" + field.id + "\">" + field.code + "</option>";
+                        dept_select.append(optionTag);
                     });
 
                 });
