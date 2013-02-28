@@ -24,7 +24,7 @@ class Course_model extends CI_Model
     // Returns the courses that contain the query string
     public function get_like_title($collegeId = -1, $query = '')
     {
-        if ($collegeId === -1 OR $query === '')
+        if ($collegeId === -1)
         {
             log_message('error', 'Necessary params were not sent to Course_model.get_like_title');
         }
