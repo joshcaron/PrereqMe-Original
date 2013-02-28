@@ -125,7 +125,7 @@ var myplan = {
                 
             if(course !== null)
             {
-                var newListItem = "<li class=\"ui-state-default\" hidden><input type=\"hidden\" value=\"" + course.id + "\"/>" +
+                var newListItem = "<li class=\"ui-state-default\" hidden onmouseover=\"myplan.shouldShowDeleteButton()\" onmouseout=\"myplan.shouldHideDeleteButton()\"><input type=\"hidden\" value=\"" + course.id + "\"/>" +
                                     course.deptCode + course.code + " - " + course.title + " (" + course.credits + ")";
 
                 //Adds the new div
@@ -139,6 +139,16 @@ var myplan = {
                 $('#COURSE_DUMP #search').first().val('');
             }   
         });  
+    },
+
+    shouldShowDeleteButton : function(listElement)
+    {
+        listElement.find('.delete').last().prop('hidden', false);
+    },
+
+    shouldHideDeleteButton : function(listElement)
+    {
+        listElement.find('.delete').last().prop('hidden', true);
     }
 
 };

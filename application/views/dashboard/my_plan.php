@@ -54,7 +54,7 @@
                     <?php 
                     foreach($courseDump as $course)
                     {
-                        echo '<li class="ui-state-default">';
+                        echo '<li class="ui-state-default" onmouseover="myplan.shouldShowDeleteButton()" onmouseout="myplan.shouldHideDeleteButton()">';
                         echo '<input type="hidden" value="', $course->id, '"\>';
                         echo $course->deptCode, $course->code, ' - ';
                         echo $course->title, ' (', $course->credits, ')'; 
