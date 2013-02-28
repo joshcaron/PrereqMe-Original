@@ -73,7 +73,7 @@ class Course extends PM_Controller
         }
         else
         {
-            $this->index();
+            redirect('/home/', 'index');
         }
     }
 }
