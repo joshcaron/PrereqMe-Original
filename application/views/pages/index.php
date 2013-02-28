@@ -46,7 +46,7 @@
                     <tr><td class="error"><?php echo form_error('collegeId'); ?></td></tr>
 
                     <tr><td>
-                        <select id="dept_id" name="deptId" onchange="home.changedSchoolOrDept()">
+                        <select id="dept_id" name="deptId" onchange="home.changedSchoolOrDept()" disabled>
                             <option value="0" selected>Select your department</option>
                         </select>
                     </td></tr>
