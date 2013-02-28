@@ -11,7 +11,6 @@ var home = {
         {
             queryElement.prop('disabled', false);
             queryElement.focus();
-            common.initializeSearchAutocomplete($("#search_box #query"), newValue);
 
             if(window.location.href.indexOf("index.php") === -1)
             {
@@ -23,7 +22,9 @@ var home = {
                 //If coming from home controller
                 var searchUrl = "search?collegeId=" + schoolId.toString();
             }
-            searchElement.autocomplete({
+            ]
+            //Setup autocomplete
+            queryElement.autocomplete({
             source: searchUrl,
             minLength: 2
             });
@@ -60,7 +61,7 @@ var myplan = {
     {
         //Initializes autocomplete
         var searchUrl = "search?collegeId=" + schoolId.toString();
-        searchElement.autocomplete({
+        inputField.autocomplete({
             source: searchUrl,
             minLength: 2
         });
