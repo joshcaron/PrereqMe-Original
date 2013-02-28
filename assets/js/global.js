@@ -9,7 +9,7 @@ var home = {
         {
             queryElement.prop('disabled', false);
             queryElement.focus();
-            common.initializeSearchAutocomplete(newValue, $("#search_box #query"));
+            common.initializeSearchAutocomplete($("#search_box #query"), newValue);
         }
         else
         {
@@ -37,9 +37,13 @@ var home = {
 
 var my_plan = {
 
-    clickedSearch : function(schoolId)
+    clickedSearch : function(inputField, schoolId)
     {
-        common.initializeSearchAutocomplete(schoolId, $("#COURSE_DUMP #search"));
+        //Initializes autocomplete
+        common.initializeSearchAutocomplete(schoolId, inputField);
+
+        //Removes on-click so this method is only executed once
+        inputField.removeAttr("onclick");
     }
 
 };
@@ -47,7 +51,7 @@ var my_plan = {
 var common = {
 
     //Expects a school ID and the searchElement (which is the input element)
-    initializeSearchAutocomplete : function(schoolId, searchElement)
+    initializeSearchAutocomplete : function(searchElement, schoolId)
     {
         var searchUrl = "index.php/course/search?collegeId=" + schoolId.toString();
         searchElement.autocomplete({
