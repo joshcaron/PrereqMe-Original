@@ -39,7 +39,6 @@ class Dashboard extends PM_Controller
             $data['semesters'] = $semesters;
             $data['schoolSemesters'] = $schoolSemesters;
             $data['courseDump'] = $courseDump;
-            echo count($courseDump);
 
             $this->load->view('templates/header', $data);
             $this->load->view('dashboard/my_plan', $data);
