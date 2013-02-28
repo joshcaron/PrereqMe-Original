@@ -109,7 +109,7 @@ var myplan = {
             source: searchUrl,
             minLength: 2,
             select: function( event, ui ) {
-
+                myplan.addCourseToDump(ui);
             }
         });
 
