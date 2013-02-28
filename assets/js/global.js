@@ -58,6 +58,7 @@ var home = {
                         dept_select.append(optionTag);
                     });
 
+                    dept_select.prop('disabled', false);
                 });
             }
 
