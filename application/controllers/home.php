@@ -133,7 +133,7 @@ class Home extends PM_Controller
 
     //Performs a search and prints an array of titles
     //Used by an AJAX call for the search typeahead
-    public function search()
+    public function hi()
     {
         $collegeId = $this->input->get('collegeId');
         $query = $this->input->get('term'); //use 'term' instead of 'query' here because it is automatically set by jQueryUI
