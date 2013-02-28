@@ -37,7 +37,10 @@ var home = {
 
 var my_plan = {
 
-    
+    clickedSearch : function(schoolId)
+    {
+        common.initializeSearchAutocomplete(schoolId, $("#COURSE_DUMP #search"));
+    }
 
 };
 

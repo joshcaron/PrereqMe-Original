@@ -50,7 +50,7 @@
             <div class="helper_text">Drag courses to a semester on the left</div>
             <div class="box">
                 <form onsubmit="">
-                    <input type="text" id="search" placeholder="Add course..." />
+                    <input type="text" id="search" onclick="clickedSearch(this, <?php echo "'", $user['id'], "'"?>)" placeholder="Add course..." />
                     <input type="submit" value="Add"/>
                 </form>
                 <ul id="dump" class="connectedSortable">
@@ -79,9 +79,6 @@ $(function() {
         items: "li:not(.ui-state-highlight)",
         placeholder: "ui-state-highlight"
     }).disableSelection();
-
-    //Creates autocomplete for "add course" input
-    common.initializeSearchAutocomplete(<?php echo "'", $user['school_id']?>, $("#COURSE_DUMP #search"));
 });
 
 </script>
