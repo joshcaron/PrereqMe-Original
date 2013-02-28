@@ -71,6 +71,10 @@ class Course extends PM_Controller
                 $this->load->view('templates/footer');
             }
         }
+        else
+        {
+            $this->index();
+        }
     }
 }
 
