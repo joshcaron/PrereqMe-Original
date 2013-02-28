@@ -1,5 +1,3 @@
-
-
 //Functions for home page
 var home = {
 
@@ -28,7 +26,6 @@ var home = {
             {
                 var searchUrl = "index.php/home/search_home?collegeId=" + newValue.toString();
             }
-            
 
             //Setup autocomplete
             queryElement.autocomplete({
@@ -103,17 +100,41 @@ var home = {
 //Functions for my plan page
 var myplan = {
 
+    //Initializes autocomplete
     clickedSearch : function(inputField, schoolId)
     {
         //Initializes autocomplete
         var searchUrl = "search?collegeId=" + schoolId.toString();
         inputField.autocomplete({
             source: searchUrl,
-            minLength: 2
+            minLength: 2,
+            select: function( event, ui ) {
+
+            }
         });
 
         //Removes on-click so this method is only executed once
         inputField.removeAttr("onclick");
+    }
+
+    addCourseToDump : function(courseTitle)
+    {
+        var getUrl = "get_course?title=" + courseTitle;
+
+        $.getJSON(getUrl ,function(course){
+                
+            if(course !== null)
+            {
+                var newListItem = "<li class=\"ui-state-default\"><input type=\"hidden\" value=\"" + course.id + "\"/>" +
+                                    course.deptCode + course.code + " - " + course.title + " (" + course.credits + ")";
+
+                //Adds the new div
+                $("#COURSE_DUMP #dump").first().append(newListItem);
+
+                //Resets the value of the search bar
+                $('#COURSE_DUMP #search').first().val('');
+            }   
+        });  
     }
 
 };
