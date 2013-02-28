@@ -15,12 +15,12 @@ var home = {
             if(window.location.href.indexOf("index.php") === -1)
             {
                 //If coming from base url
-                var searchUrl = "index.php/home/search?collegeId=" + schoolId.toString();
+                var searchUrl = "index.php/home/search?collegeId=" + newValue.toString();
             }
             else
             {
                 //If coming from home controller
-                var searchUrl = "search?collegeId=" + schoolId.toString();
+                var searchUrl = "search?collegeId=" + newValue.toString();
             }
 
             //Setup autocomplete
