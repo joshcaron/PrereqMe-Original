@@ -28,6 +28,11 @@ class Course_model extends CI_Model
         {
             log_message('error', 'Necessary params were not sent to Course_model.get_like_title');
         }
+        //Returns a blank array if no query was specified
+        if ($query === '')
+        {
+            return array();
+        }
         else
         {
             $this->db->select('pm_course.*, pm_dept.code as deptCode');
