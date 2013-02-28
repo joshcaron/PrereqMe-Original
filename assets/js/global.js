@@ -12,7 +12,7 @@ var home = {
             queryElement.prop('disabled', false);
             queryElement.focus();
 
-            if(window.location.href.indexOf("index.php") === -1)
+            if(window.location.href.indexOf("home") === -1)
             {
                 //If coming from base url
                 var searchUrl = "index.php/home/search?collegeId=" + newValue.toString();
