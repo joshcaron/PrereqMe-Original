@@ -81,8 +81,6 @@ class Course extends PM_Controller
         $collegeId = $this->input->get('collegeId');
         $query = $this->input->get('term'); //use 'term' instead of 'query' here because it is automatically set by jQueryUI
 
-        log_message('error', 'made it to search: collegeId->'.$collegeId.' query:'.$query);
-
         if($collegeId === FALSE || $query === FALSE)
         {
             log_message('error', 'GET Params were not received by search.index');
@@ -95,10 +93,8 @@ class Course extends PM_Controller
 
             foreach($fullCourses as $course)
             {
-                $courseTitles[] = $course->deptCode.$course->code.' - '.$course->title;
+                $courseTitles[] = ''.$course->deptCode.$course->code.' - '.$course->title;
             }
-
-            log_message('error', 'Got courses:'.count($courseTitles));
 
             $data['response'] = $courseTitles;
             $this->load->view('json', $data);
