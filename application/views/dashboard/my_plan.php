@@ -58,6 +58,7 @@
                         echo '<input type="hidden" value="', $course->id, '"\>';
                         echo $course->deptCode, $course->code, ' - ';
                         echo $course->title, ' (', $course->credits, ')'; 
+                        echo '<div style="float:right; width:20px; height:20px; background-color:#000;></div>';
                         echo '</li>';
                     } 
                     ?>
