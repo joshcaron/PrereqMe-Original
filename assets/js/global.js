@@ -12,16 +12,7 @@ var home = {
             queryElement.prop('disabled', false);
             queryElement.focus();
 
-            if(window.location.href.indexOf("home") === -1)
-            {
-                //If coming from base url
-                var searchUrl = "index.php/home/search_home?collegeId=" + newValue.toString();
-            }
-            else
-            {
-                //If coming from home controller
-                var searchUrl = "search_home?collegeId=" + newValue.toString();
-            }
+            var searchUrl = "index.php/home/search_home?collegeId=" + newValue.toString();
 
             //Setup autocomplete
             queryElement.autocomplete({
