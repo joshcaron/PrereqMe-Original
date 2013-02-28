@@ -48,8 +48,8 @@ class Course extends PM_Controller
 
         if ($this->form_validation->run())
         {
-            $collegeId = $this->input->get('collegeId');
-            $query = $this->input->get('query');
+            $collegeId = $this->input->post('collegeId');
+            $query = $this->input->post('query');
 
             //Performs search
             $results = $this->course_model->get_like_title($collegeId, $query);
