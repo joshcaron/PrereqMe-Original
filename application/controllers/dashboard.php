@@ -88,17 +88,33 @@ class Dashboard extends PM_Controller
     //Expected params in post: title
     public function add_semester()
     {
-        $this->form_validation->set_rules('semesterId', 'Semester', 'required');
         $this->form_validation->set_rules('year', 'Year', 'required');
+        $this->form_validation->set_rules('semesterId', 'Semester', 'callback_duplicate_semester');
+        $this->form_validation->set_message('callback_duplicate_semester', 'You have already added that semester');
 
         if( $this->form_validation->run())
         {
             $semesterId = $this->input->post('semesterId');
             $year = $this->input->post('year');
             $userId = $this->session->userdata('user_id');
+
             $this->user_course_model->add_semester($userId, $semesterId, $year);
         }
         $this->my_plan();
+    }
+
+    public function duplicate_semester($semesterId)
+    {
+        if($semesterId != FALSE && $semesterId > 0)
+        {
+            $year = $this->input->post('year');
+            $userId = $this->session->userdata('user_id');
+            return $this->user_course_model->has_semester($semesterId, $year, $userId);
+        }
+        else
+        {
+            return FALSE;
+        }
     }
 
     //Performs a search and prints an array of titles
@@ -151,6 +167,9 @@ class Dashboard extends PM_Controller
                 //Adds the course to the user
                 $course = $courses[0];
                 $userId = $this->session->userdata('user_id');
+
+                //Sees if it wa
+
                 $this->user_course_model->add_course_to_semester($course->id, 0, $userId);
 
                 //Sends back the JSON of the course

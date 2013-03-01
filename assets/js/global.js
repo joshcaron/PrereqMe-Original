@@ -230,5 +230,5 @@ var myplan = {
     {
         return deleteDivElement.find('input').first().val();
     }
-
+    
 };

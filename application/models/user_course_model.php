@@ -165,7 +165,7 @@ class User_course_model extends CI_Model
     {
         if($courseId === -1 OR $semesterId === -1 OR $userId === -1)
         {
-            log_message('error', 'Not valid params sent to Course.move_course');
+            log_message('error', 'Not valid params sent to User_course_model.move_course');
         }
         else
         {
@@ -186,6 +186,26 @@ class User_course_model extends CI_Model
 
             $this->db->insert('pm_user_course', $newData);
             return $this->db->insert_id();
+        }
+    }
+
+    //Returns whether the user has already added the semester
+    public function has_semester($semesterId = -1, $year = -1, $userId = -1)
+    {
+        if($semesterId === -1 OR $year === -1 OR $userId === -1)
+        {
+            log_message('error', 'Not valid params sent to User_course_model.has_semester');
+        }
+        else
+        {
+            $constraints = array(  
+                'id' => $semesterId,
+                'year' => $year,
+                'userId' => $userId
+            );
+            $this->db->where($constraints);
+            $this->db->from('pm_user_semester');
+            return $this->db->count_all_results() == 1;
         }
     }
 }

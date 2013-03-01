@@ -20,6 +20,7 @@
                     <?php endforeach ?>
                 </select>
                 <input type="submit" value="Add">
+                <div class="error"><?php echo form_error('semesterId');?></div>
             </form>
         </div>
 
