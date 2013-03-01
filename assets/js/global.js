@@ -171,8 +171,8 @@ var myplan = {
         $(function() {
             $( "#MY_PLAN #dialog-delete-semester" ).dialog({
                 resizable: false,
-                height:140,
-                width:387,
+                minHeight:140,
+                minWidth:387,
                 modal: true,
                 buttons: {
                     "Delete Semester": function() {
