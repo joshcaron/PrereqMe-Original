@@ -24,8 +24,9 @@
         </div>
 
         <?php foreach($semesters as $semester): ?>
-            <div class="semester box">
-                <ul id="semester_<?php echo $semester->id?>" class="connectedSortable">
+            <div class="semester box" onmouseover="myplan.shouldShowDeleteButton($(this))" onmouseout="myplan.shouldHideDeleteButton($(this))">
+                <ul id="semester_<?php echo $semester->id?>" class="connectedSortable" >
+                <div class="delete" onclick="myplan.shouldDeleteSemester($(this));" hidden></div>
                 <div class="semester_title"><?php echo $semester->title, ' (', $semester->year, ')'?></div>
                 <?php 
                 for($courseIndex = 0; $courseIndex < count($semester->courses); $courseIndex++)
@@ -104,5 +105,4 @@ $(function() {
         }
     }).disableSelection();
 });
-
 </script>

@@ -95,6 +95,31 @@ class User_course_model extends CI_Model
         }
     }
 
+    //Deletes the semester and all the courses connected to it
+    public function delete_semester($semesterId = -1)
+    {
+        if($semesterId <= 0)
+        {
+            log_message('error', 'Not valid params sent to Course.delete_semester');
+        }
+        else
+        {
+            $constraints = array(
+                'id' => $semesterId
+            );
+
+            //Delete semester
+            $this->db->delete('pm_user_semester', $constraints);
+
+            $constraints = array(
+                'semesterId' => $semesterId
+            );
+
+            //Delete courses
+            $this->db->delete('pm_user_course', $constraints);
+        }
+    }
+
     //Changes the semester of the course
     public function change_semester($courseId = -1, $semesterId = -1, $userId = -1)
     {

@@ -171,6 +171,21 @@ class Dashboard extends PM_Controller
         }
     }
 
+    //Removes the semester from the user and all the courses associated with it
+    public function delete_semester_from_user()
+    {
+        $semesterId = $this->input->get('semesterId');
+
+        if($semesterId === FALSE)
+        {
+            log_message('error', 'SemesterId not received by dasboard.delete_course_by_id');
+        }
+        else
+        {
+            $this->user_course_model->delete_semester($semesterId);
+        }
+    }
+
     //Changes the semester of the course to a new semester
     public function change_semester()
     {

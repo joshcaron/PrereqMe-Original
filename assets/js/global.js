@@ -143,12 +143,12 @@ var myplan = {
 
     shouldShowDeleteButton : function(listElement)
     {
-        listElement.find('.delete').last().prop('hidden', false);
+        listElement.find('.delete').first().prop('hidden', false);
     },
 
     shouldHideDeleteButton : function(listElement)
     {
-        listElement.find('.delete').last().prop('hidden', true);
+        listElement.find('.delete').first().prop('hidden', true);
     },
 
     shouldDeleteCourse : function(deleteButtonElement)
@@ -164,6 +164,18 @@ var myplan = {
 
         //Hide list element
         parentLi.hide('blind', {}, 250, null);       
+    },
+
+    shouldDeleteSemester : function(deleteButtonElement)
+    {
+        var parentUl = deleteButtonElement.parent();
+
+        //Executes delete
+        var deleteUrl = "delete_semester_from_user?&semesterId=" + myplan.semesterIdFromSemesterUL(parentUl);
+        $.getJSON(deleteUrl ,null);
+
+        //Hide list element
+        parentUl.hide('blind', {}, 250, null);       
     },
 
     //Gets the semester Id from the semester UL element
