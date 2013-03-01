@@ -175,7 +175,7 @@ var myplan = {
         $.getJSON(deleteUrl ,null);
 
         //Hide box element
-        parentUl.parent()hide('blind', {}, 250, null);       
+        parentUl.parent().hide('blind', {}, 250, null);       
     },
 
     //Gets the semester Id from the semester UL element
