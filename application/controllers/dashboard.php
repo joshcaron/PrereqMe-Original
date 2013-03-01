@@ -104,7 +104,7 @@ class Dashboard extends PM_Controller
 
     public function duplicate_semester($semesterId)
     {
-        if($semesterId != FALSE && $semesterId > 0)
+        if($semesterId !== FALSE && $semesterId > 0)
         {
             $year = $this->input->post('year');
             $userId = $this->session->userdata('user_id');
