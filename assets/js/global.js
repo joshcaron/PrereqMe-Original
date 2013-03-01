@@ -122,9 +122,14 @@ var myplan = {
         var getUrl = "get_course_by_title?title=" + courseTitle;
 
         $.getJSON(getUrl ,function(course){
-                
-            if(course !== null)
+            
+            var error = $('#COURSE_DUMP .box .error').first();
+
+            if(course !== null && course.id !== null)
             {
+                error.show();
+
+                //Course found so add it
                 var newListItem = "<li class=\"ui-state-default\" hidden onmouseover=\"myplan.shouldShowDeleteButton($(this))\" onmouseout=\"myplan.shouldHideDeleteButton($(this))\">" +
                                     course.deptCode + course.code + " - " + course.title + " (" + course.credits + ")" + "\n<div class=\"delete\" onclick=\"myplan.shouldDeleteCourse($(this));\" hidden><input type=\"hidden\" value=\"" + course.id + "\"/></div>" + "\n</li>";
 
@@ -138,6 +143,11 @@ var myplan = {
                 //Resets the value of the search bar
                 $('#COURSE_DUMP #search').first().val('');
             }   
+            else
+            {
+                //No course found so present error
+                error.hide();
+            }
         });  
     },
 
@@ -168,31 +178,28 @@ var myplan = {
 
     shouldDeleteSemester : function(deleteButtonElement)
     {
-        $(function() {
-            $( "#MY_PLAN #dialog-delete-semester" ).dialog({
-                resizable: false,
-                minHeight:140,
-                minWidth:387,
-                modal: true,
-                buttons: {
-                    "Delete Semester": function() {
-                        $( this ).dialog( "close" );
-                        var parentUl = deleteButtonElement.parent();
+        $( "#MY_PLAN #dialog-delete-semester" ).dialog({
+            resizable: false,
+            minHeight:140,
+            minWidth:387,
+            modal: true,
+            buttons: {
+                "Delete Semester": function() {
+                    $( this ).dialog( "close" );
+                    var parentUl = deleteButtonElement.parent();
 
-                        //Executes delete
-                        var deleteUrl = "delete_semester_from_user?&semesterId=" + myplan.semesterIdFromSemesterUL(parentUl);
-                        $.getJSON(deleteUrl ,null);
+                    //Executes delete
+                    var deleteUrl = "delete_semester_from_user?&semesterId=" + myplan.semesterIdFromSemesterUL(parentUl);
+                    $.getJSON(deleteUrl ,null);
 
-                        //Hide box element
-                        parentUl.parent().hide('blind', {}, 250, null);   
-                    },
-                    Cancel: function() {
-                        $( this ).dialog( "close" );
-                    }
+                    //Hide box element
+                    parentUl.parent().hide('blind', {}, 250, null);   
+                },
+                Cancel: function() {
+                    $( this ).dialog( "close" );
                 }
-            });
-        });
-            
+            }
+        });    
     },
 
     //Gets the semester Id from the semester UL element

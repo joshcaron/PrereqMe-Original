@@ -39,23 +39,6 @@ class Course_model extends CI_Model
         }
     }
 
-    // Returns the course that has the desired title
-    public function get_by_title($title)
-    {
-        if ($title === -1)
-        {
-            log_message('error', 'Necessary params were not sent to Course_model.get_by_title');
-            return array();
-        }
-        else
-        {
-            $this->db->select('pm_course.*, pm_dept.code as deptCode');
-            $this->db->join('pm_dept', 'pm_dept.id = pm_course.deptId');
-            $this->db->where('pm_course.title', $title);
-            return $this->db->get('pm_course')->row();
-        }
-    }
-
     // Returns the course with the given id and all it's prereqs
     public function get_with_prereqs($courseId = -1) 
     {

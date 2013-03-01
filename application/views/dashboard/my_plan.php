@@ -51,6 +51,7 @@
             <div class="helper_text">Drag courses to a semester on the left</div>
             <div class="box">
                 <input type="text" id="search" onclick="myplan.clickedSearch($(this), <?php echo "'", $user['schoolId'], "'"?>)" placeholder="Add course..." />
+                <div class="error" hidden>Course not found, please try again.</div> 
                 <ul id="dump" class="connectedSortable">
                     <?php 
                     foreach($courseDump as $course)
@@ -76,7 +77,7 @@
 <script type="text/javascript">
 $(function() {
     //Make the semesters sortable
-    //Need to call here to utilize php
+    //Need to call here to utilize php array
     $( 
         <?php 
             echo"'";
