@@ -90,7 +90,6 @@ class Dashboard extends PM_Controller
     {
         $this->form_validation->set_rules('year', 'Year', 'required');
         $this->form_validation->set_rules('semesterId', 'Semester', 'callback_duplicate_semester');
-        $this->form_validation->set_message('callback_duplicate_semester', 'You have already added that semester');
 
         if( $this->form_validation->run())
         {
