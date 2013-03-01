@@ -85,7 +85,7 @@ $(function() {
         connectWith: ".connectedSortable",
         items: "li:not(.ui-state-highlight)",
         placeholder: "ui-state-highlight",
-        stop: function( event, ui ) 
+        change: function( event, ui ) 
         {
             if(ui.sender)
             {
