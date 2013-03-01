@@ -85,20 +85,24 @@ $(function() {
         connectWith: ".connectedSortable",
         items: "li:not(.ui-state-highlight)",
         placeholder: "ui-state-highlight",
-        update: function( event, ui ) {
-            //SemesterId of where the course came from
-            var oldSemesterId = myplan.semesterIdFromSemesterUL(ui.sender);
-
-            //SemesterId of where the course ended up
-            var newSemester = ui.item.parent();
-            var newSemesterId = myplan.semesterIdFromSemesterUL(newSemester);
-
-            //Only need to update database if course changed semesters
-            if(oldSemesterId !== newSemesterId)
+        change: function( event, ui ) 
+        {
+            if(ui.sender)
             {
-                //Executes update
-                var updateUrl = "change_semester?courseId=" + myplan.courseIdFromLI(ui.item) + "&semesterId=" + newSemesterId;
-                $.getJSON(updateUrl ,null);
+                //SemesterId of where the course came from
+                var oldSemesterId = myplan.semesterIdFromSemesterUL(ui.sender);
+
+                //SemesterId of where the course ended up
+                var newSemester = ui.item.parent();
+                var newSemesterId = myplan.semesterIdFromSemesterUL(newSemester);
+
+                //Only need to update database if course changed semesters
+                if(oldSemesterId !== newSemesterId)
+                {
+                    //Executes update
+                    var updateUrl = "change_semester?courseId=" + myplan.courseIdFromLI(ui.item) + "&semesterId=" + newSemesterId;
+                    $.getJSON(updateUrl ,null);
+                }
             }
         }
     }).disableSelection();
