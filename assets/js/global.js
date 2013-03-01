@@ -169,10 +169,10 @@ var myplan = {
     shouldDeleteSemester : function(deleteButtonElement)
     {
         $(function() {
-            $( "#MY_PLAN #dialog-confirm" ).dialog({
+            $( "#MY_PLAN #dialog-delete-semester" ).dialog({
                 resizable: false,
                 height:140,
-                width:415,
+                width:387,
                 modal: true,
                 buttons: {
                     "Delete Semester": function() {

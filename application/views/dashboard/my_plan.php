@@ -67,7 +67,7 @@
         </div>
     </div>
 
-<div id="dialog-confirm" title="Are you sure?" hidden>
+<div id="dialog-delete-semester" title="Are you sure?" hidden>
   <p><span class="ui-icon ui-icon-alert"></span>Are you sure you want to delete the semester? This action cannot be undone.</p>
 </div>
 
