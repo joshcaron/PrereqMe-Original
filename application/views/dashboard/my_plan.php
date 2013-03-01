@@ -85,7 +85,7 @@ $(function() {
         connectWith: ".connectedSortable",
         items: "li:not(.ui-state-highlight)",
         placeholder: "ui-state-highlight",
-        update: function( event, ui ) 
+        change: function( event, ui ) 
         {
             //SemesterId of where the course came from
             var oldSemesterId = myplan.semesterIdFromSemesterUL(ui.item.parent());
