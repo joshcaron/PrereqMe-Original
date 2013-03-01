@@ -127,7 +127,7 @@ var myplan = {
 
             if(course !== null && course.id !== null)
             {
-                error.show();
+                error.hide();
 
                 //Course found so add it
                 var newListItem = "<li class=\"ui-state-default\" hidden onmouseover=\"myplan.shouldShowDeleteButton($(this))\" onmouseout=\"myplan.shouldHideDeleteButton($(this))\">" +
@@ -146,7 +146,7 @@ var myplan = {
             else
             {
                 //No course found so present error
-                error.hide();
+                error.show();
             }
         });  
     },
