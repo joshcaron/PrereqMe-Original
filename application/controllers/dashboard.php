@@ -145,8 +145,8 @@ class Dashboard extends PM_Controller
             $courses = $this->course_model->get_like_title($collegeId, $title);
 
             $data = array();
-            
-            if(count($course) > 0)
+
+            if(count($courses) > 0)
             {
                 //Adds the course to the user
                 $course = $courses[1];
