@@ -172,6 +172,7 @@ var myplan = {
             $( "#MY_PLAN #dialog-confirm" ).dialog({
                 resizable: false,
                 height:140,
+                width:415,
                 modal: true,
                 buttons: {
                     "Delete Semester": function() {
