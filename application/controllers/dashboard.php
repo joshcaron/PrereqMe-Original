@@ -20,7 +20,7 @@ class Dashboard extends PM_Controller
         }
         else
         {
-            redirect('/home/', 'logout');
+            redirect('/home/logout');
         }
     }
 
@@ -46,7 +46,7 @@ class Dashboard extends PM_Controller
         }
         else
         {
-            redirect('/home/', 'logout');
+            redirect('/home/logout');
         }
     }
 
@@ -63,7 +63,7 @@ class Dashboard extends PM_Controller
         }
         else
         {
-            redirect('/home/', 'logout');
+            redirect('/home/logout');
         }
     }
 
@@ -80,7 +80,7 @@ class Dashboard extends PM_Controller
         }
         else
         {
-            redirect('/home/', 'logout');
+            redirect('/home/logout');
         }
     }
 
@@ -99,7 +99,7 @@ class Dashboard extends PM_Controller
 
             $this->user_course_model->add_semester($userId, $semesterId, $year);
 
-            redirect('/dashboard/', 'my_plan');
+            redirect('/dashboard/my_plan');
         }
         else
         {
