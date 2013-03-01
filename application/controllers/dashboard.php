@@ -98,8 +98,13 @@ class Dashboard extends PM_Controller
             $userId = $this->session->userdata('user_id');
 
             $this->user_course_model->add_semester($userId, $semesterId, $year);
+
+            redirect('/dashboard/', 'my_plan');
         }
-        $this->my_plan();
+        else
+        {
+            $this->my_plan();
+        }
     }
 
     public function duplicate_semester($semesterId)
