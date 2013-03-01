@@ -59,3 +59,4 @@ select { border-color:#999; }
 #MY_PLAN li .delete { position:absolute; top:4px; right:4px; width:20px; height:20px; background-color:#000; }
 #MY_PLAN li.ui-state-highlight { cursor:default; }
 #MY_PLAN #COURSE_DUMP #search { font-size:24px; }
+#MY_PLAN #dialog-confirm .ui-icon-alert { float: left; margin: 0px 7px 20px 0px; }

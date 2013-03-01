@@ -168,14 +168,30 @@ var myplan = {
 
     shouldDeleteSemester : function(deleteButtonElement)
     {
-        var parentUl = deleteButtonElement.parent();
+        $(function() {
+            $( "#MY_PLAN #dialog-confirm" ).dialog({
+                resizable: false,
+                height:140,
+                modal: true,
+                buttons: {
+                    "Delete Semester": function() {
+                        $( this ).dialog( "close" );
+                        var parentUl = deleteButtonElement.parent();
 
-        //Executes delete
-        var deleteUrl = "delete_semester_from_user?&semesterId=" + myplan.semesterIdFromSemesterUL(parentUl);
-        $.getJSON(deleteUrl ,null);
+                        //Executes delete
+                        var deleteUrl = "delete_semester_from_user?&semesterId=" + myplan.semesterIdFromSemesterUL(parentUl);
+                        $.getJSON(deleteUrl ,null);
 
-        //Hide box element
-        parentUl.parent().hide('blind', {}, 250, null);       
+                        //Hide box element
+                        parentUl.parent().hide('blind', {}, 250, null);   
+                    },
+                    Cancel: function() {
+                        $( this ).dialog( "close" );
+                    }
+                }
+            });
+        });
+            
     },
 
     //Gets the semester Id from the semester UL element
