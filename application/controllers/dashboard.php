@@ -108,7 +108,7 @@ class Dashboard extends PM_Controller
         {
             $year = $this->input->post('year');
             $userId = $this->session->userdata('user_id');
-            return $this->user_course_model->has_semester($semesterId, $year, $userId);
+            return ! $this->user_course_model->has_semester($semesterId, $year, $userId);
         }
         else
         {

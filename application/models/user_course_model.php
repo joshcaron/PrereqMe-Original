@@ -199,7 +199,7 @@ class User_course_model extends CI_Model
         else
         {
             $constraints = array(  
-                'semesterId' => $semesterId,
+                'semesterId ' => $semesterId,
                 'year' => $year,
                 'userId' => $userId
             );
