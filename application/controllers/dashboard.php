@@ -149,7 +149,7 @@ class Dashboard extends PM_Controller
             if(count($courses) > 0)
             {
                 //Adds the course to the user
-                $course = $courses[1];
+                $course = $courses[0];
                 $userId = $this->session->userdata('user_id');
                 $this->user_course_model->add_course_to_semester($course->id, 0, $userId);
 
