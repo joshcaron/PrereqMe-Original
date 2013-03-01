@@ -27,7 +27,7 @@ class Course extends PM_Controller
         else
         {
             //Retrieve recursive prereqs for the course
-            $course->prereqs = $this->course_model->get_prereqs($course);
+            $course->prereqs = $this->course_model->get_prereqs($course, TRUE);
 
             $data['title'] = 'Course detail - PrereqMe';
             $data['course'] = $course;

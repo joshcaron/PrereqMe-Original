@@ -23,10 +23,36 @@ class User_course_model extends CI_Model
 
             $semesters = $this->db->get_where('pm_user_semester', $constraints)->result();
 
+
+            $completedCourseIds = array();
+
             //Gets the courses for each semester
             foreach($semesters as $semester)
             {
                 $semester->courses = $this->get_courses_for_semester($userId, $semester->id);
+
+                //Figures out which courses have satisfied prereqs or not
+                for($courseIndex = 0; $courseIndex < count($semester->courses); $courseIndex++)
+                {
+                    $course = $semester->courses[$courseIndex];
+
+                    for($prereqIndex = 0; $prereqIndex < count($course->prereqs); $prereqIndex++)
+                    {
+                        $prereq = $course->prereqs[$prereqIndex];
+                        //Tests to see if prereqs have been satisfied
+                        if (! in_array($prereq->id, $completedCourseIds))
+                        {
+                            $course->prereqsSatisfied = FALSE;
+                            break;
+                        }
+                        $course->prereqsSatisfied = TRUE;
+                    }
+
+                    if($course->prereqsSatisfied)
+                    {
+                        $completedCourseIds[] = $course->id;
+                    }
+                }
             }
 
             return $semesters;
@@ -52,7 +78,15 @@ class User_course_model extends CI_Model
             $this->db->join('pm_course', 'pm_course.id = pm_user_course.courseId');
             $this->db->join('pm_dept', 'pm_course.deptId = pm_dept.id');
             
-            return $this->db->get_where('pm_user_course', $constraints)->result();
+            $courses = $this->db->get_where('pm_user_course', $constraints)->result();
+
+            //Gets the prerequisites for each course
+            foreach($courses as $course)
+            {
+                $course->prereqs = $this->course_model->get_prereqs($course, FALSE);
+            }
+
+            return $courses;
         }
     }
 

@@ -55,8 +55,9 @@ class Course_model extends CI_Model
         }
     }
 
-    // Returns the recursive prereqs for the course
-    public function get_prereqs($course = NULL) 
+    // Returns the prereqs for the course
+    // $recursive - whether or not to get the prereqs prereqs, and so on
+    public function get_prereqs($course = NULL, $recursive = FALSE) 
     {
         if ($course === NULL)
         {
@@ -69,9 +70,14 @@ class Course_model extends CI_Model
             $this->db->where('pm_prereq.courseId', $course->id);
             $this->db->join('pm_course', 'pm_prereq.courseId = pm_course.id');
             $prereqs = $this->db->get('pm_prereq')->result();
-            foreach ($prereqs as $prereq)
+            
+            //Get each prereq's prereqs
+            if($recursive)
             {
-                $prereq->prereqs = $this->get_prereqs($prereq);
+                foreach ($prereqs as $prereq)
+                {
+                    $prereq->prereqs = $this->get_prereqs($prereq);
+                }
             }
             return $prereqs;
         }
