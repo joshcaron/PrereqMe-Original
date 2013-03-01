@@ -60,4 +60,5 @@ select { border-color:#999; }
 #MY_PLAN li.ui-state-highlight { cursor:default; }
 #MY_PLAN #COURSE_DUMP #search { font-size:24px; }
 .ui-dialog { width:387px; font-size:14px; }
+#dialog-delete-semester { height:77px; }
 #dialog-delete-semester .ui-icon-alert { float: left; margin: 0px 7px 20px 0px; }
