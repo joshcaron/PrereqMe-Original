@@ -95,6 +95,26 @@ class User_course_model extends CI_Model
         }
     }
 
+    //Changes the semester of the course
+    public function change_semester($courseId = -1, $semesterId = -1, $userId = -1)
+    {
+        if($courseId === -1 OR $semesterId === -1 OR $userId === -1)
+        {
+            log_message('error', 'Not valid params sent to Course.change_semester');
+        }
+        else
+        {
+            $data = array(
+                'semesterId' => $semesterId
+            );
+
+            $this->db->where('courseId', $courseId);
+            $this->db->where('userId', $userId);
+
+            $this->db->update('pm_user_course', $data);
+        }
+    }
+
     //Inserts the new semester
     public function add_semester($userId = -1, $semesterId = -1, $year = -1)
     {

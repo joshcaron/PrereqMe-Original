@@ -170,6 +170,24 @@ class Dashboard extends PM_Controller
             $this->user_course_model->delete_course_from_user($courseId, $semesterId, $userId);
         }
     }
+
+    //Changes the semester of the course to a new semester
+    public function change_semester()
+    {
+        $courseId = $this->input->get('courseId');
+        $semesterId = $this->input->get('semesterId');
+
+        if($courseId === FALSE OR $semesterId === FALSE)
+        {
+            log_message('error', 'Necessary params were not received by dasboard.change_semester');
+        }
+        else
+        {
+            $userId = $this->session->userdata('user_id');
+
+            $this->user_course_model->change_semester($courseId, $semesterId, $userId);
+        }
+    }
 }
 
 /* End of file signup.php */

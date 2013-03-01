@@ -110,6 +110,22 @@ var myplan = {
             minLength: 2,
             select: function( event, ui ) {
                 myplan.addCourseToDump(ui.item.value);
+            },
+            update: function( event, ui ) {
+                //SemesterId of where the course came from
+                var oldSemesterId = myplan.semesterIdFromSemesterUL(ui.sender);
+
+                //SemesterId of where the course ended up
+                var newSemester = ui.item.parent();
+                var newSemesterId = myplan.semesterIdFromSemesterUL(newSemester);
+
+                //Only need to update database if course changed semesters
+                if(oldSemesterId !== newSemesterId)
+                {
+                    //Executes update
+                    var updateUrl = "change_semester?courseId=" + myplan.courseIdFromLI(ui.item) + "&semesterId=" + newSemesterId;
+                    $.getJSON(deleteUrl ,null);
+                }
             }
         });
 
@@ -154,7 +170,7 @@ var myplan = {
     shouldDeleteCourse : function(deleteButtonElement)
     {
         //Get course id from inner div
-        var courseId = deleteButtonElement.find('input').first().val();
+        var courseId = myplan.courseIdFromDelete(deleteButtonElement);
         var parentLi = deleteButtonElement.parent();
         var parentUl = parentLi.parent();
 
@@ -166,6 +182,7 @@ var myplan = {
         parentLi.hide('blind', {}, 250, null);       
     },
 
+    //Gets the semester Id from the semester UL element
     semesterIdFromSemesterUL : function(semesterULElement)
     {
         var id = semesterULElement.attr('id');
@@ -179,6 +196,19 @@ var myplan = {
         {
             return id.replace("semester_",'');
         }
+    },
+
+    //Gets the courseId from the course LI element
+    courseIdFromLI : function(courseLIElement)
+    {
+        var deleteDiv = courseLIElement.find('.delete').first();
+        return myplan.courseIdFromDelete(deleteDiv);
+    },
+
+    //Gets the courseId from the delete div element
+    courseIdFromDelete : function(deleteDivElement)
+    {
+        return deleteDivElement.find('input').first().val();
     }
 
 };
