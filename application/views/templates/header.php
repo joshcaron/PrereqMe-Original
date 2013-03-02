@@ -29,7 +29,21 @@ BASE_URL = '<?php echo base_url()?>'
 <div id="MAIN_CONTAINER">
     <div id="HEADER">
         <div id="CONTENT">
-            <div id="logo" class="fl"><a href=<?php echo base_url('index.php')?>>PrereqMe</a></div>
+            <div id="logo" class="fl">
+                <a href=
+                        <?php
+                            if(isset($user))
+                            {
+                                echo base_url('index.php/dashboard');
+                            }
+                            else
+                            {
+                                echo base_url('index.php');
+                            }
+
+                        ?>
+                >PrereqMe</a>
+            </div>
 
             <?php if(isset($user)): ?>
                 <div id="userInfo" class="fr">
