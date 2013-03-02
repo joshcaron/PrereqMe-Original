@@ -38,7 +38,10 @@ var home = {
             //Setup autocomplete
             queryElement.autocomplete({
             source: searchUrl,
-            minLength: 2
+            minLength: 2,
+            select: function( event, ui ) {
+                $('#index_search').submit();
+            }
             });
         }
         else
