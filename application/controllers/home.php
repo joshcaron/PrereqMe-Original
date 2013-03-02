@@ -104,8 +104,7 @@ class Home extends PM_Controller
                 $this->session->set_userdata($user_data);
                 parent::add_user(); 
 
-                //If user is new, go to my plan instead of dashboard index
-                redirect('/dashboard/', 'index');
+                redirect(uri_string());
             }
             else
             {
