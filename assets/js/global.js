@@ -130,7 +130,7 @@ var myplan = {
                 error.hide();
 
                 //Course found so add it
-                var newListItem = "<li class=\"ui-state-default\" hidden onmouseover=\"myplan.shouldShowDeleteButton($(this))\" onmouseout=\"myplan.shouldHideDeleteButton($(this))\">" +
+                var newListItem = "<li class=\"ui-state-default\" hidden onclick=\"myplan.shouldGoToCourse($(this));\" onmouseover=\"myplan.shouldShowDeleteButton($(this))\" onmouseout=\"myplan.shouldHideDeleteButton($(this))\">" +
                                     course.deptCode + course.code + " - " + course.title + " (" + course.credits + ")" + "\n<div class=\"delete\" onclick=\"myplan.shouldDeleteCourse($(this));\" hidden><input type=\"hidden\" value=\"" + course.id + "\"/></div>" + "\n</li>";
 
                 //Adds the new div
@@ -229,6 +229,15 @@ var myplan = {
     courseIdFromDelete : function(deleteDivElement)
     {
         return deleteDivElement.find('input').first().val();
+    },
+
+    //Called by clicking on a list element in my_plan
+    //Loads view for that course
+    shouldGoToCourse : function(courseLIElement)
+    {
+        var courseId = myplan.courseIdFromLI(courseLIElement);
+
+        window.location.href = BASE_URL + "?courseId=" + courseId;
     }
-    
+
 };
