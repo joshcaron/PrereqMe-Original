@@ -34,6 +34,8 @@ class User_course_model extends CI_Model
                 //Figures out which courses have satisfied prereqs or not
                 for($courseIndex = 0; $courseIndex < count($semester->courses); $courseIndex++)
                 {
+                    log_message('info', 'Knowledgebase:');
+                    var_dump($completedCourseIds)
                     $course = $semester->courses[$courseIndex];
                     $course->prereqsSatisfied = TRUE;
 
@@ -41,8 +43,12 @@ class User_course_model extends CI_Model
                     {
                         $prereq = $course->prereqs[$prereqIndex];
                         //Tests to see if prereqs have been satisfied
+                        
                         if (! in_array($prereq->id, $completedCourseIds))
                         {
+                            log_message('info', 'Prereq not found:');
+                            var_dump($course);
+                            var_dump($prereq);
                             $course->prereqsSatisfied = FALSE;
                             break;
                         }
