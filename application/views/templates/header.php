@@ -19,7 +19,7 @@
 <!-- JS sources -->
 <script>
 //Global variables
-BASE_URL = <?php echo base_url()?>
+BASE_URL = '<?php echo base_url()?>'
 </script>
 <script src=<?php echo js_url(), 'global.js'?> ></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
