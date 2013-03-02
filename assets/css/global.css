@@ -21,10 +21,10 @@ select { border-color:#999; }
 #HEADER #CONTENT #logo a:hover { color:#FFF; text-decoration:none; } 
 #HEADER #CONTENT #login #forgot a { color:#FFF; font-size:14px; }
 
-#HOME #search_small { display:inline-block; }
-#HOME #search_small #search_box { height:33px; margin-bottom:5px; padding:10px 24px 4px 24px; border-radius:12px; border:1px solid #000; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
-#HOME #search_small .magnifying_small { width:16px; height:28px; border:1px dotted #FF0000; }
-#HOME #search_small #query { width:150px; height:30px; padding:5px 15px; font-size:16px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
+#search_small { display:inline-block; }
+#search_small #search_box { height:33px; margin-bottom:5px; padding:10px 24px 4px 24px; border-radius:12px; border:1px solid #000; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
+#search_small .magnifying_small { width:16px; height:28px; border:1px dotted #FF0000; }
+#search_small #query { width:150px; height:30px; padding:5px 15px; font-size:16px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
 
 /* Dashboard Links */
 #DASHBOARD_LINKS { padding:8px 15px; font-size:32px; background-color:#D4D6D4; }
