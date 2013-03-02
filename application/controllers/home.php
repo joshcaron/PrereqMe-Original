@@ -117,10 +117,11 @@ class Home extends PM_Controller
     //Logs out the user and loads homepage
     public function logout()
     {
-        /*
+        log_message('info', 'is user logged in first?',var_export(parent::_is_logged_in()));
         $this->session->unset_userdata('is_logged_in');
-        unset($user);*/
-        $this->session->sess_destroy();
+                log_message('info', 'is user logged in second?',var_export(parent::_is_logged_in()));
+
+        unset($user);
         redirect('/home/index');
     }
 }
