@@ -52,7 +52,7 @@ BASE_URL = '<?php echo base_url()?>'
                         <div id="search_box">
                             <div class="magnifying_small fl"></div>
                             <div class="fr">
-                                <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." disabled/>
+                                <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." />
                             </div>
                         </div>
                         <div>
