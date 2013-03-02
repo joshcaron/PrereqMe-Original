@@ -58,6 +58,7 @@ BASE_URL = '<?php echo base_url()?>'
                         <div class="fr">
                             <input type="submit" value="Search"/>
                         </div>
+                        <div class="clear"></div>
                     </div>
                     
                     <div id="userInfo" class="fr">
