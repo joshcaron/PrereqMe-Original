@@ -121,7 +121,7 @@ class Home extends PM_Controller
         $this->session->unset_userdata('is_logged_in');
         unset($user);*/
         $this->session->sess_destroy();
-        redirect('/home/', 'index');
+        redirect('/home/index');
     }
 }
 
