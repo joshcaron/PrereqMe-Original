@@ -104,7 +104,8 @@ class Home extends PM_Controller
                 $this->session->set_userdata($user_data);
                 parent::add_user(); 
 
-                redirect(uri_string());
+                //Go to dashboard
+                redirect('/dashboard/', 'index');
             }
             else
             {
