@@ -237,7 +237,7 @@ var myplan = {
     {
         var courseId = myplan.courseIdFromLI(courseLIElement);
 
-        window.location.href = BASE_URL + "?courseId=" + courseId;
+        window.location.href = BASE_URL + "index.php/course/view?courseId=" + courseId;
     }
 
 };
