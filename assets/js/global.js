@@ -13,7 +13,7 @@ var global = {
         source: searchUrl,
         minLength: 2,
         select: function( event, ui ) {
-            $('#header_search').submit(
+            $('#header_search').submit();
         }
         });
     }
