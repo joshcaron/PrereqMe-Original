@@ -14,6 +14,7 @@ class PM_Controller extends CI_Controller
     {
         $is_logged_in = $this->session->userdata('is_logged_in');
 
+        log_message('info', 'Is user logged in?'.var_export($is_logged_in, 1));
         if($is_logged_in)
         {
             $user['id'] = $this->session->userdata('user_id');
