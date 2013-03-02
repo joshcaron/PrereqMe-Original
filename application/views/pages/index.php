@@ -1,3 +1,10 @@
+<?php if(isset($user)): ?>
+    <script>
+    //If user is logged in, redirect to dashboard
+    window.location.href = BASE_URL + 'index.php/dashboard';
+    </script>
+<?php endif ?>
+
 <div id="HOME">
     <div id="search_large" class='fl'>
 
