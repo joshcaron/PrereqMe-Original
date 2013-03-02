@@ -54,6 +54,7 @@ class User_course_model extends CI_Model
                         }
                     }
 
+                    log_message('info', 'Were prereqs satisfied for '.$course->title.':'.$course->prereqsSatisfied);
                     if($course->prereqsSatisfied)
                     {
                         $completedCourseIds[] = $course->id;
