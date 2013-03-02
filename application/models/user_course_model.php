@@ -23,11 +23,10 @@ class User_course_model extends CI_Model
 
             $semesters = $this->db->get_where('pm_user_semester', $constraints)->result();
 
-
             $completedCourseIds = array();
 
             //Gets the courses for each semester
-            foreach($semesters as $semester)
+            foreach(array_reverse($semesters) as $semester)
             {
                 $semester->courses = $this->get_courses_for_semester($userId, $semester->id);
 
@@ -54,7 +53,6 @@ class User_course_model extends CI_Model
                         }
                     }
 
-                    log_message('info', 'Were prereqs satisfied for '.$course->title.':'.$course->prereqsSatisfied);
                     if($course->prereqsSatisfied)
                     {
                         $completedCourseIds[] = $course->id;
