@@ -49,13 +49,13 @@ BASE_URL = '<?php echo base_url()?>'
                 <?php echo form_open('course/search_results'); ?>
                     <input type="hidden" name="collegeId" value=<?php echo $user['schoolId']?> />
                     <div id="search_small">
-                        <div id="search_box">
+                        <div id="search_box fl">
                             <div class="magnifying_small fl"></div>
                             <div class="fr">
                                 <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." />
                             </div>
                         </div>
-                        <div>
+                        <div class="fr">
                             <input type="submit" value="Search"/>
                         </div>
                     </div>
