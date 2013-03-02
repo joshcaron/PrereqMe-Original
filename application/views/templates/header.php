@@ -55,9 +55,6 @@ BASE_URL = '<?php echo base_url()?>'
                                 <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." />
                             </div>
                         </div>
-                        <div>
-                            <input type="submit" value="Search"/>
-                        </div>
                     </div>
                     
                     <div id="userInfo" class="fr">
