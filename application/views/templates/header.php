@@ -46,11 +46,27 @@ BASE_URL = '<?php echo base_url()?>'
             </div>
 
             <?php if(isset($user)): ?>
-                <div id="userInfo" class="fr">
-                    <div>Hi, <?php echo $user['firstName']?></div>
-                    <div><?php echo $user['email']?></div>
-                    <button class="logOut" onclick="window.location.href= '<?php echo base_url('index.php/home/logout')?>'">Log Out</button>
-                </div>
+                <?php echo form_open('course/search_results'); ?>
+                    <input type="hidden" name="collegeId" value=<?php echo $user['schoolId']?> />
+                    <div id="search_small">
+                        <div id="search_box">
+                            <div class="magnifying_large fl"></div>
+                            <div class="fr">
+                                <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." disabled/>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="submit" value="Search"/>
+                        </div>
+                    </div>
+                    
+                    <div id="userInfo" class="fr">
+                        <div>Hi, <?php echo $user['firstName']?></div>
+                        <div><?php echo $user['email']?></div>
+                        <button class="logOut" onclick="window.location.href= '<?php echo base_url('index.php/home/logout')?>'">Log Out</button>
+                    </div>
+                </form>
+
             <?php else: ?>
                 <div id="login" class="fr">
                     <form action=<?php echo base_url('index.php/home/login')?> method="post">
