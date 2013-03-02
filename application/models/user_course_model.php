@@ -35,7 +35,7 @@ class User_course_model extends CI_Model
                 for($courseIndex = 0; $courseIndex < count($semester->courses); $courseIndex++)
                 {
                     log_message('info', 'Knowledgebase:');
-                    var_dump($completedCourseIds)
+                    var_dump($completedCourseIds);
                     $course = $semester->courses[$courseIndex];
                     $course->prereqsSatisfied = TRUE;
 
