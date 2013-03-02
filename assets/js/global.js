@@ -1,3 +1,49 @@
+var global = {
+
+    //Initializes the search bar autocomplete in the header
+    initializeSearchBarAutocomplete : function()
+    {
+        var queryElement = $('#HEADER #search_small #query').first();
+        var schoolId = $('#HEADER #search_small .college_id').first().val();
+
+        if (window.location.href.indexOf("home") !== -1)
+        {
+            if(window.location.href.indexOf("home/index") !== -1)
+            {
+                var searchUrl = "search_home?collegeId=" + schoolId.toString();
+            }
+            else
+            {
+                var searchUrl = "home/search_home?collegeId=" + schoolId.toString();
+            }
+        }
+        else if (window.location.href.indexOf("dashboard") !== -1)
+        {
+            //In dashboard controller
+            if(window.location.href.indexOf("home/index") !== -1)
+            {
+                var searchUrl = "search?collegeId=" + schoolId.toString();
+            }
+            else
+            {
+                var searchUrl = "home/search?collegeId=" + schoolId.toString();
+            }
+        }
+        else
+        {
+            var searchUrl = "index.php/home/search_home?collegeId=" + schoolId.toString();
+        }
+
+        //Setup autocomplete
+        queryElement.autocomplete({
+        source: searchUrl,
+        minLength: 2
+        });
+    }
+
+
+}
+
 //Functions for home page
 var home = {
 

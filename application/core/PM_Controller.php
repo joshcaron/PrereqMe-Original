@@ -32,6 +32,11 @@ class PM_Controller extends CI_Controller
     {
         return $this->session->userdata('is_logged_in');
     }
+
+    public function test()
+    {
+        echo "test";
+    }
 }
 
 /* End of file base.php */

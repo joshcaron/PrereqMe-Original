@@ -47,7 +47,7 @@ BASE_URL = '<?php echo base_url()?>'
 
             <?php if(isset($user)): ?>
                 <?php echo form_open('course/search_results'); ?>
-                    <input type="hidden" name="collegeId" value=<?php echo $user['schoolId']?> />
+                    <input type="hidden" class="college_id" name="collegeId" value=<?php echo $user['schoolId']?> />
                     <div id="search_small">
                         <div id="search_box">
                             <div class="magnifying_small fl"></div>
@@ -56,6 +56,8 @@ BASE_URL = '<?php echo base_url()?>'
                             </div>
                         </div>
                     </div>
+
+                <script>//global.initializeSearchBarAutocomplete()</script>
                     
                     <div id="userInfo" class="fr">
                         <div>Hi, <?php echo $user['firstName']?></div>
