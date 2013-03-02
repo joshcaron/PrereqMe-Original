@@ -11,7 +11,10 @@ var global = {
         //Setup autocomplete
         queryElement.autocomplete({
         source: searchUrl,
-        minLength: 2
+        minLength: 2,
+        select: function( event, ui ) {
+            $('#header_search').submit(
+        }
         });
     }
 

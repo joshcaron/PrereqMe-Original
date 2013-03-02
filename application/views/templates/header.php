@@ -46,7 +46,7 @@ BASE_URL = '<?php echo base_url()?>'
             </div>
 
             <?php if(isset($user)): ?>
-                <?php echo form_open('course/search_results'); ?>
+                <?php echo form_open('course/search_results', array('id'=>'header_search')); ?>
                     <div id="search_small">
                         <input type="hidden" class="college_id" name="collegeId" value=<?php echo $user['schoolId']?> />
                         <div id="search_box">
