@@ -12,7 +12,7 @@ class PM_Controller extends CI_Controller
     //Adds the user if it exists to the data object
     public function add_user()
     {
-        if($this->_is_logged_in)
+        if($this->_is_logged_in())
         {
             $user['id'] = $this->session->userdata('user_id');
             $user['email'] = $this->session->userdata('email');
