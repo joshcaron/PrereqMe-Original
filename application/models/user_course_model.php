@@ -35,6 +35,7 @@ class User_course_model extends CI_Model
                 for($courseIndex = 0; $courseIndex < count($semester->courses); $courseIndex++)
                 {
                     $course = $semester->courses[$courseIndex];
+                    $course->prereqsSatisfied = TRUE;
 
                     for($prereqIndex = 0; $prereqIndex < count($course->prereqs); $prereqIndex++)
                     {
@@ -45,7 +46,6 @@ class User_course_model extends CI_Model
                             $course->prereqsSatisfied = FALSE;
                             break;
                         }
-                        $course->prereqsSatisfied = TRUE;
                     }
 
                     if($course->prereqsSatisfied)
