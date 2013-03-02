@@ -57,7 +57,7 @@ BASE_URL = '<?php echo base_url()?>'
                         </div>
                     </div>
 
-                <script>//global.initializeSearchBarAutocomplete()</script>
+                <script>global.initializeSearchBarAutocomplete()</script>
                     
                     <div id="userInfo" class="fr">
                         <div>Hi, <?php echo $user['firstName']?></div>
