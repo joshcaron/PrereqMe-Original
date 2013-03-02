@@ -56,15 +56,15 @@ BASE_URL = '<?php echo base_url()?>'
                             </div>
                         </div>
                     </div>
+                </form>
 
                 <script>global.initializeSearchBarAutocomplete()</script>
                     
-                    <div id="userInfo" class="fr">
-                        <div>Hi, <?php echo $user['firstName']?></div>
-                        <div><?php echo $user['email']?></div>
-                        <button class="logOut" onclick="window.location.href= '<?php echo base_url('index.php/home/logout')?>'">Log Out</button>
-                    </div>
-                </form>
+                <div id="userInfo" class="fr">
+                    <div>Hi, <?php echo $user['firstName']?></div>
+                    <div><?php echo $user['email']?></div>
+                    <button class="logOut" onclick="window.location.href= '<?php echo base_url('index.php/home/logout')?>'">Log Out</button>
+                </div>
 
             <?php else: ?>
                 <div id="login" class="fr">
@@ -84,7 +84,7 @@ BASE_URL = '<?php echo base_url()?>'
                         </table>
                     </form>
                 </div>
-            <?php endif; ?>
+            <?php endif ?>
         </div>
     </div>
 
