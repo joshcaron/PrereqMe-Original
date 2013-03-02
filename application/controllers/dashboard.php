@@ -121,33 +121,6 @@ class Dashboard extends PM_Controller
         }
     }
 
-    //Performs a search and prints an array of titles
-    //Used by an AJAX call for the search typeahead
-    public function search()
-    {
-        $collegeId = $this->input->get('collegeId');
-        $query = $this->input->get('term'); //use 'term' instead of 'query' here because it is automatically set by jQueryUI
-
-        if($collegeId === FALSE || $query === FALSE)
-        {
-            log_message('error', 'GET Params were not received by dashboard.search');
-        }
-        else
-        {
-            $fullCourses = $this->course_model->get_like_title($collegeId, $query);
-
-            $courseTitles = array();
-
-            foreach($fullCourses as $course)
-            {
-                $courseTitles[] = $course->title;
-            }
-
-            $data['response'] = $courseTitles;
-            $this->load->view('json', $data);
-        }
-    }
-
     //Gets a course based on its title
     //Used by an AJAX call to add courses to your dump
     public function get_course_by_title()

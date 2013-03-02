@@ -6,33 +6,7 @@ var global = {
         var queryElement = $('#HEADER #search_small #query').first();
         var schoolId = $('#HEADER #search_small .college_id').first().val();
 
-        if (window.location.href.indexOf("home") !== -1)
-        {
-            if(window.location.href.indexOf("home/index") !== -1)
-            {
-                var searchUrl = "search_home?collegeId=" + schoolId.toString();
-            }
-            else
-            {
-                var searchUrl = "home/search_home?collegeId=" + schoolId.toString();
-            }
-        }
-        else if (window.location.href.indexOf("dashboard") !== -1)
-        {
-            //In dashboard controller
-            if(window.location.href.indexOf("home/index") !== -1)
-            {
-                var searchUrl = "search?collegeId=" + schoolId.toString();
-            }
-            else
-            {
-                var searchUrl = "home/search?collegeId=" + schoolId.toString();
-            }
-        }
-        else
-        {
-            var searchUrl = "index.php/home/search_home?collegeId=" + schoolId.toString();
-        }
+        var searchUrl = BASE_URL + "index.php/home/search?collegeId=" + schoolId.toString();
 
         //Setup autocomplete
         queryElement.autocomplete({
@@ -56,22 +30,7 @@ var home = {
             queryElement.prop('disabled', false);
             queryElement.focus();
 
-            //Makes sure it routes to the correct place
-            if (window.location.href.indexOf("home") !== -1)
-            {
-                if(window.location.href.indexOf("home/index") !== -1)
-                {
-                    var searchUrl = "search_home?collegeId=" + newValue.toString();
-                }
-                else
-                {
-                    var searchUrl = "home/search_home?collegeId=" + newValue.toString();
-                }
-            }
-            else
-            {
-                var searchUrl = "index.php/home/search_home?collegeId=" + newValue.toString();
-            }
+            var searchUrl = BASE_URL + "index.php/home/search?collegeId=" + newValue.toString();
 
             //Setup autocomplete
             queryElement.autocomplete({
@@ -150,7 +109,8 @@ var myplan = {
     clickedSearch : function(inputField, schoolId)
     {
         //Initializes autocomplete
-        var searchUrl = "search?collegeId=" + schoolId.toString();
+        var searchUrl = BASE_URL + "index.php/home/search?collegeId=" + newValue.toString();
+
         inputField.autocomplete({
             source: searchUrl,
             minLength: 2,
