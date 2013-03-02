@@ -47,8 +47,8 @@ class User_course_model extends CI_Model
                         if (! in_array($prereq->id, $completedCourseIds))
                         {
                             log_message('info', 'Prereq not found:');
-                            log_message('info', var_export($course, 1));
-                            log_message('info', var_export($prereq, 1));
+                            log_message('info', $course->id.' '.$course->title);
+                            log_message('info', $prereq->id.' '.$prereq->title);
                             $course->prereqsSatisfied = FALSE;
                             break;
                         }
