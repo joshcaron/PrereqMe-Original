@@ -1,4 +1,4 @@
-<?php if(isset($user):)?>
+<?php if(isset($user)): ?>
 <script>
 //If user is logged in, redirect to dashboard
 window.location.href = BASE_URL + 'index.php/dashboard';
