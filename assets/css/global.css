@@ -40,7 +40,7 @@ select { border-color:#999; }
 #DASHBOARD_LINKS ul { height:47px; width:523px; margin:0px auto; }
 #DASHBOARD_LINKS li { list-style-type:none; margin-right:8px; }
 #DASHBOARD_LINKS a { display:block; padding:9px; color:#000; text-decoration:none;}
-#DASHBOARD_LINKS a:hover { position:relative; top:-4px; padding-top:13px; border-radius:4px 4px 0px 0px; background-color:#FFF; }
+#DASHBOARD_LINKS a:hover { position:relative; top:-4px; padding-top:13px; border-radius:4px 4px 0px 0px; background-color:#FFFDEB; }
 
 /* Body */
 #BODY_CONTAINER { min-height:650px; }
