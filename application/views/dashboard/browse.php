@@ -21,14 +21,12 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach(range(0,20) as $num): ?>
         <tr>
-            <td class="temp"></td>
-            <td class="temp"></td>
-            <td class="temp"></td>        
-            <td class="temp"></td>
+            <td></td>
+            <td></td>
+            <td>Please select a department above to begin</td>        
+            <td></td>
         </tr>
-        <?php endforeach ?>
     </tbody>
 </table>
 

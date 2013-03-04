@@ -5,7 +5,7 @@ var browse = {
     {
         $('#BROWSE #RESULTS').first().dataTable({
              "bJQueryUI": true,
-             "sScrollY": 1000,
+             "sScrollY": 600,
              "bScrollCollapse": true,
              "bPaginate": false
         });
