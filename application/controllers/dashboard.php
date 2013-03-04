@@ -230,7 +230,7 @@ class Dashboard extends PM_Controller
         {
             $rawCourses = $this->user_course_model->get_courses_by_filters($deptId);
 
-            $courses = [];
+            $courses = array();
 
             foreach ($rawCourses -> $rawCourse)
             {
