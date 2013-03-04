@@ -114,8 +114,7 @@ var myplan = {
     //Initializes autocomplete
     clickedSearch : function(inputField, schoolId)
     {
-        //Initializes autocomplete
-        var searchUrl = BASE_URL + "index.php/home/search?collegeId=" + newValue.toString();
+        var searchUrl = BASE_URL + "index.php/home/search?collegeId=" + schoolId.toString();
 
         inputField.autocomplete({
             source: searchUrl,
