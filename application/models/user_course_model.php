@@ -244,7 +244,7 @@ class User_course_model extends CI_Model
     }
 
     //Get the courses based on the supplied filters
-    public function get_courses_by_filters($deptId === -1)
+    public function get_courses_by_filters($deptId = -1)
     {
         $this->db->select('pm_course.*, pm_dept.code as deptCode');
         $this->db->join('pm_dept', 'pm_dept.id = pm_course.deptId');
