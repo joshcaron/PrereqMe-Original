@@ -13,6 +13,7 @@ class Dashboard extends PM_Controller
         if( parent::_is_logged_in() )
         {
             $data['title'] = 'Dashboard - PrereqMe';
+            $data['selectedNav'] = 'overview';
 
             $this->load->view('templates/header', $data);
             $this->load->view('dashboard/index', $data);
@@ -36,6 +37,7 @@ class Dashboard extends PM_Controller
             $courseDump = $this->user_course_model->get_courses_for_semester($userId, 0);
 
             $data['title'] = 'My Plan - PrereqMe';
+            $data['selectedNav'] = 'my_plan';
             $data['semesters'] = $semesters;
             $data['schoolSemesters'] = $schoolSemesters;
             $data['courseDump'] = $courseDump;
@@ -56,6 +58,7 @@ class Dashboard extends PM_Controller
         if( parent::_is_logged_in() )
         {
             $data['title'] = 'Browse - PrereqMe';
+            $data['selectedNav'] = 'browse';
 
             $this->load->view('templates/header', $data);
             $this->load->view('dashboard/browse', $data);
@@ -73,6 +76,7 @@ class Dashboard extends PM_Controller
         if( parent::_is_logged_in() )
         {
             $data['title'] = 'Help - PrereqMe';
+            $data['selectedNav'] = 'help';
 
             $this->load->view('templates/header', $data);
             $this->load->view('dashboard/help', $data);
