@@ -6,8 +6,8 @@ var browse = {
         $('#BROWSE #RESULTS').first().dataTable({
              "bJQueryUI": true,
              "sScrollY": 1000,
-            "bScrollCollapse": true,
-            "bPaginate": false
+             "bScrollCollapse": true,
+             "bPaginate": false
         });
     },
 
@@ -19,6 +19,8 @@ var browse = {
         if(deptId > 0)
         {
             var getUrl = BASE_URL + "index.php/dashboard/courses_for_filters?deptId=" + deptId;
+
+            var dataTable = $('#BROWSE #RESULTS').first().dataTable();
 
             //Get filtered courses from server
             $.getJSON(getUrl ,function(result){
@@ -38,7 +40,8 @@ var browse = {
                         tableBody.append(tableRow);
                     });
 
-                    browse.initializeTable();
+                    //Redraw Table
+                    dataTable.fnDraw();
             });
         }
     }
