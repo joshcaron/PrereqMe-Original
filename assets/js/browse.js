@@ -4,6 +4,7 @@ var browse = {
     initializeTable : function()
     {
         $('#BROWSE #RESULTS').first().dataTable({
+             "bJQueryUI": true
 
 
         });
