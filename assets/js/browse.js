@@ -20,11 +20,10 @@ var browse = {
         {
             var getUrl = BASE_URL + "index.php/dashboard/courses_for_filters?deptId=" + deptId;
 
-            var dataTable = $('#BROWSE #RESULTS').first().dataTable();
+            var coursesTable = $('#BROWSE #RESULTS').first().dataTable();
 
             //Get filtered courses from server and replaces the current data with the new data
             $.getJSON(getUrl ,function(result){
-                var coursesTable = $('#BROWSE #FILTERS #dept_id').first().dataTable();
                 coursesTable.fnClearTable();;
                 coursesTable.fnAddData(result);
             });
