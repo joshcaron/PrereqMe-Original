@@ -20,8 +20,6 @@ var browse = {
         {
             var getUrl = BASE_URL + "index.php/dashboard/courses_for_filters?deptId=" + deptId;
 
-            var dataTable = $('#BROWSE #RESULTS').first().dataTable();
-
             //Get filtered courses from server
             $.getJSON(getUrl ,function(result){
                     var tableBody = $('#BROWSE #RESULTS tbody').first();
@@ -39,9 +37,6 @@ var browse = {
                         tableRow += "</tr>";
                         tableBody.append(tableRow);
                     });
-
-                    //Redraw Table
-                    dataTable.fnDraw();
             });
         }
     }
