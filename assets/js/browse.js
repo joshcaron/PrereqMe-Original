@@ -22,26 +22,11 @@ var browse = {
 
             var dataTable = $('#BROWSE #RESULTS').first().dataTable();
 
-            //Get filtered courses from server
+            //Get filtered courses from server and replaces the current data with the new data
             $.getJSON(getUrl ,function(result){
-                    var tableBody = $('#BROWSE #RESULTS tbody').first();
-
-                    //Resets html
-                    tableBody.html("");
-
-                    //Creates table based on returend courses
-                    $.each(result, function(i, course){
-                        tableRow = "<tr>";
-                        tableRow += "<td>" + course.deptCode + "</td>";
-                        tableRow += "<td>" + course.code + "</td>";
-                        tableRow += "<td>" + course.title.substring(0,100) + "</td>";
-                        tableRow += "<td>" + course.credits + "</td>";
-                        tableRow += "</tr>";
-                        tableBody.append(tableRow);
-                    });
-
-                    //Redraw Table
-                    dataTable.fnDraw();
+                var coursesTable = $('#BROWSE #FILTERS #dept_id').first().dataTable();
+                coursesTable.fnClearTable();;
+                coursesTable.fnAddData(result);
             });
         }
     }
