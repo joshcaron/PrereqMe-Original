@@ -23,10 +23,10 @@
     <tbody>
         <?php foreach(range(0,20) as $num): ?>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>        
-            <td></td>
+            <td class="temp"></td>
+            <td class="temp"></td>
+            <td class="temp"></td>        
+            <td class="temp"></td>
         </tr>
         <?php endforeach ?>
     </tbody>

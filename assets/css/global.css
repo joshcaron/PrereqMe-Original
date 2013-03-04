@@ -81,3 +81,5 @@ select { border-color:#999; }
 #dialog-delete-semester { height:77px; font-size:14px;}
 #dialog-delete-semester .ui-icon-alert { float: left; margin: 0px 7px 20px 0px; }
 
+/* BROWSE */
+#BROWSE #RESULTS .temp{ height:38px }
