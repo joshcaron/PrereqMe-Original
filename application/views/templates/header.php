@@ -90,12 +90,12 @@ BASE_URL = '<?php echo base_url()?>'
 
     <?php if(isset($user)): ?>
         <div id="DASHBOARD_LINKS">
-            <div id="CONTENT">
-                <a href=<?php echo base_url('index.php/dashboard')?>>Dashboard</a> | 
-                <a href=<?php echo base_url('index.php/dashboard/my_plan')?>>My Plan</a> | 
-                <a href=<?php echo base_url('index.php/dashboard/browse')?>>Browse Courses</a> | 
-                <a href=<?php echo base_url('index.php/dashboard/help')?>>Help</a>
-            </div>
+            <ul>
+                <li><a href=<?php echo base_url('index.php/dashboard')?>>Dashboard</a></li> 
+                <li><a href=<?php echo base_url('index.php/dashboard/my_plan')?>>My Plan</a></li>  
+                <li><a href=<?php echo base_url('index.php/dashboard/browse')?>>Browse Courses</a></li>  
+                <li><a href=<?php echo base_url('index.php/dashboard/help')?>>Help</a></li> 
+            </ul>
         </div>
     <?php endif; ?>
 
