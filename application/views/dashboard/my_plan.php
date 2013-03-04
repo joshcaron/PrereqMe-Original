@@ -62,7 +62,7 @@
                     <?php 
                     foreach($courseDump as $course)
                     {
-                        echo '<li class="ui-state-default" onmouseover="myplan.shouldShowDeleteButton($(this))" onmouseout="myplan.shouldHideDeleteButton($(this))">';
+                        echo '<li class="ui-state-default" onclick="myplan.shouldGoToCourse($(this));" onmouseover="myplan.shouldShowDeleteButton($(this))" onmouseout="myplan.shouldHideDeleteButton($(this))">';
                         echo $course->deptCode, $course->code, ' - ';
                         echo $course->title, ' (', $course->credits, ')'; 
                         echo '<div class="delete" onclick="myplan.shouldDeleteCourse($(this));" hidden><input type="hidden" value="', $course->id, '"\></div>';
