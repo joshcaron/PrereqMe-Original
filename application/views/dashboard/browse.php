@@ -23,7 +23,11 @@
     </thead>
     <tbody>
         <tr>
-            <td colspan="5">Please select a department above to begin</td>        
+            <td></td>
+            <td></td>
+            <td>Please select a department above to begin</td>        
+            <td></td>
+            <td></td>
         </tr>
     </tbody>
 </table>
