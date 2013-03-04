@@ -4,10 +4,10 @@ var browse = {
     initializeTable : function()
     {
         $('#BROWSE #RESULTS').first().dataTable({
-            "sScrollY": 400,
+             "bJQueryUI": true,
+             "sScrollY": 200,
             "bScrollCollapse": true,
             "bPaginate": false
-
         });
     },
 
