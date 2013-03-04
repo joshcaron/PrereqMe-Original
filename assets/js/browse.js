@@ -41,7 +41,7 @@ var browse = {
                     });
 
                     //Redraw Table
-                    //dataTable.fnDraw();
+                    dataTable.fnDraw();
             });
         }
     }
