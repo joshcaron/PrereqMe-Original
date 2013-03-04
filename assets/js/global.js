@@ -189,7 +189,8 @@ var myplan = {
 
     shouldDeleteSemester : function(deleteButtonElement)
     {
-        $( "#MY_PLAN #dialog-delete-semester" ).dialog({
+        var dialogueData = $( "#MY_PLAN #dialog-delete-semester" ).first().clone();
+        dialogueData.dialog({
             resizable: false,
             minHeight:140,
             minWidth:387,
@@ -201,7 +202,7 @@ var myplan = {
 
                     //Executes delete
                     var deleteUrl = "delete_semester_from_user?&semesterId=" + myplan.semesterIdFromSemesterUL(parentUl);
-                    $.getJSON(deleteUrl ,null);
+                    $.getJSON(deleteUrl, null);
 
                     //Hide box element
                     parentUl.parent().hide('blind', {}, 250, null);   
