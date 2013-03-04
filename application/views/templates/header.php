@@ -15,16 +15,19 @@
 <!-- CSS sources -->
 <link rel="stylesheet" type="text/css" href=<?php echo css_url(), 'global.css'?> >
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
 
-<!-- JS sources -->
 <script>
 //Global variables
 BASE_URL = '<?php echo base_url()?>'
 </script>
+
+<!-- JS sources -->
 <script src=<?php echo js_url(), 'global.js'?> ></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
 <div id="MAIN_CONTAINER">
     <div id="HEADER">
