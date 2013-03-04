@@ -24,6 +24,9 @@ BASE_URL = '<?php echo base_url()?>'
 
 <!-- JS sources -->
 <script src=<?php echo js_url(), 'global.js'?> ></script>
+<script src=<?php echo js_url(), 'home.js'?> ></script>
+<script src=<?php echo js_url(), 'my_plan.js'?> ></script>
+<script src=<?php echo js_url(), 'browse.js'?> ></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
