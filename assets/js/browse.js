@@ -28,7 +28,7 @@ var browse = {
                         tableRow += "<td>" + course.deptCode + "</td>";
                         tableRow += "<td>" + course.code + "</td>";
                         tableRow += "<td>" + course.title + "</td>";
-                        tableRow += "<td>" + course.description + "</td>";
+                        tableRow += "<td>" + course.description.substring(0,40) + "...</td>";
                         tableRow += "<td>" + course.credits + "</td>";
                         tableRow += "</tr>";
                         tableBody.append(tableRow);
