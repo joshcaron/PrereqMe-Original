@@ -30,6 +30,7 @@ class Course extends PM_Controller
             $course->prereqs = $this->course_model->get_prereqs($course, TRUE);
 
             $data['title'] = 'Course detail - PrereqMe';
+            $data['selectedNav'] = 'browse';
             $data['course'] = $course;
 
             $this->load->view('templates/header', $data);

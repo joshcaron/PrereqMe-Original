@@ -41,7 +41,8 @@ select { border-color:#999; }
 #DASHBOARD_LINKS li { list-style-type:none; margin-right:8px; }
 #DASHBOARD_LINKS a { display:block; padding:9px; color:#FFF; text-decoration:none;}
 #DASHBOARD_LINKS a:hover,
-#DASHBOARD_LINKS a.selected { position:relative; top:-4px; padding-top:13px; color:#000; border-radius:4px 4px 0px 0px; background-color:#FFFDEB; }
+#DASHBOARD_LINKS a.selected { position:relative; top:-4px; padding-top:13px; color:#000; border-radius:4px 4px 0px 0px; background-color:#FFFDEB; cursor:default;}
+#DASHBOARD_LINKS .browse a.selected { cursor:pointer; }
 
 /* Body */
 #BODY_CONTAINER { min-height:650px; }

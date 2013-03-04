@@ -91,10 +91,10 @@ BASE_URL = '<?php echo base_url()?>'
     <?php if(isset($user)): ?>
         <div id="DASHBOARD_LINKS">
             <ul class="cf">
-                <li class="fl"><a <?php if(isset($selectedNav) AND $selectedNav === 'overview')echo 'class="selected"'?> href=<?php echo base_url('index.php/dashboard')?>>Dashboard</a></li> 
-                <li class="fl"><a <?php if(isset($selectedNav) AND $selectedNav === 'my_plan')echo 'class="selected"'?> href=<?php echo base_url('index.php/dashboard/my_plan')?>>My Plan</a></li>  
-                <li class="fl"><a <?php if(isset($selectedNav) AND $selectedNav === 'browse')echo 'class="selected"'?> href=<?php echo base_url('index.php/dashboard/browse')?>>Browse Courses</a></li>  
-                <li class="fl"><a <?php if(isset($selectedNav) AND $selectedNav === 'help')echo 'class="selected"'?> href=<?php echo base_url('index.php/dashboard/help')?>>Help</a></li> 
+                <li class="fl"><a <?php $selectedNav === 'overview')echo 'class="selected"'?> href=<?php echo base_url('index.php/dashboard')?>>Dashboard</a></li> 
+                <li class="fl"><a <?php $selectedNav === 'my_plan')echo 'class="selected"'?> href=<?php echo base_url('index.php/dashboard/my_plan')?>>My Plan</a></li>  
+                <li class="fl browse"><a <?php $selectedNav === 'browse')echo 'class="selected"'?> href=<?php echo base_url('index.php/dashboard/browse')?>>Browse Courses</a></li>  
+                <li class="fl"><a <?php $selectedNav === 'help')echo 'class="selected"'?> href=<?php echo base_url('index.php/dashboard/help')?>>Help</a></li> 
             </ul>
         </div>
     <?php endif; ?>
