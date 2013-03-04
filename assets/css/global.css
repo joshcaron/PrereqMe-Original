@@ -80,3 +80,11 @@ select { border-color:#999; }
 #MY_PLAN #COURSE_DUMP #search { font-size:24px; }
 #dialog-delete-semester { height:77px; font-size:14px;}
 #dialog-delete-semester .ui-icon-alert { float: left; margin: 0px 7px 20px 0px; }
+
+/* Browse */
+#BROWSE #RESULTS #dept_code { width:42px; }
+#BROWSE #RESULTS #course_id { width:55px; }
+#BROWSE #RESULTS #credits { width:53px; }
+
+
+

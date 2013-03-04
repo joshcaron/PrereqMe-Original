@@ -3,7 +3,11 @@ var browse = {
 
     initializeTable : function()
     {
-        $('#BROWSE #RESULTS').first().dataTable();
+        $('#BROWSE #RESULTS').first().dataTable({
+             "bJQueryUI": true
+
+
+        });
     },
 
     //Updates the courses based on the set filters
@@ -27,8 +31,7 @@ var browse = {
                         tableRow = "<tr>";
                         tableRow += "<td>" + course.deptCode + "</td>";
                         tableRow += "<td>" + course.code + "</td>";
-                        tableRow += "<td>" + course.title + "</td>";
-                        tableRow += "<td>" + course.description.substring(0,40) + "...</td>";
+                        tableRow += "<td>" + course.title.substring(0,100) + "</td>";
                         tableRow += "<td>" + course.credits + "</td>";
                         tableRow += "</tr>";
                         tableBody.append(tableRow);

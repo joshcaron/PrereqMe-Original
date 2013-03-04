@@ -14,11 +14,10 @@
 <table id="RESULTS">
     <thead>
         <tr>
-            <th>Dept. Code</th>
-            <th>Course Id</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Credits</th>
+            <th id="dept_code">Dept. Code</th>
+            <th id="course_id">Course Id</th>
+            <th id="title">Title</th>
+            <th id="credits">Credits</th>
         </tr>
     </thead>
     <tbody>
@@ -26,7 +25,6 @@
             <td></td>
             <td></td>
             <td>Please select a department above to begin</td>        
-            <td></td>
             <td></td>
         </tr>
     </tbody>
