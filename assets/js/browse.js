@@ -4,8 +4,9 @@ var browse = {
     initializeTable : function()
     {
         $('#BROWSE #RESULTS').first().dataTable({
-             "bJQueryUI": true
-
+            "sScrollY": 400,
+            "bScrollCollapse": true,
+            "bPaginate": false
 
         });
     },
