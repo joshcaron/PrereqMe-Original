@@ -13,7 +13,7 @@ var browse = {
 
         if(deptId > 0)
         {
-            var getUrl = BASE_URL + dashboard + "courses_for_filters?deptId=" + deptId;
+            var getUrl = BASE_URL + "dashboard/courses_for_filters?deptId=" + deptId;
 
             //Get filtered courses from server
             $.getJSON(getUrl ,function(result){
