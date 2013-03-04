@@ -21,6 +21,12 @@
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Please select a department above to begin</td>        
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
