@@ -89,8 +89,8 @@ BASE_URL = '<?php echo base_url()?>'
     </div>
 
     <?php if(isset($user)): ?>
-        <div id="DASHBOARD_LINKS" class="cf">
-            <ul>
+        <div id="DASHBOARD_LINKS">
+            <ul class="cf">
                 <li class="fl"><a href=<?php echo base_url('index.php/dashboard')?>>Dashboard</a></li> 
                 <li class="fl"><a href=<?php echo base_url('index.php/dashboard/my_plan')?>>My Plan</a></li>  
                 <li class="fl"><a href=<?php echo base_url('index.php/dashboard/browse')?>>Browse Courses</a></li>  

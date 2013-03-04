@@ -36,9 +36,9 @@ select { border-color:#999; }
 #search_small #query { width:204px; height:13px; padding:5px 15px; font-size:16px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
 
 /* Dashboard Links */
-#DASHBOARD_LINKS { padding:8px 15px; font-size:32px; background-color:#D4D6D4; }
-#DASHBOARD_LINKS ul { width:717px; margin:0px auto; }
-#DASHBOARD_LINKS li { list-style-type:none; margin-right:10px; }
+#DASHBOARD_LINKS { padding:8px 15px; font-size:24px; background-color:#D4D6D4; }
+#DASHBOARD_LINKS ul { width:523px; margin:0px auto; }
+#DASHBOARD_LINKS li { list-style-type:none; margin-right:24px; }
 #DASHBOARD_LINKS a { color:#000; text-decoration:none;}
 
 /* Body */
