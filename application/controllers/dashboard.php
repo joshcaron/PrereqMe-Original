@@ -228,7 +228,14 @@ class Dashboard extends PM_Controller
         }
         else
         {
-            $courses = $this->user_course_model->get_courses_by_filters($deptId);
+            $rawCourses = $this->user_course_model->get_courses_by_filters($deptId);
+
+            $courses = [];
+
+            foreach ($rawCourses -> $rawCourse)
+            {
+                $courses[] = array($rawCourse->deptCode, $rawCourse->code, $rawCourse->title, $rawCourse->credits);
+            }
 
             $data['response'] = $courses;
             $this->load->view('json', $data);
