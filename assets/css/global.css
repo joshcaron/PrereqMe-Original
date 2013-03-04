@@ -30,7 +30,7 @@ select { border-color:#999; }
 /* Dashboard Links */
 #DASHBOARD_LINKS { padding:8px 15px; font-size:32px; background-color:#D4D6D4; }
 #DASHBOARD_LINKS ul { width:717px; margin:0px auto; }
-#DASHBOARD_LINKS li { list-style-type:none; }
+#DASHBOARD_LINKS li { list-style-type:none; margin-right:10px; }
 #DASHBOARD_LINKS a { color:#000; text-decoration:none;}
 
 /* Body */
