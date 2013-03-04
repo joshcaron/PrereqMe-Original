@@ -96,6 +96,7 @@ BASE_URL = '<?php echo base_url()?>'
                 <li class="fl"><a href=<?php echo base_url('index.php/dashboard/browse')?>>Browse Courses</a></li>  
                 <li class="fl"><a href=<?php echo base_url('index.php/dashboard/help')?>>Help</a></li> 
             </ul>
+            <div class="clear"></div>
         </div>
     <?php endif; ?>
 
