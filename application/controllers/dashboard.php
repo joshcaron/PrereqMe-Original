@@ -57,8 +57,12 @@ class Dashboard extends PM_Controller
     {
         if( parent::_is_logged_in() )
         {
+            $schoolId = $this->session->userdata('school_id');
+            $departments = $this->school_model->get_departments($schoolId);
+
             $data['title'] = 'Browse - PrereqMe';
             $data['selectedNav'] = 'browse';
+            $data['departments'] = $departments;
 
             $this->load->view('templates/header', $data);
             $this->load->view('dashboard/browse', $data);
