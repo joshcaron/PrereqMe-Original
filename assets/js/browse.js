@@ -37,6 +37,8 @@ var browse = {
                         tableRow += "</tr>";
                         tableBody.append(tableRow);
                     });
+
+                    browse.initializeTable();
             });
         }
     }
