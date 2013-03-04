@@ -28,7 +28,7 @@ BASE_URL = '<?php echo base_url()?>'
 
 <div id="MAIN_CONTAINER">
     <div id="HEADER">
-        <div id="CONTENT">
+        <div id="CONTENT" class="cf">
             <div id="logo" class="fl">
                 <a href=
                         <?php
@@ -47,7 +47,7 @@ BASE_URL = '<?php echo base_url()?>'
 
             <?php if(isset($user)): ?>
                 <?php echo form_open('course/search_results', array('id'=>'header_search', 'class'=>'fl')); ?>
-                    <div id="search_small">
+                    <div id="search_small" class="cf">
                         <input type="hidden" class="college_id" name="collegeId" value=<?php echo $user['schoolId']?> />
                         <div id="search_box">
                             <div class="magnifying_small fl"></div>
@@ -99,4 +99,4 @@ BASE_URL = '<?php echo base_url()?>'
         </div>
     <?php endif; ?>
 
-    <div id="BODY_CONTAINER">
+    <div id="BODY_CONTAINER" class="cf">
