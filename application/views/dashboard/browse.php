@@ -22,6 +22,9 @@
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td colspan="5">Please select a department above to begin</td>        
+        </tr>
     </tbody>
 </table>
 
