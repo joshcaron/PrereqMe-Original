@@ -232,7 +232,7 @@ class Dashboard extends PM_Controller
 
             $courses = array();
 
-            foreach ($rawCourses -> $rawCourse)
+            foreach ($rawCourses as $rawCourse)
             {
                 $courses[] = array($rawCourse->deptCode, $rawCourse->code, $rawCourse->title, $rawCourse->credits);
             }
