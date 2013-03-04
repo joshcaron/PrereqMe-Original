@@ -207,13 +207,31 @@ class Dashboard extends PM_Controller
 
         if($courseId === FALSE OR $semesterId === FALSE)
         {
-            log_message('error', 'Necessary params were not received by dasboard.change_semester');
+            log_message('error', 'Necessary params were not received by dashboard.change_semester');
         }
         else
         {
             $userId = $this->session->userdata('user_id');
 
             $this->user_course_model->change_semester($courseId, $semesterId, $userId);
+        }
+    }
+
+    //Gets the courses for the given filters
+    public function courses_for_filters()
+    {
+        $deptId = $this->input->get('deptId');
+
+        if($deptId === FALSE)
+        {
+            log_message('error', 'Necessary params were not received by dashboard.courses_for_filters');
+        }
+        else
+        {
+            $courses = $this->user_course_model->get_courses_by_filters($deptId);
+
+            $data['response'] = $courses;
+            $this->load->view('json', $courses);
         }
     }
 }

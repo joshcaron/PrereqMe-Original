@@ -2,7 +2,7 @@
 
 <div id="FILTERS">
 
-    <select id="dept_id" name="deptId">
+    <select id="dept_id" name="deptId" onchange="browse.updateCourses();">
         <option value="0" selected>Select department</option>
 
         <?php foreach($departments as $department): ?>
