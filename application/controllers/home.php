@@ -20,7 +20,7 @@ class Home extends PM_Controller
         $this->load->view('templates/footer');
     }
 
-    //Called by an ajax request to get the categories for a school
+    //Called by an ajax request to get the departments for a school
     public function get_departments()
     {
         $schoolId = $this->input->get('collegeId');
@@ -35,6 +35,25 @@ class Home extends PM_Controller
             $departments = $this->school_model->get_departments($schoolId);
 
             $data['response'] = $departments;
+            $this->load->view('json', $data);
+        }
+    }
+
+    //Called by an ajax request to get the majors for a school
+    public function get_majors()
+    {
+        $deptId = $this->input->get('deptId');
+
+        if($deptId === FALSE)
+        {
+            log_message('error', 'DeptId not sent to home.get_majors');
+        }
+        else
+        {
+            //Get departments for the school and send back the JSON array
+            $majors = $this->school_model->get_majors($deptId);
+
+            $data['response'] = $majors;
             $this->load->view('json', $data);
         }
     }
@@ -98,7 +117,8 @@ class Home extends PM_Controller
                     'email' => $user->email,
                     'first_name' => $user->firstName,
                     'school_id' => $user->schoolId,
-                    'dept_id' => $user->deptId
+                    'dept_id' => $user->deptId,
+                    'major_id' => $user->majorId
                 );
 
                 $this->session->set_userdata($user_data);

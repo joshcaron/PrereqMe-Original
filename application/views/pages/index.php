@@ -42,7 +42,7 @@
                 <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
 
                 <tr><td>
-                    <select id="college_id" name="collegeId" onchange="home.changedSchoolOrDept()">
+                    <select id="college_id" name="collegeId" onchange="home.changedSchoolOrDeptOrMajor()">
                         <option value="0" selected>Select your school</option>
 
                         <?php foreach($schools as $school): ?>
@@ -53,11 +53,17 @@
                 <tr><td class="error"><?php echo form_error('collegeId'); ?></td></tr>
 
                 <tr><td>
-                    <select id="dept_id" name="deptId" onchange="home.changedSchoolOrDept()" disabled>
+                    <select id="dept_id" name="deptId" onchange="home.changedSchoolOrDeptOrMajor()" disabled>
                         <option value="0" selected>Select your department</option>
                     </select>
                 </td></tr>
-                <tr><td class="error"><?php echo form_error('deptId'); ?></td></tr>
+
+                <tr><td>
+                    <select id="major_id" name="majorId" onchange="home.changedSchoolOrDeptOrMajor()" disabled>
+                        <option value="0" selected>Select your major</option>
+                    </select>
+                </td></tr>
+                <tr><td class="error"><?php echo form_error('majorId'); ?></td></tr>
 
                 <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
 

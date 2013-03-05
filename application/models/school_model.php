@@ -26,6 +26,24 @@ class School_model extends CI_Model
         }
     }
 
+    //Returns all of the majors for the department
+    public function get_majors($deptId = -1)
+    {
+        if($deptId === -1)
+        {
+            log_message('error', 'Necessary params not sent to School_model.get_majors()');
+            return array();
+        }
+        else
+        {
+            $constraints = array(
+                'deptId' => $deptId
+            );
+
+            return $this->db->get_where('pm_major', $constraints)->result();
+        }
+    }
+
     //Gets semesters for the school
     public function get_semeseters($schoolId = -1)
     {
