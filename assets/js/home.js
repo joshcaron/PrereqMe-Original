@@ -53,6 +53,8 @@ var home = {
             //Remove majors and disable major button
             major_select.html("<option value=\"0\" selected>Select your major</option>");
             major_select.prop('disabled', true);
+
+            submit_button.prop('disabled', true);
         }
         //Only school has been chosen
         else if(dept_id === 0)
@@ -73,6 +75,8 @@ var home = {
             //Remove majors and disable major button
             major_select.html("<option value=\"0\" selected>Select your major</option>");
             major_select.prop('disabled', true);
+
+            submit_button.prop('disabled', true);
         }
         //School and department have been chosen
         else
