@@ -63,7 +63,6 @@
                         <option value="0" selected>Select your major</option>
                     </select>
                 </td></tr>
-                <tr><td class="error"><?php echo form_error('majorId'); ?></td></tr>
 
                 <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
 

@@ -74,9 +74,10 @@ class Home extends PM_Controller
             $password = $this->input->post('password');
             $schoolId = $this->input->post('collegeId');
             $deptId = $this->input->post('deptId');
+            $majorId = $this->input->post('majorId');
 
             //Signs up user
-            $this->user_model->sign_up_user($firstName, $email, $password, $schoolId, $deptId);
+            $this->user_model->sign_up_user($firstName, $email, $password, $schoolId, $deptId, $majorId);
 
             //Logs new user in
             $this->login($email, $password);
