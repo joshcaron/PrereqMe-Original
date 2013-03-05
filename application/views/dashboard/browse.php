@@ -1,7 +1,9 @@
 <div id="BROWSE">
 
-<div id="FILTERS">
+<h2>Find courses using the filters below<h2>
+<h3>Click on any course to see its details<h3>
 
+<div id="FILTERS">
     <span>Filters: </span>
     <select id="dept_id" name="deptId" onchange="browse.updateCourses();">
         <option value="0" selected>Department</option>
