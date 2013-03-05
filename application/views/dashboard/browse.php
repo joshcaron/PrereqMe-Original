@@ -2,6 +2,7 @@
 
 <div id="FILTERS">
 
+    <span>Filters: </span>
     <select id="dept_id" name="deptId" onchange="browse.updateCourses();">
         <option value="0" selected>Select department</option>
 
