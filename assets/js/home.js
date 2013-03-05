@@ -58,7 +58,7 @@ var home = {
         else if(dept_id === 0)
         {
             //Make an ajax call to insert departments for the school and enable department select
-            var search_url = BASE_URL + "index.php/home/get_departments?collegeId=" + school_id.toString();
+            var searchUrl = BASE_URL + "index.php/home/get_departments?collegeId=" + school_id.toString();
             $.getJSON(searchUrl ,function(result){
                 
                 dept_select.html("<option value=\"0\" selected>Select your department</option>");
@@ -78,7 +78,7 @@ var home = {
         else
         {
             //Make an ajax call to insert majors for the department and enable major select
-            var search_url = BASE_URL + "index.php/home/get_majors?deptId=" + dept_id.toString();
+            var searchUrl = BASE_URL + "index.php/home/get_majors?deptId=" + dept_id.toString();
             $.getJSON(searchUrl ,function(result){
                 
                 major_select.html("<option value=\"0\" selected>Select your major</option>");
