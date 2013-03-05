@@ -82,5 +82,5 @@ select { border-color:#999; }
 #dialog-delete-semester .ui-icon-alert { float: left; margin: 0px 7px 20px 0px; }
 
 /* BROWSE */
-#BROWSE #RESULTS tr { cursor:pointer; }
-#BROWSE #RESULTS .temp { cursor:default; }
+#BROWSE #RESULTS tbody tr { cursor:pointer; }
+#BROWSE #RESULTS tbody .temp { cursor:default; }
