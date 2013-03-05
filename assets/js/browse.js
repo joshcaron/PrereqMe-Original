@@ -9,7 +9,8 @@ var browse = {
             "bScrollCollapse": true,
             "bPaginate": false,
             "aoColumnDefs": [
-                { "bSearchable": false, "bVisible": false, "aTargets": [ 0 ] }
+                { "bSearchable": false, "bVisible": false, "aTargets": [0] },
+                { "bSearchable": false, "aTargets": [4] }
             ]
         });
 
