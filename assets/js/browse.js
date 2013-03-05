@@ -12,6 +12,13 @@ var browse = {
                 { "bSearchable": false, "bVisible": false, "aTargets": [ 0 ] }
             ]
         });
+
+        //Checks to see if filters are already set
+        if($('#BROWSE #FILTERS #dept_id').val() > 0)
+        {
+            //Refresh data
+            browse.updateCourses();
+        }
     },
 
     //Updates the courses based on the set filters
