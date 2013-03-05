@@ -234,7 +234,7 @@ class Dashboard extends PM_Controller
 
             foreach ($rawCourses as $rawCourse)
             {
-                $courses[] = array($rawCourse->deptCode, $rawCourse->code, $rawCourse->title, $rawCourse->credits);
+                $courses[] = array($rawCourse->id, $rawCourse->deptCode, $rawCourse->code, $rawCourse->title, $rawCourse->credits);
             }
 
             $data['response'] = $courses;
