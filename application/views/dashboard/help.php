@@ -1,5 +1,5 @@
 <div id="HELP">
 
-<h1>HELP!</h1>
+<h1>Coming Soon!</h1>
 
 </div>
