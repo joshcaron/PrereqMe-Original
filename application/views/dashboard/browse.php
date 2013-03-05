@@ -1,7 +1,6 @@
 <div id="BROWSE">
 
-<h2>Find courses using the filters below<h2>
-<h3>Click on any course to see its details<h3>
+<h1>Browse courses using the filters below<h1>
 
 <div id="FILTERS">
     <span>Filters: </span>
