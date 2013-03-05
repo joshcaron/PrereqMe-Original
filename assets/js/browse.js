@@ -29,6 +29,15 @@ var browse = {
             $.getJSON(getUrl ,function(result){
                 coursesTable.fnClearTable();;
                 coursesTable.fnAddData(result);
+
+                //Add on-click methods
+                coursesTable.$('tr').click( function () {
+                    var rowData = oTable.fnGetData(this);
+                    var courseId = data[0];
+
+                    //Redirect to course detail page
+                    window.location.href = BASE_URL + "course/view/?courseId=" + courseId;
+                });
             });
         }
     }
