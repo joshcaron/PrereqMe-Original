@@ -35,12 +35,6 @@
         <h2>Sign up for an account:</h2>
         <?php echo form_open('home/signup'); ?>
             <table>
-                <tr><td><label for="first_name">First Name<span class="required">*</span></label></td></tr>
-
-                <tr><td><input type="text" class="wide" name="first_name" value="<?php echo set_value('first_name'); ?>" /></td></tr>
-
-                <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
-
                 <tr><td>
                     <select id="college_id" name="collegeId" onchange="home.changedSchoolOrDeptOrMajor()">
                         <option value="0" selected>Select your school</option>
@@ -64,6 +58,8 @@
                     </select>
                 </td></tr>
 
+                <tr><td><label for="first_name">First Name<span class="required">*</span></label></td></tr>
+                <tr><td><input type="text" class="wide" name="first_name" value="<?php echo set_value('first_name'); ?>" /></td></tr>
                 <tr><td class="error"><?php echo form_error('first_name'); ?></td></tr>
 
                 <tr><td><label for="email">Email<span class="required">*</span></label></td></tr>
