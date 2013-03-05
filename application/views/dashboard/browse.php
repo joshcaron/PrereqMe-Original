@@ -1,6 +1,6 @@
 <div id="BROWSE">
 
-<h1>Browse courses using the filters below<h1>
+<h1>Browse courses using the filters below</h1>
 
 <div id="FILTERS">
     <span>Filters: </span>
