@@ -89,7 +89,6 @@ var home = {
 
                 major_select.prop('disabled', false);
             });
-        }
 
             submit_button.prop('disabled', true);
         }
