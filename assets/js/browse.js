@@ -32,7 +32,7 @@ var browse = {
 
                 //Add on-click methods
                 coursesTable.$('tr').click( function () {
-                    var rowData = oTable.fnGetData(this);
+                    var rowData = coursesTable.fnGetData(this);
                     var courseId = data[0];
 
                     //Redirect to course detail page
