@@ -22,7 +22,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr class="temp">
             <td></td>
             <td></td>
             <td></td>
