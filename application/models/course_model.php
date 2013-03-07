@@ -17,7 +17,17 @@ class Course_model extends CI_Model
 
             $this->db->select('pm_course.*, pm_dept.code as deptCode');
             $this->db->join('pm_dept', 'pm_dept.id = pm_course.deptId');
-            return $this->db->get_where('pm_course', $constraints)->row();
+
+            $course = $this->db->get_where('pm_course', $constraints)->row();
+
+            if(is_object($course))
+            {
+                return $course;
+            }
+            else
+            {
+                return NULL;
+            }
         }
     }
 
