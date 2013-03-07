@@ -14,16 +14,19 @@ class Spacetree_course
             $this->name = $course->title . '(' . $course->deptCode . $course->code . ')';
             $this->data = array();
 
-            $spacetreePrereqs = array();
-
-            //Changes each prereq into a prereq
-            foreach($course->prereqs as $prereq)
+            if(isset($course->prereqs))
             {
-                //Changes it (and it's children) into a spacetree course
-                $spacetreePrereqs[] = new Spacetree_course($prereq);
-            }
+                $spacetreePrereqs = array();
 
-            $this->children = $spacetreePrereqs;
+                //Changes each prereq into a prereq
+                foreach($course->prereqs as $prereq)
+                {
+                    //Changes it (and it's children) into a spacetree course
+                    $spacetreePrereqs[] = new Spacetree_course($prereq);
+                }
+
+                $this->children = $spacetreePrereqs;
+            }
         }
     }
 
