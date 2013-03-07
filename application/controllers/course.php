@@ -17,7 +17,14 @@ class Course extends PM_Controller
         if($course === NULL)
         {
             $courseId = $this->input->get('courseId');
-            $course = $this->course_model->get_by_id($courseId);
+
+            if($courseId === FALSE)
+            {
+                //If course wasn't sent by "get" params, get it from URI
+                $courseId = $this->uri->uri_to_assoc(3)['courseId'];
+            }
+
+            $course = $this->course_model->get_by_id($courseId);           
         }
 
         if($course === NULL)
