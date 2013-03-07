@@ -11,22 +11,15 @@ class Course extends PM_Controller
     // NOTE: there are two ways to retrieve course:
     // 1. Passed as a variable (such as from search function)
     // 2. Sent by GET (from a view)
-    public function view($course = NULL)
+    public function view($courseId = -1)
     {
-        log_message('info', var_export($course));
         //If course wasn't sent, retrieve courseId from GET and course from course_model
-        if($course === NULL)
+        if($courseId === -1)
         {
             $courseId = $this->input->get('courseId');
-
-            if($courseId === FALSE)
-            {
-                //If course wasn't sent by "get" params, get it from URI
-                $courseId = $this->uri->segment(3);
-            }
-
-            $course = $this->course_model->get_by_id($courseId);           
         }
+
+        $course = $this->course_model->get_by_id($courseId);           
 
         if($course === NULL)
         {
@@ -71,7 +64,8 @@ class Course extends PM_Controller
             if (count($results) === 1)
             {
                 //Display course detail page
-                $this->view($results[0]);
+                $course = $results[0];
+                redirect('/course/view/'.$course->id);
             }
             else
             {
