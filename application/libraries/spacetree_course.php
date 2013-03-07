@@ -8,7 +8,7 @@ class Spacetree_course
 
     public function Spacetree_course($course)
     {
-        if($course !== NULL)
+        if(isset($course))
         {
             $this->id = $course->id;
             $this->name = $course->title . '(' . $course->deptCode . $course->code . ')';
