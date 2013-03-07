@@ -40,7 +40,7 @@ function initWithJSON(json)
         //set distance between node and its children
         levelDistance: 50,
 
-        align: "left",
+        orientation: 'right',
 
         //enable panning
         Navigation: {
