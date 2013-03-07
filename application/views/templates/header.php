@@ -14,6 +14,8 @@
 
 <!-- CSS sources -->
 <link rel="stylesheet" type="text/css" href=<?php echo css_url(), 'global.css'?> >
+<link rel="stylesheet" type="text/css" href=<?php echo css_url(), 'spacetree/base.css'?> >
+<link rel="stylesheet" type="text/css" href=<?php echo css_url(), 'spacetree/Spacetree.css'?> >
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
 <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
 
@@ -28,6 +30,9 @@ BASE_URL = '<?php echo base_url()?>'
 <script src=<?php echo js_url(), 'my_plan.js'?> ></script>
 <script src=<?php echo js_url(), 'browse.js'?> ></script>
 <script src=<?php echo js_url(), 'dashboard.js'?> ></script>
+<script src=<?php echo js_url(), 'spacetree/jit-yc.js'?> ></script>
+<script src=<?php echo js_url(), 'spacetree/jit.js'?> ></script>
+<script src=<?php echo js_url(), 'spacetree/course.js'?> ></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>

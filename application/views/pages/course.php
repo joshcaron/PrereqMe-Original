@@ -3,6 +3,15 @@
 <p><?php echo $course->credits ?> credits</p>
 <p><?php echo $course->description ?></p>
 
+
 <h2>Prereqs</h2>
-<?php print_r($courseJSON) ?>
-</div>
+
+<div id="SPACETREE"></div>
+
+<script>
+//Initializes spacetree
+var JSON = <?php echo $courseJSON ?>;
+initWithJSON();
+</script>
+
+<div>
