@@ -20,6 +20,8 @@ class Course_model extends CI_Model
 
             $course = $this->db->get_where('pm_course', $constraints)->row();
 
+            log_message('info', 'Course:'.var_export($course));
+
             if(is_object($course))
             {
                 return $course;
