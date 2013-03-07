@@ -21,9 +21,7 @@ class Course extends PM_Controller
             if($courseId === FALSE)
             {
                 //If course wasn't sent by "get" params, get it from URI
-                $uriSegments = $this->uri->uri_to_assoc(3);
-                log_message('info', var_export($uriSegments));
-                $courseId = $uriSegments['courseId'];
+                $courseId = $this->uri->segment(3);
             }
 
             $course = $this->course_model->get_by_id($courseId);           
