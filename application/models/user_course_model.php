@@ -30,6 +30,8 @@ class User_course_model extends CI_Model
             {
                 $semester->courses = $this->get_courses_for_semester($userId, $semester->id);
 
+                /* Only goes 1-level deep so it doesn't work 
+
                 //Figures out which courses have satisfied prereqs or not
                 for($courseIndex = 0; $courseIndex < count($semester->courses); $courseIndex++)
                 {
@@ -53,9 +55,11 @@ class User_course_model extends CI_Model
                         $completedCourseIds[] = $course->id;
                     }
                 }
+
+                */
             }
 
-            return $semesters;
+            return  $semesters;
         }
     }
 

@@ -29,9 +29,13 @@ class Course extends PM_Controller
             //Retrieve recursive prereqs for the course
             $course->prereqs = $this->course_model->get_prereqs($course, TRUE);
 
+            //Converts the course into a spacetreeCourse and then into JSON
+            $spacetreeCourse = new SpaceTreeCourse($course);
+            $courseJSON = json_encode($spacetreeCourse);
+
             $data['title'] = 'Course detail - PrereqMe';
             $data['selectedNav'] = 'browse';
-            $data['course'] = $course;
+            $data['course'] = $courseJSON;
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/course', $data);
