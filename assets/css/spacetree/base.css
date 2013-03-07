@@ -70,9 +70,9 @@
 
 #infovis {
     position:relative;
-    width:100%;
+    width:90%;
     height:600px;
-    margin:auto;
+    margin:10px auto;
     overflow:hidden;
 }
 
