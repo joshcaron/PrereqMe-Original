@@ -78,7 +78,7 @@ function initWithJSON(json)
             label.id = node.id;            
             label.innerHTML = node.name;
             label.onclick = function(){
-            	if(normal.checked) {
+            	if(normal && normal.checked) {
             	  st.onClick(node.id);
             	} else {
                 st.setRoot(node.id, 'animate');
