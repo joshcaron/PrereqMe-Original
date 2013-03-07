@@ -30,7 +30,7 @@ class Course extends PM_Controller
             $course->prereqs = $this->course_model->get_prereqs($course, TRUE);
 
             //Converts the course into a spacetreeCourse and then into JSON
-            $spacetreeCourse = new SpaceTreeCourse($course);
+            $spacetreeCourse = new Spacetree_course($course);
             $courseJSON = json_encode($spacetreeCourse);
 
             $data['title'] = 'Course detail - PrereqMe';
