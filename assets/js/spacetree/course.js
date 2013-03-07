@@ -39,6 +39,9 @@ function initWithJSON(json)
         transition: $jit.Trans.Quart.easeInOut,
         //set distance between node and its children
         levelDistance: 50,
+
+        align: left,
+        
         //enable panning
         Navigation: {
           enable:true,
@@ -137,12 +140,10 @@ function initWithJSON(json)
     st.loadJSON(json);
     //compute node positions and layout
     st.compute();
-
+    //optional: make a translation of the tree
+    st.geom.translate(new $jit.Complex(-200, 0), "current");
     //emulate a click on the root node.
     st.onClick(st.root);
     //end
-
-        //optional: make a translation of the tree
-    st.geom.translate(new $jit.Complex(-800, 0), "current");
 
 }
