@@ -9,7 +9,7 @@ class Spacetree_course
     public function __construct($course)
     {
         $this->id = $course->id;
-        $this->name = $course->title . '(' . $course->deptCode . $course.code . ')';
+        $this->name = $course->title . '(' . $course->deptCode . $course->code . ')';
         $this->data = array();
 
         $spacetreePrereqs = array();
