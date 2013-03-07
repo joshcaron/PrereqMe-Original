@@ -67,9 +67,9 @@ class Course_model extends CI_Model
         else
         {
             $this->db->select('pm_course.*, pm_dept.code as deptCode');
-            $this->db->join('pm_dept', 'pm_dept.id = pm_course.deptId');
             $this->db->where('pm_prereq.courseId', $course->id);
             $this->db->join('pm_course', 'pm_prereq.prereqId = pm_course.id');
+            $this->db->join('pm_dept', 'pm_dept.id = pm_course.deptId');
             $prereqs = $this->db->get('pm_prereq')->result();
             
             //Get each prereq's prereqs
