@@ -78,7 +78,8 @@ function initWithJSON(json)
             label.id = node.id;            
             label.innerHTML = node.name;
             label.onclick = function(){
-            	  st.onClick(node.id);
+                //Redirect to that course's detail page
+            	window.location.href = BASE_URL + "index.php/course/view?courseId=" + node.id;
             };
             //set label styles
             var style = label.style;
