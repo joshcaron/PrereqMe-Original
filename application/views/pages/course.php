@@ -4,5 +4,5 @@
 <p><?php echo $course->description ?></p>
 
 <h2>Prereqs</h2>
-<?php print_r($course->prereqs) ?>
+<?php print_r($courseJSON) ?>
 </div>

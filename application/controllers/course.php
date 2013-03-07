@@ -37,7 +37,8 @@ class Course extends PM_Controller
 
             $data['title'] = 'Course detail - PrereqMe';
             $data['selectedNav'] = 'browse';
-            $data['course'] = $courseJSON;
+            $data['course'] = $course;
+            $data['courseJSON'] = $courseJSON;
 
             $this->load->view('templates/header', $data);
             $this->load->view('pages/course', $data);
