@@ -6,6 +6,11 @@ class Spacetree_course
     public $data = array();
     public $children = array();
 
+    public function __construct()
+    {
+
+    }
+
     public function __construct($course)
     {
         $this->id = $course->id;
@@ -14,7 +19,7 @@ class Spacetree_course
 
         $spacetreePrereqs = array();
 
-        //Chagnes each prereq into a prereq
+        //Changes each prereq into a prereq
         foreach($course->prereqs as $prereq)
         {
             //Changes it (and it's children) into a spacetree course
