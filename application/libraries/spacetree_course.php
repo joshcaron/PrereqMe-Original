@@ -6,27 +6,25 @@ class Spacetree_course
     public $data = array();
     public $children = array();
 
-    public function __construct()
+    public function Spacetree_course($course)
     {
-
-    }
-
-    public function __construct($course)
-    {
-        $this->id = $course->id;
-        $this->name = $course->title . '(' . $course->deptCode . $course->code . ')';
-        $this->data = array();
-
-        $spacetreePrereqs = array();
-
-        //Changes each prereq into a prereq
-        foreach($course->prereqs as $prereq)
+        if($course !== NULL)
         {
-            //Changes it (and it's children) into a spacetree course
-            $spacetreePrereqs[] = new Spacetree_course($prereq);
-        }
+            $this->id = $course->id;
+            $this->name = $course->title . '(' . $course->deptCode . $course->code . ')';
+            $this->data = array();
 
-        $this->children = $spacetreePrereqs;
+            $spacetreePrereqs = array();
+
+            //Changes each prereq into a prereq
+            foreach($course->prereqs as $prereq)
+            {
+                //Changes it (and it's children) into a spacetree course
+                $spacetreePrereqs[] = new Spacetree_course($prereq);
+            }
+
+            $this->children = $spacetreePrereqs;
+        }
     }
 
 }
