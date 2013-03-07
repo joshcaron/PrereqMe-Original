@@ -32,7 +32,7 @@ function initWithJSON(json)
     //Create a new ST instance
     var st = new $jit.ST({
         //id of viz container element
-        injectInto: 'SPACETREE',
+        injectInto: 'infovis',
         //set duration for the animation
         duration: 500,
         //set animation transition type

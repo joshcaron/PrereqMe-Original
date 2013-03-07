@@ -6,7 +6,7 @@
 
 <h2>Prereqs</h2>
 
-<div id="SPACETREE"></div>
+<div id="infovis"></div>
 
 <script>
 //Initializes spacetree
