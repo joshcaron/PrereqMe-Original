@@ -139,12 +139,8 @@ function initWithJSON(json)
     st.compute();
     //optional: make a translation of the tree
     st.geom.translate(new $jit.Complex(-200, 0), "current");
-
-    st.switchAlignment("right", "animate", {  
-         onComplete: function() { 
-           //emulate a click on the root node. 
-           st.onClick(st.root);  
-         }  
-    });
+    //emulate a click on the root node.
+    st.onClick(st.root);
+    //end
 
 }
