@@ -68,6 +68,7 @@ select { border-color:#999; }
 #SEARCH_RESULTS #content .course { margin:8px 0px; padding:10px; border:1px solid #000000; cursor:pointer; }
 
 /* Course Detail */
+#COURSE_DETAIL #infovis { background-color:#1a1a1a; }
 #COURSE_DETAIL #infovis .node { width:50px; height:50px; padding:15px; margin:auto; }
 
 /* My Plan */
