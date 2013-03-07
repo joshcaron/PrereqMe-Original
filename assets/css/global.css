@@ -67,6 +67,9 @@ select { border-color:#999; }
 #SEARCH_RESULTS #content { width:700px; margin:auto; }
 #SEARCH_RESULTS #content .course { margin:8px 0px; padding:10px; border:1px solid #000000; cursor:pointer; }
 
+/* Course Detail */
+#COURSE_DETAIL #infovis .node { min-width:50px; min-height:50px; }
+
 /* My Plan */
 #MY_PLAN div { margin-bottom:10px; }
 #MY_PLAN .box { min-width:450px; padding:20px; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#FFF; }

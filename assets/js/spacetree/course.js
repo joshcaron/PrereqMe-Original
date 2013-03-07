@@ -48,8 +48,7 @@ function initWithJSON(json)
         //set overridable=true for styling individual
         //nodes or edges
         Node: {
-            height: 50,
-            autoWidth: true,
+            autoHeight: true,
             type: 'rectangle',
             color: '#aaa',
             overridable: true
