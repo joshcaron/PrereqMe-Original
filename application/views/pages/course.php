@@ -10,8 +10,8 @@
 
 <script>
 //Initializes spacetree
-var JSON = <?php echo $courseJSON ?>;
-initWithJSON();
+var json = <?php echo $courseJSON ?>;
+initWithJSON(json);
 </script>
 
 <div>
