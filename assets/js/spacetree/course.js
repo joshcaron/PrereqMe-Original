@@ -44,7 +44,8 @@ function initWithJSON(json)
         //set orientation
         orientation: 'right',
         //set levels to show
-        levelsToShow: 6,
+        levelsToShow: n,
+        constrained: false,
         siblingOffset: 50,
 
         //enable panning
