@@ -92,9 +92,9 @@ function initWithJSON(json)
             };
 
             //set label styles
-            /*var style = label.style;
+            var style = label.style;
             style.width = node.width + 'px';
-            style.height = node.height + 'px'; */           
+            style.height = node.height + 'px';           
         },
         
         //This method is called right before plotting
