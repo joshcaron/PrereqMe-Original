@@ -40,7 +40,7 @@ function initWithJSON(json)
         //set distance between node and its children
         levelDistance: 150,
         //set xoffset
-        xOffset: 200,
+        offsetX: 200,
         //set orientation
         orientation: 'right',
 
