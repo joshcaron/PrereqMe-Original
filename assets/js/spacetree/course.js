@@ -54,6 +54,7 @@ function initWithJSON(json)
             autoWidth: true,
             type: 'rectangle',
             color: '#aaa',
+            levelDistance: 50,
             overridable: true
         },
         
