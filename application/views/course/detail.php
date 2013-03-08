@@ -1,9 +1,10 @@
 <div id="COURSE_DETAIL">
 
-
-<h2 class="fl"><?php echo $course->deptCode, $course->code, " - ", $course->title ?></h2>
-<h3 class="fr"><?php echo $course->credits ?> credits</h3>
-<p class="fl"><?php echo $course->description ?></p>
+<div class="cf">
+    <h2 class="fl"><?php echo $course->deptCode, $course->code, " - ", $course->title ?></h2>
+    <h3 class="fr"><?php echo $course->credits ?> credits</h3>
+    <p class="fl"><?php echo $course->description ?></p>
+</div>
 
 <div id="infovis"></div>
 
