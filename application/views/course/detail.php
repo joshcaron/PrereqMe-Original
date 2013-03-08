@@ -2,7 +2,7 @@
 
 
 <h2 class="fl"><?php echo $course->deptCode, $course->code, " - ", $course->title ?></h2>
-<p class="fr"><?php echo $course->credits ?> credits</p>
+<h3 class="fr"><?php echo $course->credits ?> credits</h3>
 <p class="fl"><?php echo $course->description ?></p>
 
 <div id="infovis"></div>
