@@ -67,6 +67,11 @@ function initWithJSON(json)
             type: 'bezier',
             overridable: true
         },
+
+        Tips: {
+            enable: true,
+            type: 'HTML'
+        },
         
         onBeforeCompute: function(node){
             Log.write("loading " + node.name);
