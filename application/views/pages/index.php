@@ -20,7 +20,18 @@
             <div id="search_box">
                 <div class="magnifying_large fl"></div>
                 <div class="fr">
-                    <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..." disabled/>
+                    <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..."/>
+                    <script>
+                    //Sets query to disabled if school select is 0
+                    if($('#HOME #college_id').val() === 0)
+                    {
+                        $('#HOME #query').first().prop('disabled', true);
+                    }
+                    else
+                    {
+                        $('#HOME #query').first().prop('disabled', false);
+                    }
+                    </script>
                 </div>
             </div>
             <div class="error"><?php echo form_error('query'); ?></div>
