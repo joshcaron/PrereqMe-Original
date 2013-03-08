@@ -10,9 +10,10 @@ class Spacetree_course
     {
         if($course !== NULL)
         {
-            $this->id = $course->id;
+            $this->id = rand(0, 10000000);
             $this->name = $course->deptCode . $course->code;
             $this->data = array();
+            $this->data['id'] = $course->id;
             $this->data['tip'] = $course->title . ' (' . $course->credits . ')';
 
             if(isset($course->prereqs))

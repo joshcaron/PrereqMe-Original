@@ -94,7 +94,7 @@ function initWithJSON(json)
             label.innerHTML = node.name;
             label.onclick = function(){
                 //Redirect to that course's detail page (if we aren't on it right now)
-                var redirectUrl = BASE_URL + "index.php/course/view/" + node.id;
+                var redirectUrl = BASE_URL + "index.php/course/view/" + node.data['id'];
                 if(window.location.href !== redirectUrl)
                 {
             	   window.location.href = redirectUrl;
