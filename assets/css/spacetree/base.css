@@ -67,15 +67,6 @@
     color:#23A4FF;
 }
 
-
-#infovis {
-    position:relative;
-    width:90%;
-    height:600px;
-    margin:10px auto;
-    overflow:hidden;
-}
-
 /*TOOLTIPS*/
 .tip {
     color: #111;
