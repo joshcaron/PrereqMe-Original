@@ -64,7 +64,7 @@ function initWithJSON(json)
         },
         
         Edge: {
-            type: 'hyperline',
+            type: 'arrow',
             overridable: true
         },
 
