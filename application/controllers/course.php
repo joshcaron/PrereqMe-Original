@@ -31,7 +31,7 @@ class Course extends PM_Controller
             $courseJSON = json_encode($spacetreeCourse);
 
             print_r($course);
-            print_r('');
+            print_r('----------------');
             print_r($spacetreeCourse);
 
             $data['title'] = 'Course detail - PrereqMe';
