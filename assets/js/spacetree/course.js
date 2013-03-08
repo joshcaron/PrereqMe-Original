@@ -56,8 +56,8 @@ function initWithJSON(json)
         //set overridable=true for styling individual
         //nodes or edges
         Node: {
-            height:75,
-            width:290,
+            autoHeight: true,
+            autoWidth: true,
             type: 'rectangle',
             color: '#aaa',
             overridable: true
@@ -70,7 +70,11 @@ function initWithJSON(json)
 
         Tips: {
             enable: true,
-            type: 'HTML'
+            type: 'HTML',
+            onShow: function (tip, node)
+            {
+                tip.innerHTML = node.data['tip'];
+            }
         },
         
         onBeforeCompute: function(node){
