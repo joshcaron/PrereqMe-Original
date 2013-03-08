@@ -68,7 +68,7 @@ select { border-color:#999; }
 #SEARCH_RESULTS #content .course { margin:8px 0px; padding:10px; border:1px solid #000000; cursor:pointer; }
 
 /* Course Detail */
-#COURSE_DETAIL #infovis { position:relative; width:75%; height:200px; margin:10px auto; overflow:hidden; border:6px ridge rgb(238, 238, 238); }
+#COURSE_DETAIL #infovis { position:relative; width:80%; height:275px; margin:10px auto; overflow:hidden; border:6px ridge rgb(238, 238, 238); }
 #COURSE_DETAIL #infovis .node { text-align:center; font-size:1.5em; color:#333; cursor:pointer;}
 .tip { width: 139px; color: #111; background-color: white; border:1px solid #ccc; -moz-box-shadow:#555 2px 2px 8px; 
     -webkit-box-shadow:#555 2px 2px 8px; -o-box-shadow:#555 2px 2px 8px; box-shadow:#555 2px 2px 8px;  opacity:0.9; 
