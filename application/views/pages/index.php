@@ -23,7 +23,7 @@
                     <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..."/>
                     <script>
                     //Sets query to disabled if school select is 0
-                    if($('#HOME #college_id').val() === 0)
+                    if(parseInt($('#HOME #college_id').val()) === 0)
                     {
                         $('#HOME #query').first().prop('disabled', true);
                     }
