@@ -90,14 +90,6 @@ function initWithJSON(json)
             var style = label.style;
             style.width = node.width + 'px';
             style.height = node.height + 'px';            
-            style.cursor = 'pointer';
-            style.color = '#333';
-            style.fontSize = '0.8em';
-            style.textAlign= 'center';
-            style.paddingTop = '5px';
-            style.paddingBottom = '5px';
-            style.paddingLeft = '10px';
-            style.paddingRight = '10px';
         },
         
         //This method is called right before plotting
