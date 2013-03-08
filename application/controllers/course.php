@@ -27,10 +27,8 @@ class Course extends PM_Controller
             //Converts the course into a spacetreeCourse and then into JSON
             $spacetreeCourse = new Spacetree_course($course);
             $courseJSON = json_encode($spacetreeCourse);
-
-            print_r($course);
-            print_r('----------------');
-            print_r($spacetreeCourse);
+            
+            print_r($courseJSON);
 
             $data['title'] = 'Course detail - PrereqMe';
             $data['selectedNav'] = 'browse';
