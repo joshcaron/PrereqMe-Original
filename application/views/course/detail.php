@@ -1,6 +1,6 @@
 <div id="COURSE_DETAIL">
 
-<h2 class="fl"><?php echo $course->deptCode, $course->code, , " - ", $course->title ?></h2>
+<h2 class="fl"><?php echo $course->deptCode, $course->code, " - ", $course->title ?></h2>
 <p class="fr"><?php echo $course->credits ?> credits</p>
 <p><?php echo $course->description ?></p>
 
