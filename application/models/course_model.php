@@ -87,7 +87,7 @@ class Course_model extends CI_Model
             {
                 foreach ($prereqs as $prereq)
                 {
-                    $prereq->prereqs = $this->get_prereqs($prereq);
+                    $prereq->prereqs = $this->get_prereqs($prereq, TRUE);
                 }
             }
             return $prereqs;
