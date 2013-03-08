@@ -13,7 +13,7 @@ class Spacetree_course
             $this->id = $course->id;
             $this->name = $course->deptCode . $course->code;
             $this->data = array();
-            $this->data['tip'] = $course->title;
+            $this->data['tip'] = $course->title . ' (' . $course->credits . ')';
 
             if(isset($course->prereqs))
             {

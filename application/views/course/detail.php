@@ -15,4 +15,6 @@ $(document).ready(function() {
 });
 </script>
 
+<p class="help">Hover over a course to see it's title and credits. Click on a course to view its description. Drag the background to move around the graph.</p>
+
 </div>
