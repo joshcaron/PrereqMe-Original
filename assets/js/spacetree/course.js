@@ -57,7 +57,7 @@ function initWithJSON(json)
         //nodes or edges
         Node: {
             height:75,
-            width:350,
+            width:290,
             type: 'rectangle',
             color: '#aaa',
             overridable: true
