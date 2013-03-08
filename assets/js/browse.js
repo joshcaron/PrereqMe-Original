@@ -44,7 +44,7 @@ var browse = {
                     var courseId = rowData[0];
 
                     //Redirect to course detail page
-                    window.location.href = BASE_URL + "index.php/course/view/?courseId=" + courseId;
+                    window.location.href = BASE_URL + "index.php/course/view/" + courseId;
                 });
             });
         }

@@ -13,12 +13,6 @@ class Course extends PM_Controller
     // 2. Sent by GET (from a view)
     public function view($courseId = -1)
     {
-        //If course wasn't sent, retrieve courseId from GET and course from course_model
-        if($courseId === -1)
-        {
-            $courseId = $this->input->get('courseId');
-        }
-
         $course = $this->course_model->get_by_id($courseId);           
 
         if($course === NULL)
