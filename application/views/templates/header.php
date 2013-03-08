@@ -14,7 +14,6 @@
 
 <!-- CSS sources -->
 <link rel="stylesheet" type="text/css" href=<?php echo css_url(), 'global.css'?> >
-<link rel="stylesheet" type="text/css" href=<?php echo css_url(), 'spacetree/base.css'?> >
 <link rel="stylesheet" type="text/css" href=<?php echo css_url(), 'spacetree/Spacetree.css'?> >
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
 <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
