@@ -64,7 +64,7 @@ function initWithJSON(json)
         },
         
         Edge: {
-            type: 'arrow',
+            type: 'reverseArrow',
             overridable: true
         },
 
