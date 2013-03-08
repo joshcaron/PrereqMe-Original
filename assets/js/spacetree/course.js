@@ -78,9 +78,14 @@ function initWithJSON(json)
             label.id = node.id;            
             label.innerHTML = node.name;
             label.onclick = function(){
-                //Redirect to that course's detail page
-            	window.location.href = BASE_URL + "index.php/course/view/" + node.id;
+                //Redirect to that course's detail page (if we aren't on it right now)
+                var redirectUrl = BASE_URL + "index.php/course/view/" + node.id;
+                if(window.location.href !== redirectUrl)
+                {
+            	   window.location.href = redirectUrl;
+                }
             };
+
             //set label styles
             var style = label.style;
             style.width = node.width + 'px';
@@ -89,7 +94,7 @@ function initWithJSON(json)
             style.color = '#333';
             style.fontSize = '0.8em';
             style.textAlign= 'center';
-            style.paddingTop = '3px';
+            style.paddingTop = '5px';
         },
         
         //This method is called right before plotting
