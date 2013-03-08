@@ -83,8 +83,8 @@ function initWithJSON(json)
             };
             //set label styles
             var style = label.style;
-            style.width = 60 + 'px';
-            style.height = 17 + 'px';            
+            style.width = node.width + 'px';
+            style.height = node.height + 'px';            
             style.cursor = 'pointer';
             style.color = '#333';
             style.fontSize = '0.8em';
