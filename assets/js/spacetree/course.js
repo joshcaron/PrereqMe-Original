@@ -95,6 +95,9 @@ function initWithJSON(json)
             style.fontSize = '0.8em';
             style.textAlign= 'center';
             style.paddingTop = '5px';
+            style.paddingBottom = '5px';
+            style.paddingLeft = '10px';
+            style.paddingRight = '10px';
         },
         
         //This method is called right before plotting
