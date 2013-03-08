@@ -34,7 +34,7 @@ class Course extends PM_Controller
             $data['courseJSON'] = $courseJSON;
 
             $this->load->view('templates/header', $data);
-            $this->load->view('pages/course', $data);
+            $this->load->view('course/detail', $data);
             $this->load->view('templates/footer');
         }
     }
@@ -69,7 +69,7 @@ class Course extends PM_Controller
                 $data['query'] = $query;
 
                 $this->load->view('templates/header', $data);
-                $this->load->view('pages/search_results', $data);
+                $this->load->view('course/search_results', $data);
                 $this->load->view('templates/footer');
             }
         }
