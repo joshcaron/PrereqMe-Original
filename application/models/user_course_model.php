@@ -29,34 +29,6 @@ class User_course_model extends CI_Model
             foreach(array_reverse($semesters) as $semester)
             {
                 $semester->courses = $this->get_courses_for_semester($userId, $semester->id);
-
-                /* Only goes 1-level deep so it doesn't work 
-
-                //Figures out which courses have satisfied prereqs or not
-                for($courseIndex = 0; $courseIndex < count($semester->courses); $courseIndex++)
-                {
-                    $course = $semester->courses[$courseIndex];
-                    $course->prereqsSatisfied = TRUE;
-
-                    //Tests to see if prereqs have been satisfied
-                    for($prereqIndex = 0; $prereqIndex < count($course->prereqs); $prereqIndex++)
-                    {
-                        $prereq = $course->prereqs[$prereqIndex];
-
-                        if (! in_array($prereq->id, $completedCourseIds))
-                        {
-                            $course->prereqsSatisfied = FALSE;
-                            break;
-                        }
-                    }
-
-                    if($course->prereqsSatisfied)
-                    {
-                        $completedCourseIds[] = $course->id;
-                    }
-                }
-
-                */
             }
 
             return  $semesters;
