@@ -11,7 +11,7 @@ class Spacetree_course
         if($course !== NULL)
         {
             $this->id = $course->id;
-            $this->name = $course->title . '(' . $course->deptCode . $course->code . ')';
+            $this->name = $course->title . ' (' . $course->deptCode . $course->code . ')';
             $this->data = array();
 
             if(isset($course->prereqs))
