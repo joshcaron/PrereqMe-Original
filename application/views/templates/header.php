@@ -53,7 +53,9 @@ BASE_URL = '<?php echo base_url()?>'
                             }
 
                         ?>
-                >PrereqMe</a>
+                >
+                <img src=<?=img_url(), 'test.jpg'?> />
+                </a>
             </div>
 
             <?php if(isset($user)): ?>
