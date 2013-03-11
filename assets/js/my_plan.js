@@ -18,6 +18,7 @@ var myplan = {
         inputField.removeAttr("onclick");
     },
 
+    //Adds course to dump
     addCourseToDump : function(courseTitle)
     {
         var getUrl = "get_course_by_title?title=" + courseTitle;
