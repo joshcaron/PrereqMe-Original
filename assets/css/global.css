@@ -22,12 +22,12 @@ select { border-color:#999; }
 .ui-autocomplete { max-height:200px; overflow-y:auto; overflow-x:hidden; }
 
 /* Header */
-#HEADER { height:100px; background-color:#006363; color:#FFF; }
+#HEADER { height:100px; background-color:#006363; }
 #HEADER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 #HEADER #CONTENT #logo {font-size:32px;}
-#HEADER #CONTENT #logo a { color:#fff; text-decoration:none; }
-#HEADER #CONTENT #logo a:hover { color:#000; text-decoration:none; }
-#HEADER #CONTENT #login #forgot a { color:#FFF; font-size:14px; }
+#HEADER #CONTENT #logo a { text-decoration:none; }
+#HEADER #CONTENT #logo a:hover { text-decoration:none; }
+#HEADER #CONTENT #login #forgot a { font-size:14px; }
 
 /* Small search in header */
 #search_small { display:inline-block; margin:7px 0px 0px 322px;}
@@ -39,7 +39,7 @@ select { border-color:#999; }
 #DASHBOARD_LINKS { font-size:24px; background-color:#5ccccc; }
 #DASHBOARD_LINKS ul { height:47px; width:523px; margin:0px auto; }
 #DASHBOARD_LINKS li { list-style-type:none; margin-right:8px; }
-#DASHBOARD_LINKS a { display:block; padding:9px; color:#FFF; text-decoration:none;}
+#DASHBOARD_LINKS a { display:block; padding:9px; text-decoration:none;}
 #DASHBOARD_LINKS a:hover,
 #DASHBOARD_LINKS a.selected { position:relative; top:-4px; padding-top:13px; color:#000; border-radius:4px 4px 0px 0px; background-color:#ffaa00;}
 #DASHBOARD_LINKS a.selected { cursor:default; }
@@ -50,7 +50,7 @@ select { border-color:#999; }
 #BODY_CONTAINER > div { height:100%; width:1250px; margin:0px auto; padding:42px 15px 0px; }
 
 /* Footer */
-#FOOTER { height:32px; background-color:#006363; color:#FFF; }
+#FOOTER { height:32px; background-color:#006363; }
 #FOOTER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Home */
@@ -82,10 +82,9 @@ select { border-color:#999; }
 /* My Plan */
 #MY_PLAN { width:1135px !important; }
 #MY_PLAN div { margin-bottom:10px; }
-#MY_PLAN .box { min-width:450px; padding:20px; color:#FFF; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#fff; }
-#MY_PLAN .header { font-size:25px; font-weight:bold; color: #fff; }
+#MY_PLAN .box { min-width:450px; padding:20px; color:#000; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#fff; }
+#MY_PLAN .header { font-size:25px; font-weight:bold; }
 #MY_PLAN .box .header {color: #000;}
-#MY_PLAN .fr .helper_text {color: #fff;}
 #MY_PLAN ul { position:relative; min-height:30px; padding:0px; }
 #MY_PLAN li { position:relative; margin:8px; padding:10px; list-style-type:none; cursor:move; }
 #MY_PLAN ul .delete { position:absolute; top:-14px; right:7px; width:15px; height:15px; background-image: url('/assets/img/x.png'); cursor:pointer;}
@@ -98,7 +97,7 @@ select { border-color:#999; }
 /* BROWSE */
 #BROWSE #FILTERS { margin:16px 0px; }
 #BROWSE #FILTERS select { font-size:14px; }
-#BROWSE #RESULTS { color:#FFF; }
+#BROWSE #RESULTS { color:#000; }
 #BROWSE #RESULTS tbody tr { cursor:pointer; }
 #BROWSE #RESULTS tbody .temp { cursor:default; }
 
