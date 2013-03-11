@@ -2,7 +2,12 @@
 
 <div class="cf">
     <h2 class="fl"><?php echo $course->deptCode, $course->code, " - ", $course->title ?></h2>
-    <h3 class="fr"><?php echo $course->credits ?> credits</h3>
+    <h3><?php echo $course->credits ?> credits</h3>
+
+    <?php if(isset($user)): ?>
+        <button id="add_to_plan" class="fr" onclick="course.addToPlan(<?php echo $user['id'], ',', $courseId ?>)" value="Add to Plan">
+    <?php endif ?>
+
     <p id="description" class="fl"><?php echo $course->description ?></p>
 </div>
 
