@@ -7,7 +7,7 @@
 #
 # Host: prereqme.cdxj1iemkunh.us-east-1.rds.amazonaws.com (MySQL 5.5.27-log)
 # Database: PrereqMe
-# Generation Time: 2013-03-09 03:41:31 +0000
+# Generation Time: 2013-03-11 16:54:44 +0000
 # ************************************************************
 
 
@@ -216,7 +216,7 @@ LOCK TABLES `pm_major` WRITE;
 
 INSERT INTO `pm_major` (`id`, `deptId`, `title`)
 VALUES
-	(1,1,'CS');
+	(1,1,'Computer Science');
 
 /*!40000 ALTER TABLE `pm_major` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -407,9 +407,12 @@ VALUES
 	(41,11,19,5),
 	(45,9,29,2),
 	(46,11,29,2),
-	(47,2,30,2),
+	(47,2,0,2),
 	(49,1,30,2),
-	(50,19,30,2);
+	(50,19,30,2),
+	(51,11,0,5),
+	(52,8,0,4),
+	(54,2,0,2);
 
 /*!40000 ALTER TABLE `pm_user_course` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -442,11 +445,11 @@ VALUES
 	(14,9,4,2012),
 	(15,5,1,2012),
 	(16,5,2,2011),
-	(17,5,4,2013),
 	(18,9,1,2013),
 	(19,5,1,2013),
 	(29,2,4,2010),
-	(30,2,1,2011);
+	(30,2,1,2011),
+	(34,5,2,2012);
 
 /*!40000 ALTER TABLE `pm_user_semester` ENABLE KEYS */;
 UNLOCK TABLES;
