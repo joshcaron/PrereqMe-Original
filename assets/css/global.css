@@ -21,7 +21,7 @@ select { border-color:#999; }
 .ui-autocomplete { max-height:200px; overflow-y:auto; overflow-x:hidden; }
 
 /* Header */
-#HEADER { height:82px; background-color:#0C6BA1; color:#FFF; }
+#HEADER { height:82px; background-color:#006363; color:#FFF; }
 #HEADER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 #HEADER #CONTENT #logo a { color:#FFF; text-decoration:none; }
 #HEADER #CONTENT #logo a:hover { color:#FFF; text-decoration:none; } 
@@ -76,6 +76,7 @@ select { border-color:#999; }
 #COURSE_DETAIL #description { line-height:26px; }
 
 /* My Plan */
+#MY_PLAN { width:1135px;}
 #MY_PLAN div { margin-bottom:10px; }
 #MY_PLAN .box { min-width:450px; padding:20px; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#FFF; }
 #MY_PLAN .header { font-size:25px; font-weight:bold; }
