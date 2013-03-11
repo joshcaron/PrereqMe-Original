@@ -17,6 +17,7 @@ var home = {
             source: searchUrl,
             minLength: 2,
             select: function( event, ui ) {
+                queryElement.val(ui.item.title);
                 $('#index_search').submit();
             }
             });
