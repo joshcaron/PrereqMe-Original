@@ -17,7 +17,7 @@ class Course extends PM_Controller
 
         if($course === NULL)
         {
-            log_message('error', 'course was not sent to Course.view as an argument or it was not pulled from DB');
+            log_message('error', 'Course was not sent to Course.view as an argument or it was not pulled from DB');
         }
         else
         {
@@ -32,6 +32,11 @@ class Course extends PM_Controller
             $data['selectedNav'] = 'browse';
             $data['course'] = $course;
             $data['courseJSON'] = $courseJSON;
+
+            if(isset($data['user']))
+            {
+                $data['hasCourseInPlan'] = $this->user_course_model->has_course($course->id, $data['user']['id']);
+            }
 
             $this->load->view('templates/header', $data);
             $this->load->view('course/detail', $data);
@@ -65,13 +70,9 @@ class Course extends PM_Controller
             {
                 //Display search results page
                 $data['title'] = 'Search Results - PrereqMe';
+                $data['selectedNav'] = 'browse';
                 $data['results'] = $results;
                 $data['query'] = $query;
-
-                if(!isset($data['user']))
-                {
-                    $data['selectedNav'] = 'browse';
-                }
 
                 $this->load->view('templates/header', $data);
                 $this->load->view('course/search_results', $data);
