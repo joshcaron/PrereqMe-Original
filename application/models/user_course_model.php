@@ -229,7 +229,7 @@ class User_course_model extends CI_Model
         else
         {
             $constraints = array(
-                'courseId' => $course,
+                'courseId' => $courseId,
                 'userId' => $userId
             );
             $this->db->where($constraints);
