@@ -1,4 +1,4 @@
-body { margin:0px; font-family:'Lato', sans-serif; background-color:#FFFDEB; }
+body { margin:0px; font-family:'Lato', sans-serif; background-color:#009999; }
 #MAIN_CONTAINER { min-width:1000px; }
 
 /* Global styles */
@@ -21,10 +21,11 @@ select { border-color:#999; }
 .ui-autocomplete { max-height:200px; overflow-y:auto; overflow-x:hidden; }
 
 /* Header */
-#HEADER { height:82px; background-color:#0C6BA1; color:#FFF; }
+#HEADER { height:82px; background-color:#006363; color:#FFF; }
 #HEADER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
-#HEADER #CONTENT #logo a { color:#FFF; text-decoration:none; }
-#HEADER #CONTENT #logo a:hover { color:#FFF; text-decoration:none; } 
+#HEADER #CONTENT #logo { margin-top:16px; font-size:32px;}
+#HEADER #CONTENT #logo a { color:#fff; text-decoration:none; }
+#HEADER #CONTENT #logo a:hover { color:#000; text-decoration:none; }
 #HEADER #CONTENT #login #forgot a { color:#FFF; font-size:14px; }
 
 /* Small search in header */
@@ -34,12 +35,12 @@ select { border-color:#999; }
 #search_small #query { width:204px; height:13px; padding:5px 15px; font-size:16px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
 
 /* Dashboard Links */
-#DASHBOARD_LINKS { font-size:24px; background-color:#0C6BA1; }
+#DASHBOARD_LINKS { font-size:24px; background-color:#5ccccc; }
 #DASHBOARD_LINKS ul { height:47px; width:523px; margin:0px auto; }
 #DASHBOARD_LINKS li { list-style-type:none; margin-right:8px; }
 #DASHBOARD_LINKS a { display:block; padding:9px; color:#FFF; text-decoration:none;}
 #DASHBOARD_LINKS a:hover,
-#DASHBOARD_LINKS a.selected { position:relative; top:-4px; padding-top:13px; color:#000; border-radius:4px 4px 0px 0px; background-color:#FFFDEB;}
+#DASHBOARD_LINKS a.selected { position:relative; top:-4px; padding-top:13px; color:#000; border-radius:4px 4px 0px 0px; background-color:#ffaa00;}
 #DASHBOARD_LINKS a.selected { cursor:default; }
 #DASHBOARD_LINKS .browse a.selected { cursor:pointer; }
 
@@ -48,7 +49,7 @@ select { border-color:#999; }
 #BODY_CONTAINER > div { height:100%; width:1250px; margin:0px auto; padding:42px 15px 0px; }
 
 /* Footer */
-#FOOTER { height:32px; background-color:#0C6BA1; color:#FFF; }
+#FOOTER { height:32px; background-color:#006363; color:#FFF; }
 #FOOTER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Home */
@@ -69,19 +70,19 @@ select { border-color:#999; }
 /* Course Detail */
 #COURSE_DETAIL #infovis { position:relative; width:80%; height:275px; margin:72px auto 5px; overflow:hidden; border:6px ridge rgb(238, 238, 238); }
 #COURSE_DETAIL #infovis .node { text-align:center; font-size:1.5em; color:#333; cursor:pointer;}
-.tip { width: 139px; color: #111; background-color: white; border:1px solid #ccc; -moz-box-shadow:#555 2px 2px 8px; 
-    -webkit-box-shadow:#555 2px 2px 8px; -o-box-shadow:#555 2px 2px 8px; box-shadow:#555 2px 2px 8px;  opacity:0.9; 
+.tip { width: 139px; color: #111; background-color: white; border:1px solid #ccc; -moz-box-shadow:#555 2px 2px 8px;
+    -webkit-box-shadow:#555 2px 2px 8px; -o-box-shadow:#555 2px 2px 8px; box-shadow:#555 2px 2px 8px;  opacity:0.9;
     filter:alpha(opacity=90); font-size:10px; font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; padding:7px; }
 #COURSE_DETAIL .help { width:936px; margin:0px auto; font-style:italic; }
 #COURSE_DETAIL #description { line-height:26px; }
 
 /* My Plan */
 #MY_PLAN div { margin-bottom:10px; }
-#MY_PLAN .box { min-width:450px; padding:20px; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#FFF; }
+#MY_PLAN .box { min-width:450px; padding:20px; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#fff; }
 #MY_PLAN .header { font-size:25px; font-weight:bold; }
 #MY_PLAN ul { position:relative; min-height:30px; padding:0px; }
 #MY_PLAN li { position:relative; margin:8px; padding:10px; list-style-type:none; cursor:move; }
-#MY_PLAN ul .delete { position:absolute; top:-14px; right:7px; width:20px; height:20px; background-color:#000; cursor:pointer;} 
+#MY_PLAN ul .delete { position:absolute; top:-14px; right:7px; width:20px; height:20px; background-color:#000; cursor:pointer;}
 #MY_PLAN li .delete { position:absolute; top:4px; right:4px; width:20px; height:20px; background-color:#000; cursor:pointer;}
 #MY_PLAN li.ui-state-highlight { cursor:default; }
 #MY_PLAN #COURSE_DUMP #search { font-size:24px; }
