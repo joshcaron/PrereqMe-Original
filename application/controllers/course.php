@@ -68,6 +68,11 @@ class Course extends PM_Controller
                 $data['results'] = $results;
                 $data['query'] = $query;
 
+                if(!isset($data['user']))
+                {
+                    $data['selectedNav'] = 'browse';
+                }
+
                 $this->load->view('templates/header', $data);
                 $this->load->view('course/search_results', $data);
                 $this->load->view('templates/footer');
