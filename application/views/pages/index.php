@@ -75,15 +75,15 @@
 
                 <tr><td><label for="email">Email<span class="required">*</span></label></td></tr>
                 <tr><td><input class="wide" type="text" name="email" value="<?php echo set_value('email'); ?>"/></td></tr>
-                
-                <tr><td><label for="reenter_email">Email again<span class="required">*</span></label></td></tr>
+
+                <tr><td><label for="reenter_email">Re-Enter Email<span class="required">*</span></label></td></tr>
                 <tr><td><input class="wide" type="text" name="reenter_email" /></td></tr>
                 <tr><td class="error"><?php echo form_error('email'); ?></td></tr>
-                
+
                 <tr><td><label for="password">Password<span class="required">*</span></label></td></tr>
                 <tr><td><input class="wide" type="password" name="password" /></td></tr>
-                
-                <tr><td><label for="reenter_password">Password again<span class="required">*</span></label></td></tr>
+
+                <tr><td><label for="reenter_password">Re-Enter Password<span class="required">*</span></label></td></tr>
                 <tr><td><input class="wide"  type="password" name="reenter_password" /></td></tr>
                 <tr><td class="error" colspan = "2"><?php echo form_error('password'); ?></td></tr>
 
