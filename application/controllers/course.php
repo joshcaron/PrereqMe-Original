@@ -34,7 +34,6 @@ class Course extends PM_Controller
             $data['courseJSON'] = $courseJSON;
 
             log_message('info', 'getting ready to check for user');
-            log_message('info', var_export($data));
             if(isset($data['user']))
             {
                 log_message('info', 'user found');
