@@ -84,6 +84,7 @@ select { border-color:#999; }
 #MY_PLAN .box { min-width:450px; padding:20px; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#fff; }
 #MY_PLAN .header { font-size:25px; font-weight:bold; color: #fff; }
 #MY_PLAN .box .header {color: #000;}
+#MY_PLAN .fr .helper_text {color: #fff;}
 #MY_PLAN ul { position:relative; min-height:30px; padding:0px; }
 #MY_PLAN li { position:relative; margin:8px; padding:10px; list-style-type:none; cursor:move; }
 #MY_PLAN ul .delete { position:absolute; top:-14px; right:7px; width:20px; height:20px; background-color:#000; cursor:pointer;}
