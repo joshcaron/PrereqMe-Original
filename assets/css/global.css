@@ -87,8 +87,8 @@ select { border-color:#999; }
 #MY_PLAN .fr .helper_text {color: #fff;}
 #MY_PLAN ul { position:relative; min-height:30px; padding:0px; }
 #MY_PLAN li { position:relative; margin:8px; padding:10px; list-style-type:none; cursor:move; }
-#MY_PLAN ul .delete { position:absolute; top:-14px; right:7px; width:20px; height:20px; background-color:#000; cursor:pointer;}
-#MY_PLAN li .delete { position:absolute; top:4px; right:4px; width:20px; height:20px; background-color:#000; cursor:pointer;}
+#MY_PLAN ul .delete { position:absolute; top:-14px; right:7px; width:20px; height:20px; background-image: url('/assets/image/x.png'); cursor:pointer;}
+#MY_PLAN li .delete { position:absolute; top:4px; right:4px; width:20px; height:20px; background-color:url('/assets/image/x.png'); cursor:pointer;}
 #MY_PLAN li.ui-state-highlight { cursor:default; }
 #MY_PLAN #COURSE_DUMP #search { font-size:24px; }
 #dialog-delete-semester { height:77px; font-size:14px;}
