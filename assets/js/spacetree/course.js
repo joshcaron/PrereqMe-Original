@@ -166,7 +166,9 @@ var course = {
     addToPlan : function(userId, courseId)
     {
         //Disables the button
-        $('#COURSE_DETAIL #add_to_plan').prop('disabled', true);
+        var addToPlanButton = $('#COURSE_DETAIL #add_to_plan').first();
+        addToPlanButton.prop('disabled', true);
+        addToPlanButton.html("Added");
 
         //Adds the course to the user's course dump
         var addUrl = BASE_URL + "index.php/course/add_to_my_plan/" + userId + "/" + courseId;

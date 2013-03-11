@@ -11,7 +11,7 @@
             <?php if(isset($hasCourseInPlan) AND $hasCourseInPlan === TRUE) 
             {
                 echo 'disabled';
-                echo '>Already added to my plan';
+                echo '>Added to my plan';
             }
             else
             {
