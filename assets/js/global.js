@@ -16,7 +16,13 @@ var global = {
             $('#header_search').submit();
         }
         });
-    }
+    },
 
+    //Stops propogation of the event
+    stopPropogation : function(e)
+    {
+        var event = e || window.event;
+        event.stopPropagation();
+    }
 
 };

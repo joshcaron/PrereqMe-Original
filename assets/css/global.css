@@ -1,5 +1,5 @@
 body { margin:0px; font-family:'Lato', sans-serif; background-color:#009999; }
-#MAIN_CONTAINER { min-width:1000px; }
+#MAIN_CONTAINER { min-width:1000px;  }
 
 /* Global styles */
 .fl { float:left; }
@@ -23,7 +23,7 @@ select { border-color:#999; }
 /* Header */
 #HEADER { height:100px; background-color:#006363; color:#FFF; }
 #HEADER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
-#HEADER #CONTENT #logo { margin-top:16px; font-size:32px;}
+#HEADER #CONTENT #logo {font-size:32px;}
 #HEADER #CONTENT #logo a { color:#fff; text-decoration:none; }
 #HEADER #CONTENT #logo a:hover { color:#000; text-decoration:none; }
 #HEADER #CONTENT #login #forgot a { color:#FFF; font-size:14px; }
@@ -65,7 +65,8 @@ select { border-color:#999; }
 
 /* Search Results */
 #SEARCH_RESULTS #content { width:700px; margin:auto; }
-#SEARCH_RESULTS #content .course { margin:8px 0px; padding:10px; border:1px solid #000000; cursor:pointer; }
+#SEARCH_RESULTS #content .course { margin:8px 0px; padding:10px; border:1px solid #000000; cursor:pointer; background-color: #fff; border-radius: 10px;}
+.results_text { font-size: 24px; color: #fa0;}
 
 /* Course Detail */
 #COURSE_DETAIL #infovis { position:relative; width:80%; height:275px; margin:72px auto 5px; overflow:hidden; border:6px ridge rgb(238, 238, 238); }
@@ -75,6 +76,7 @@ select { border-color:#999; }
     filter:alpha(opacity=90); font-size:10px; font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; padding:7px; }
 #COURSE_DETAIL .help { width:936px; margin:0px auto; font-style:italic; }
 #COURSE_DETAIL #description { line-height:26px; }
+#COURSE_DETAIL #add_to_plan { margin-top:31px; }
 
 /* My Plan */
 #MY_PLAN { width:1135px !important; }

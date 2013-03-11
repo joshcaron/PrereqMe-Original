@@ -159,3 +159,18 @@ function initWithJSON(json)
     //end
 
 }
+
+var course = {
+
+    //Adds the course to the user's plan
+    addToPlan : function(userId, courseId)
+    {
+        //Disables the button
+        $('#COURSE_DETAIL #add_to_plan').prop('disabled', true);
+
+        //Adds the course to the user's course dump
+        var addUrl = BASE_URL + "index.php/course/add_to_my_plan/" + userId + "/" + courseId;
+        $.getJSON(addUrl ,function(result){});
+    }
+
+}
