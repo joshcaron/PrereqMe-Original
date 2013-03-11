@@ -76,6 +76,7 @@ select { border-color:#999; }
     filter:alpha(opacity=90); font-size:10px; font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; padding:7px; }
 #COURSE_DETAIL .help { width:936px; margin:0px auto; font-style:italic; }
 #COURSE_DETAIL #description { line-height:26px; }
+#COURSE_DETAIL #add_to_plan { margin-top:31px; }
 
 /* My Plan */
 #MY_PLAN { width:1135px !important; }

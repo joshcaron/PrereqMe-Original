@@ -83,6 +83,19 @@ class Course extends PM_Controller
             redirect('/', '');
         }
     }
+
+    //AJAX call to add the course to the user's course dump
+    public function add_to_my_plan($userId = -1, $courseId = -1)
+    {
+        if($userId === -1 OR $courseId === -1)
+        {
+            log_message('error', "Necessary params weren't sent to Course.add_to_my_plan");
+        }
+        else
+        {
+            $this->user_course_model->add_course_to_semester($courseId, 0, $userId);
+        }
+    }
 }
 
 /* End of file search.php */
