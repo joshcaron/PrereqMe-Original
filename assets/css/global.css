@@ -76,7 +76,7 @@ select { border-color:#999; }
 #COURSE_DETAIL #description { line-height:26px; }
 
 /* My Plan */
-#MY_PLAN { width:1135px; }
+#MY_PLAN { width:1135px !important; }
 #MY_PLAN div { margin-bottom:10px; }
 #MY_PLAN .box { min-width:450px; padding:20px; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#FFF; }
 #MY_PLAN .header { font-size:25px; font-weight:bold; }
