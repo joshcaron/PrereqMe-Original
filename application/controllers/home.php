@@ -126,7 +126,8 @@ class Home extends PM_Controller
                 parent::add_user(); 
 
                 //Go to dashboard
-                redirect('/dashboard/', 'index');
+                // redirect('/dashboard/', 'index');
+                redirect('/dashboard/my_plan/index');
             }
             else
             {
