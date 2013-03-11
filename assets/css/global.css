@@ -1,4 +1,5 @@
-body { margin:0px; font-family:'Lato', sans-serif; background-color:#009999; }
+body { margin:0px; font-family:'Lato', sans-serif; color:#FFF; background-color:#009999;}
+
 #MAIN_CONTAINER { min-width:1000px;  }
 
 /* Global styles */
@@ -81,7 +82,7 @@ select { border-color:#999; }
 /* My Plan */
 #MY_PLAN { width:1135px !important; }
 #MY_PLAN div { margin-bottom:10px; }
-#MY_PLAN .box { min-width:450px; padding:20px; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#fff; }
+#MY_PLAN .box { min-width:450px; padding:20px; color:#FFF; border:1px solid rgba(0, 0, 0, 0.14); border-radius:20px; background-color:#fff; }
 #MY_PLAN .header { font-size:25px; font-weight:bold; color: #fff; }
 #MY_PLAN .box .header {color: #000;}
 #MY_PLAN .fr .helper_text {color: #fff;}
@@ -97,6 +98,7 @@ select { border-color:#999; }
 /* BROWSE */
 #BROWSE #FILTERS { margin:16px 0px; }
 #BROWSE #FILTERS select { font-size:14px; }
+#BROWSE #RESULTS { color:#FFF; }
 #BROWSE #RESULTS tbody tr { cursor:pointer; }
 #BROWSE #RESULTS tbody .temp { cursor:default; }
 
