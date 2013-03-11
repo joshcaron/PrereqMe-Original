@@ -7,7 +7,7 @@
     </div>
 
     <?php if(isset($user)): ?>
-        <button id="add_to_plan" class="fr" onclick="course.addToPlan(<?php echo $user['id'], ',', $course->id ?>)" <?php if(isset($hasCourseInPlan) AND $hasCourseInPlan) {echo 'disabled';}?> >Add to Plan</button>
+        <button id="add_to_plan" class="fr" onclick="course.addToPlan(<?php echo $user['id'], ',', $course->id ?>)" <?php if(isset($hasCourseInPlan) AND $hasCourseInPlan === TRUE) {echo 'disabled';}?> >Add to Plan</button>
     <?php endif ?>
 
     <p id="description" class="fl"><?php echo $course->description ?></p>
