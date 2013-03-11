@@ -18,5 +18,11 @@ var global = {
         });
     }
 
+    //Stops propogation of the event
+    stopPropogation : function(e)
+    {
+        var event = e || window.event;
+        event.stopPropagation();
+    }
 
 };
