@@ -33,8 +33,10 @@ class Course extends PM_Controller
             $data['course'] = $course;
             $data['courseJSON'] = $courseJSON;
 
+            log_message('info', 'getting ready to check for user');
             if(isset($data['user']))
             {
+                log_message('info', 'user found');
                 $data['hasCourseInPlan'] = $this->user_course_model->has_course($course->id, $data['user']['id']);
             }
 
