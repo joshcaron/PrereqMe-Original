@@ -219,6 +219,25 @@ class User_course_model extends CI_Model
         }
     }
 
+    //Returns whether the user has already added the course
+    public function has_course($courseId = -1, $userId = -1)
+    {
+        if($courseId === -1 OR $userId === -1)
+        {
+            log_message('error', 'Not valid params sento to User_course_model.has_course()');
+        }
+        else
+        {
+            $constraints = array(
+                'courseId' => $course,
+                'userId' => $userId
+            );
+            $this->db->where($constraints);
+            $this->db->from('pm_user_course');
+            return $this->db->count_all_results() == 1;
+        }
+    }
+
     //Get the courses based on the supplied filters
     public function get_courses_by_filters($deptId = -1)
     {
