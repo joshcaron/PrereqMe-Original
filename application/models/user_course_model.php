@@ -234,7 +234,7 @@ class User_course_model extends CI_Model
             );
             $this->db->where($constraints);
             $this->db->from('pm_user_course');
-            return $this->db->count_all_results() == 1;
+            return $this->db->count_all_results() > 0;
         }
     }
 
