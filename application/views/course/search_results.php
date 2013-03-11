@@ -1,6 +1,6 @@
 <div id="SEARCH_RESULTS">
 
-<div id="content" style="border:1px dashed #FF2A00;">
+<div id="content">
 
 <div class="results_text">Found <?php echo count($results)?> results for "<?php echo $query?>":</div>
 <?php foreach($results as $course)
