@@ -171,7 +171,6 @@ var course = {
         //Adds the course to the user's course dump
         var addUrl = BASE_URL + "index.php/course/add_to_my_plan/" + userId + "/" + courseId;
         $.getJSON(addUrl ,function(result){});
-        });
     }
 
 }
