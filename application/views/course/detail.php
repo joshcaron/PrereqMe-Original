@@ -5,7 +5,7 @@
     <h3><?php echo $course->credits ?> credits</h3>
 
     <?php if(isset($user)): ?>
-        <button id="add_to_plan" class="fr" onclick="course.addToPlan(<?php echo $user['id'], ',', $courseId ?>)" value="Add to Plan">
+        <button id="add_to_plan" class="fr" onclick="course.addToPlan(<?php echo $user['id'], ',', $course->id ?>)" value="Add to Plan">
     <?php endif ?>
 
     <p id="description" class="fl"><?php echo $course->description ?></p>
