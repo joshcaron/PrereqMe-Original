@@ -16,7 +16,7 @@ var global = {
             $('#header_search').submit();
         }
         });
-    }
+    },
 
     //Stops propogation of the event
     stopPropogation : function(e)
