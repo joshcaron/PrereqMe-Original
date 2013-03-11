@@ -66,9 +66,9 @@ select { border-color:#999; }
 #HOME #sign_up select { font-size:19px; }
 
 /* Search Results */
+#SEARCH_RESULTS #results_text { font-size: 24px; color: #fa0;}
 #SEARCH_RESULTS #content { width:700px; margin:auto; }
 #SEARCH_RESULTS #content .course { margin:8px 0px; padding:10px; color:#000; border:1px solid #000000; cursor:pointer; background-color: #fff; border-radius: 10px;}
-.results_text { font-size: 24px; color: #fa0;}
 
 /* Course Detail */
 #COURSE_DETAIL #infovis { position:relative; width:80%; height:275px; margin:72px auto 5px; overflow:hidden; border:6px ridge rgb(238, 238, 238); }
