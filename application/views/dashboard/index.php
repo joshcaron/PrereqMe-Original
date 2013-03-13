@@ -7,7 +7,7 @@
 <div id="DEGREE_AUDIT">
     <h3>Computer Science Major Requirements</h3>
     <div>
-        <ul>
+        <ul class="course_list">
             <li class="ui-state-default">CS 1200 - Computer Science/Information Science Overview 1</li>
             <li class="ui-state-default">CS 1210 - Computer Science/Information Science Overview 2: Co-op Preparation</li>
             <li class="ui-state-default">CS 2500 - Fundamentals of Computer Science 1</li>
@@ -31,7 +31,7 @@
 
     <h3>CS Additional Courses for BS</h3>
     <div>
-        <ul>
+        <ul class="course_list">
             <li class="ui-state-default">MATH 2331 - Linear Algebra</li>
             <li class="ui-state-default">MATH 3081 - Probability and Statistics</li>
             <li class="ui-state-default">SOCL 4528 - Computers and Society</li>
@@ -44,7 +44,7 @@
 
     <h3>Computer Science English Requirement</h3>
     <div>
-        <ul>
+        <ul class="course_list">
             <li class="ui-state-default">ENGL 1111 - College Writing</li>
             <li class="ui-state-default">ENGL 3301 - Advanced Writing in the Disciplines</li>
             <li class="ui-state-default">ENGL 3302 - Advanced Writing in the Technical Professions</li>
@@ -53,7 +53,7 @@
 
     <h3>General Electives</h3>
     <div>
-        <ul>
+        <ul class="course_list">
             <li class="ui-state-default">General Elective 1</li>
             <li class="ui-state-default">General Elective 2</li>
             <li class="ui-state-default">General Elective 3</li>
@@ -67,7 +67,7 @@
 
     <h3>NU Core</h3>
     <div>
-        <ul>
+        <ul class="course_list">
             <li class="ui-state-default">College Writing</li>
             <li class="ui-state-default">Arts and Humanities Level 1</li>
             <li class="ui-state-default">Social Science Level 1</li>
