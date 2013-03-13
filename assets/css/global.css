@@ -104,6 +104,7 @@ select { border-color:#999; }
 #BROWSE #RESULTS tbody .temp { cursor:default; }
 
 /* Overview */
+#OVERVIEW ul.course_list { padding:0px; }
 #OVERVIEW li.ui-state-default { margin:10px 0px; padding:3px; list-style-type:none; }
 
 
