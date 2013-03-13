@@ -96,10 +96,14 @@ select { border-color:#999; }
 #dialog-delete-semester { height:77px; font-size:14px;}
 #dialog-delete-semester .ui-icon-alert { float: left; margin: 0px 7px 20px 0px; }
 
-/* BROWSE */
+/* Browse */
 #BROWSE #FILTERS { margin:16px 0px; }
 #BROWSE #FILTERS select { font-size:14px; }
 #BROWSE #RESULTS { color:#000; }
 #BROWSE #RESULTS tbody tr { cursor:pointer; }
 #BROWSE #RESULTS tbody .temp { cursor:default; }
+
+/* Overview */
+#OVERVIEW li.ui-state-default { margin:10px 5px; padding:3px; list-style-type:none; }
+
 
