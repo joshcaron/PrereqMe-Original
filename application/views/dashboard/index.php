@@ -4,6 +4,11 @@
 
 <h3>Note, the following data is static (for now)</h3>
 
+<div id="legend">
+    <div class="ui-state-default">Completed Requirement</div>
+    <div class="ui-state-highlight">Remaining Requirement</div>
+</div>
+
 <div id="DEGREE_AUDIT">
     <h3>Computer Science Major Requirements</h3>
     <div>
