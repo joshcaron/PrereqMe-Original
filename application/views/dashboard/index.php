@@ -88,8 +88,8 @@
 $(function() {
     $( "#DEGREE_AUDIT" ).accordion({
       collapsible: true,
-      heightStyle: "content",
-      autoFocus: false
+      heightStyle: "content"
+      active: false
     });
   });
 </script>
