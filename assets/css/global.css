@@ -9,6 +9,7 @@ a { color:#ffaa00; }
 .required { color:#FF0000; font-weight:normal; }
 .error { color:#FF0000; font-size:13px; }
 select { border-color:#999; }
+.orange { color:#ffaa00; }
 
 /* Clearfix */
 /* Modern browsers */
@@ -105,7 +106,7 @@ select { border-color:#999; }
 
 /* Overview */
 #OVERVIEW #DEGREE_AUDIT { margin:15px 0px; }
-#OVERVIEW ul.course_list { padding:0px; }
-#OVERVIEW li.ui-state-default { margin:10px 0px; padding:3px; list-style-type:none; }
+#OVERVIEW #DEGREE_AUDIT ul.course_list { padding:0px; }
+#OVERVIEW #DEGREE_AUDIT li { margin:10px 0px; padding:3px; list-style-type:none; }
 
 

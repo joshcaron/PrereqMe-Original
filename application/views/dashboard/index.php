@@ -1,6 +1,6 @@
 <div ID="OVERVIEW">
 
-<h1>You've completed ___% of your requirements!</h1>
+<h1>You have <span class="orange">9</span> remaining requirements</h1>
 
 <h3>Note, the following data is static (for now)</h3>
 
@@ -20,12 +20,12 @@
             <li class="ui-state-default">CS 3800 - Theory of Computation</li>
             <li class="ui-state-default">CS 3600 - Systems and Networks</li>
             <li class="ui-state-default">CS 4400 - Programming Languages</li>
-            <li class="ui-state-default">CS 4500 - Software Development</li>
+            <li class="ui-state-highlight">CS 4500 - Software Development</li>
             <li class="ui-state-default">CS 4800 - Algorithms and Data</li>
-            <li class="ui-state-default">CS 4000 - Senior Seminar</li>
-            <li class="ui-state-default">Computer Science Capstone</li>
-            <li class="ui-state-default">Computer Science Upper Division Elective 1</li>
-            <li class="ui-state-default">Computer Science Upper Division Elective 2</li>
+            <li class="ui-state-highlight">CS 4000 - Senior Seminar</li>
+            <li class="ui-state-highlight">Computer Science Capstone</li>
+            <li class="ui-state-highlight">Computer Science Upper Division Elective 1</li>
+            <li class="ui-state-highlight">Computer Science Upper Division Elective 2</li>
         </ul>
     </div>
 
@@ -38,7 +38,7 @@
             <li class="ui-state-default">Science Requirement 1</li>
             <li class="ui-state-default">Science Requirement 2</li>
             <li class="ui-state-default">Science Requirement 3</li>
-            <li class="ui-state-default">Science Requirement 4</li>
+            <li class="ui-state-highlight">Science Requirement 4</li>
         </ul>
     </div>
 
@@ -60,8 +60,8 @@
             <li class="ui-state-default">General Elective 4</li>
             <li class="ui-state-default">General Elective 5</li>
             <li class="ui-state-default">General Elective 6</li>
-            <li class="ui-state-default">General Elective 7</li>
-            <li class="ui-state-default">General Elective 8</li>
+            <li class="ui-state-highlight">General Elective 7</li>
+            <li class="ui-state-highlight">General Elective 8</li>
         </ul>    
     </div>
 
@@ -79,7 +79,7 @@
             <li class="ui-state-default">Capstone / Writing Intensive II</li>
             <li class="ui-state-default">Experiential Learning</li>
             <li class="ui-state-default">Cooperative Education</li>
-            <li class="ui-state-default">General Electives</li>
+            <li class="ui-state-highlight">General Electives</li>
         </ul>    
     </div>
 </div>
