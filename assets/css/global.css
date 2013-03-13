@@ -105,6 +105,7 @@ select { border-color:#999; }
 #BROWSE #RESULTS tbody .temp { cursor:default; }
 
 /* Overview */
+#OVERVIEW #legent { margin:10px 0px; padding:3px; }
 #OVERVIEW #DEGREE_AUDIT { margin:15px 0px; }
 #OVERVIEW #DEGREE_AUDIT ul.course_list { padding:0px; }
 #OVERVIEW #DEGREE_AUDIT li { margin:10px 0px; padding:3px; list-style-type:none; }
