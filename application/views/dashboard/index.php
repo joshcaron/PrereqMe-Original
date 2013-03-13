@@ -39,8 +39,6 @@
             <li>Science Requirement 2</li>
             <li>Science Requirement 3</li>
             <li>Science Requirement 4</li>
-            <li></li>
-            <li></li>
         </ul>
     </div>
 
@@ -82,10 +80,6 @@
             <li>Experiential Learning</li>
             <li>Cooperative Education</li>
             <li>General Electives</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
         </ul>    
     </div>
 </div>
