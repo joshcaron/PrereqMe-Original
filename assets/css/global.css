@@ -39,7 +39,7 @@ select { border-color:#999; }
 
 /* Dashboard Links  */
 #DASHBOARD_LINKS { font-size:24px; background-color:#5cc; }
-#DASHBOARD_LINKS ul { height:47px; width:540px; margin:0px auto; }
+#DASHBOARD_LINKS ul { height:47px;}
 #DASHBOARD_LINKS li { list-style-type:none; margin-right:8px; }
 #DASHBOARD_LINKS a { display:block; padding:9px; text-decoration:none;}
 #DASHBOARD_LINKS a:hover,
