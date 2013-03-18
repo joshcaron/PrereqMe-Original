@@ -6,40 +6,43 @@
 <?php endif ?>
 
 <div id="HOME">
-    <div id="search_large" class='fl'>
+    <div class="fl">
+        <div class="helper_text">This is the two sentence helper text for what PrereqMe does. We can say things here and stuff.</div>
+        <div id="search_large">
 
-        <?php echo form_open('course/search_results', array('id'=>'index_search')); ?>
-            <select id="college_id" name="collegeId" onchange="home.changedSearchSchool(this.value)">
-                <option value="0" selected>Select your school</option>
+            <?php echo form_open('course/search_results', array('id'=>'index_search')); ?>
+                <select id="college_id" name="collegeId" onchange="home.changedSearchSchool(this.value)">
+                    <option value="0" selected>Select your school</option>
 
-                <?php foreach($schools as $school): ?>
-                    <option value=<?php echo $school->id?> ><?php echo $school->title?></option>
-                <?php endforeach ?>
-            </select>
+                    <?php foreach($schools as $school): ?>
+                        <option value=<?php echo $school->id?> ><?php echo $school->title?></option>
+                    <?php endforeach ?>
+                </select>
 
-            <div id="search_box">
-                <div class="magnifying_large fl"></div>
-                <div class="fr">
-                    <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..."/>
-                    <script>
-                    //Sets query to disabled if school select is 0
-                    if(parseInt($('#HOME #college_id').val()) === 0)
-                    {
-                        $('#HOME #query').first().prop('disabled', true);
-                    }
-                    else
-                    {
-                        $('#HOME #query').first().prop('disabled', false);
-                    }
-                    </script>
+                <div id="search_box">
+                    <div class="magnifying_large fl"></div>
+                    <div class="fr">
+                        <input id="query" class="fl" type="text" name="query" class="search" placeholder="Find course by id or title..."/>
+                        <script>
+                        //Sets query to disabled if school select is 0
+                        if(parseInt($('#HOME #college_id').val()) === 0)
+                        {
+                            $('#HOME #query').first().prop('disabled', true);
+                        }
+                        else
+                        {
+                            $('#HOME #query').first().prop('disabled', false);
+                        }
+                        </script>
+                    </div>
                 </div>
-            </div>
-            <div class="error"><?php echo form_error('query'); ?></div>
-            <div>
-                <input type="submit" value="Search"/>
-            </div>
-        </form>
+                <div class="error"><?php echo form_error('query'); ?></div>
+                <div>
+                    <input type="submit" value="Search"/>
+                </div>
+            </form>
 
+        </div>
     </div>
 
     <div id="sign_up" class="fr">
