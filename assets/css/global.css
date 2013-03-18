@@ -26,7 +26,7 @@ select { border-color:#999; }
 /* Header */
 #HEADER { height:84px; background-color:#006363; }
 #HEADER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
-#HEADER #CONTENT #logo { width:570px; position:relative; font-size:18px;}
+#HEADER #CONTENT #logo { width:389px; position:relative; font-size:18px;}
 #HEADER #CONTENT #logo a { text-decoration:none; }
 #HEADER #CONTENT #logo a:hover { text-decoration:none; }
 #HEADER #CONTENT #logo #tagline { position:absolute; right:0px; top:32px; }
