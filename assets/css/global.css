@@ -38,7 +38,7 @@ select { border-color:#999; }
 #search_small #query { width:204px; height:13px; padding:5px 15px; font-size:16px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
 
 /* Dashboard Links  */
-#DASHBOARD_LINKS { font-size:24px; background-color:#dcc; }
+#DASHBOARD_LINKS { font-size:24px; background-color:#5cc; }
 #DASHBOARD_LINKS ul { height:47px; width:523px; margin:0px auto; }
 #DASHBOARD_LINKS li { list-style-type:none; margin-right:8px; }
 #DASHBOARD_LINKS a { display:block; padding:9px; text-decoration:none;}
