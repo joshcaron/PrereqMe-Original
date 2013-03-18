@@ -54,7 +54,7 @@ BASE_URL = '<?php echo base_url()?>'
 
                         ?>
                 >
-                <img src=<?php echo img_url(), 'Logo.png'?> height="80px" />
+                <img src=<?php echo img_url(), 'Logo.png'?> height="58px" />
                 </a>
             </div>
 
