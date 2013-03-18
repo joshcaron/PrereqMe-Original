@@ -32,7 +32,7 @@ select { border-color:#999; }
 #HEADER #CONTENT #login #forgot a { font-size:14px; }
 
 /* Small search in header */
-#search_small { display:inline-block; margin:7px 0px 0px 322px;}
+#search_small { display:inline-block; margin:4px 0px 0px 322px;}
 #search_small #search_box { height:25px; margin-bottom:5px; padding:6px 15px 4px; border-radius:12px; border:1px solid #000; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
 #search_small .magnifying_small { width:16px; height:23px; background: url('../img/search_icon_small.png'); }
 #search_small #query { width:204px; height:13px; padding:5px 15px; font-size:16px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
