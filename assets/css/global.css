@@ -34,7 +34,7 @@ select { border-color:#999; }
 /* Small search in header */
 #search_small { display:inline-block; margin:4px 0px 0px 322px;}
 #search_small #search_box { height:25px; margin-bottom:5px; padding:6px 15px 4px; border-radius:12px; border:1px solid #000; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
-#search_small .magnifying_small { width:16px; height:23px; border:1px dotted #FF0000; }
+#search_small .magnifying_small { width:16px; height:23px; background: url('../img/search_icon_small.png'); }
 #search_small #query { width:204px; height:13px; padding:5px 15px; font-size:16px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
 
 /* Dashboard Links  */
@@ -62,7 +62,7 @@ select { border-color:#999; }
 #HOME #search_large { margin-top:126px; }
 #HOME #search_large #college_id { width:532px; margin:0px 0px 5px 31px; font-size:26px; }
 #HOME #search_large #search_box { height:66px; margin-bottom:5px; padding:10px 24px 4px 24px; border-radius:35px; border:1px solid #000; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
-#HOME #search_large .magnifying_large { width:36px; height:56px; border:1px dotted #FF0000; }
+#HOME #search_large .magnifying_large { width:36px; height:56px; background: url('../img/search_icon.png'); }
 #HOME #search_large #query { width:500px; height:50px; padding:5px 15px; font-size:32px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
 #HOME #sign_up td { width:196px; }
 #HOME #sign_up input { font-size:16px; padding:5px; }
