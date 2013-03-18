@@ -52,7 +52,7 @@ select { border-color:#999; }
 #DASHBOARD_LINKS .browse a.selected { cursor:pointer; }
 
 /* Body */
-#BODY_CONTAINER { min-height:650px; }
+#BODY_CONTAINER { min-height:663px; }
 #BODY_CONTAINER > div { height:100%; width:960px; margin:0px auto; padding:42px 15px 0px; }
 
 /* Footer */
