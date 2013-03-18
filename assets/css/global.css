@@ -60,7 +60,8 @@ select { border-color:#999; }
 #FOOTER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Home */
-#HOME #search_large { margin-top:126px; }
+#HOME #left_box { width:636px; }
+#HOME #search_large { margin-top:80px; }
 #HOME #search_large #college_id { width:532px; margin:0px 0px 5px 31px; font-size:26px; }
 #HOME #search_large #search_box { height:66px; margin-bottom:5px; padding:10px 24px 4px 24px; border-radius:35px; border:1px solid #000; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
 #HOME #search_large .magnifying_large { width:56px; height:56px; background: url('../img/search_icon.png'); background-size:56px 56px; }

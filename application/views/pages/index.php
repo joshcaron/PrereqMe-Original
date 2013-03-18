@@ -6,8 +6,8 @@
 <?php endif ?>
 
 <div id="HOME">
-    <div class="fl">
-        <div class="helper_text">This is the two sentence helper text for what PrereqMe does. We can say things here and stuff.</div>
+    <div id="left_box" class="fl">
+        <h2 class="helper_text">This is the two sentence helper text for what PrereqMe does. We can say things here and stuff.</h2>
         <div id="search_large">
 
             <?php echo form_open('course/search_results', array('id'=>'index_search')); ?>
