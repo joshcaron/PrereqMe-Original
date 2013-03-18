@@ -89,7 +89,7 @@ BASE_URL = '<?php echo base_url()?>'
 
     <?php if(isset($user)): ?>
         <div id="USER_HEADING">
-            <div class="content cf">
+            <div id="content" class="cf">
                 <div id="DASHBOARD_LINKS" class="fl">
                     <ul class="cf">
                         <li class="fl"><a class="menu_item <?php if(isset($selectedNav) AND $selectedNav === 'overview'){echo ' selected"';} else {echo '" href=', base_url('index.php/dashboard');}?>>Dashboard</a></li> 
