@@ -95,13 +95,4 @@ class Course_model extends CI_Model
     }
 }
 
-
-
-
-
-
-
-
-
-
 /* End of course_model.php */
