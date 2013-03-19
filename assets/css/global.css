@@ -31,6 +31,7 @@ select { border-color:#999; }
 #HEADER #CONTENT #logo a:hover { text-decoration:none; }
 #HEADER #CONTENT #logo #tagline { position:absolute; right:0px; top:32px; }
 #HEADER #CONTENT #login #forgot a { font-size:14px; }
+#HEADER #CONTENT #login .error { font-size:14px; }
 
 /* Small search in header */
 #search_small { display:inline-block; margin:4px 0px 0px 322px;}
