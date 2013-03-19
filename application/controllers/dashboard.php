@@ -8,12 +8,12 @@ class Dashboard extends PM_Controller
     }
 
     //Loads the homepage of the dashboard
-    public function index()
+    public function audit()
     {
         if( parent::_is_logged_in() )
         {
             $data['title'] = 'Dashboard - PrereqMe';
-            $data['selectedNav'] = 'overview';
+            $data['selectedNav'] = 'audit';
 
             $this->load->view('templates/header', $data);
             $this->load->view('dashboard/index', $data);
