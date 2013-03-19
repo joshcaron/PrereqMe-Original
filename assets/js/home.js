@@ -88,7 +88,7 @@ var home = {
                 
                 major_select.html("<option value=\"0\" selected>Select your major</option>");
                 $.each(result, function(i, field){
-                    optionTag = "<option class=\"major\" value=\"" + field.id + "\">" + field.deptCode + field.code + "-" + field.title + "</option>";
+                    optionTag = "<option class=\"major\" value=\"" + field.id + "\">" + field.title + "</option>";
                     major_select.append(optionTag);
                 });
 
