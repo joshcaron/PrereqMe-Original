@@ -41,20 +41,20 @@ class Course_model extends CI_Model
         }
         else
         {
-            //$code = preg_replace("/[^0-9,.]/", "", $query);
+            $code = preg_replace("/[^0-9,.]/", "", $query);
 
-            /*$midPoint = strrpos($query, '-');
+            $midPoint = strrpos($query, '-');
             if($midPoint !== FALSE)
             {
                 $query = substr($query, $midPoint + 1);
-            }*/
+            }
             print_r($query);
 
             $this->db->select('pm_course.*, pm_dept.code as deptCode');
             $this->db->join('pm_dept', 'pm_dept.id = pm_course.deptId');
             $this->db->where('pm_dept.schoolId', $collegeId);
             $this->db->like('pm_course.title', $query);
-            //$this->db->or_like('pm_course.code', $code);
+            $this->db->or_like('pm_course.code', $code);
             return $this->db->get('pm_course')->result();
         }
     }
