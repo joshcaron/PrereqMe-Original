@@ -48,7 +48,6 @@ class Course_model extends CI_Model
             {
                 $query = trim(substr($query, $midPoint + 1));
             }
-            print_r($query);
 
             $this->db->select('pm_course.*, pm_dept.code as deptCode');
             $this->db->join('pm_dept', 'pm_dept.id = pm_course.deptId');
