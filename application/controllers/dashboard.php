@@ -16,7 +16,7 @@ class Dashboard extends PM_Controller
             $data['selectedNav'] = 'audit';
 
             $this->load->view('templates/header', $data);
-            $this->load->view('dashboard/index', $data);
+            $this->load->view('dashboard/audit', $data);
             $this->load->view('templates/footer');
         }
         else
