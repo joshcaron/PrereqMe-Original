@@ -87,6 +87,9 @@ var myplan = {
             minWidth:387,
             modal: true,
             buttons: {
+                Cancel: function() {
+                    $( this ).dialog( "close" );
+                },
                 "Delete Semester": function() {
                     $( this ).dialog( "close" );
                     var parentUl = deleteButtonElement.parent();
@@ -97,9 +100,6 @@ var myplan = {
 
                     //Hide box element
                     parentUl.parent().hide('blind', {}, 250, null);   
-                },
-                Cancel: function() {
-                    $( this ).dialog( "close" );
                 }
             }
         });    
