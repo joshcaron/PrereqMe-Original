@@ -41,7 +41,7 @@ class Course_model extends CI_Model
         }
         else
         {
-            $code = preg_replace("/[^0-9,.]/", "", $query);
+            //$code = preg_replace("/[^0-9,.]/", "", $query);
 
             $midPoint = strrpos($query, '-');
             if($midPoint !== FALSE)
