@@ -50,7 +50,7 @@
 
     <div class="fr">
         <div id="COURSE_DUMP">
-            <div class="header">Courses without a semester</div>
+            <div class="header">Unplanned courses</div>
             <div class="helper_text">Drag courses to a semester on the left</div>
             <div class="box">
                 <input type="text" id="search" onclick="myplan.clickedSearch($(this), <?php echo "'", $user['schoolId'], "'"?>)" placeholder="Add course..." />
