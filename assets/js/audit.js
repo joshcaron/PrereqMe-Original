@@ -21,7 +21,7 @@ var audit = {
     {
         var courseId = audit.courseIdFromLI(courseLIElement);
 
-        if(courseId !== 0)
+        if(courseId !== null)
         {
             window.location.href = BASE_URL + "index.php/course/view/" + courseId;
         }
