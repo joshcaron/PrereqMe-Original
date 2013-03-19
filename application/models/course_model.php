@@ -54,7 +54,7 @@ class Course_model extends CI_Model
             $this->db->join('pm_dept', 'pm_dept.id = pm_course.deptId');
             $this->db->where('pm_dept.schoolId', $collegeId);
             $this->db->like('pm_course.title', $query);
-            $this->db->or_like('pm_course.code', $code);
+            //$this->db->or_like('pm_course.code', $code);
             return $this->db->get('pm_course')->result();
         }
     }
