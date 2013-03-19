@@ -24,6 +24,10 @@
     <p id="description" class="fl"><?php echo $course->description ?></p>
 </div>
 
+<?php if(count($course->prereqs) === 0): ?>
+<p>This class does not have any prerequesites</p>
+<?php endif?>
+
 <div id="infovis"></div>
 
 <script>
