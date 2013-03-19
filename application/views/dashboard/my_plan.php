@@ -22,6 +22,7 @@
                 </select>
                 <input type="submit" value="Add">
                 <div class="error"><?php echo form_error('semesterId');?></div>
+                <div class="error"><?php echo form_error('year');?></div>
             </form>
         </div>
 
