@@ -9,7 +9,7 @@
     <div class="ui-state-error">Incomplete Requirement</div>
 </div>
 
-<input type="checkbox" name="showCompletedCourses" checked onclick="audit.toggleCompletedCourses($(this));"><label for="showCompletedCourses">Show completed courses</label>
+<input type="checkbox" name="showCompletedCourses" checked onchange="audit.toggleCompletedCourses($(this));"><label for="showCompletedCourses">Show completed courses</label>
 
 <div id="DEGREE_AUDIT">
     <h3>Computer Science Major Requirements (5/18 incomplete)</h3>
