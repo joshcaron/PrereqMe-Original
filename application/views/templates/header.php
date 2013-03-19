@@ -79,6 +79,11 @@ BASE_URL = '<?php echo base_url()?>'
                                 <td><input type="password" name="password" /></td>
                                 <td><input type="submit" value="Log In" /></td>
                             </tr>
+                            <?php if($loginError): ?>
+                                <tr>
+                                    <td>Incorrect username/password combination. Please try again.</td>
+                                </tr>
+                            <?php endif ?>
                             <tr>
                                 <td id="forgot"><a href="">Forgot your password?</a></td>
                         </table>

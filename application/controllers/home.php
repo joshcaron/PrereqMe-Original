@@ -8,12 +8,13 @@ class Home extends PM_Controller
     }
 
     // Displays the home page
-    public function index()
+    public function index($errorLoggingIn = FALSE)
     {
         $schools = $this->school_model->get_all();
 
         $data['title'] = 'PrereqMe';
         $data['schools'] = $schools;
+        $data['loginError'] = $errorLoggingIn;
 
         $this->load->view('templates/header', $data);
         $this->load->view('pages/index', $data);
@@ -131,7 +132,7 @@ class Home extends PM_Controller
             }
             else
             {
-                $this->index();
+                redirect('/home/index/true');
             }
         }
     }
