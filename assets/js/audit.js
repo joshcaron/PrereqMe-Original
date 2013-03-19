@@ -25,5 +25,20 @@ var audit = {
         {
             window.location.href = BASE_URL + "index.php/course/view/" + courseId;
         }
+    },
+
+    //Toggles whether to show completed requirements or not
+    toggleCompletedCourses : function(checkbox)
+    {
+        var completedCourses = $("#DEGREE_AUDIT li.ui-state-error");
+
+        if(checkbox.attr('checked'))
+        {
+            completedCourses.hide('blind', {}, 250, null);
+        }
+        else
+        {
+            completedCourses..show('blind', {}, 250, null);
+        }
     }
 };

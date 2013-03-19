@@ -1,16 +1,18 @@
 <div ID="AUDIT">
 
-<h1>You have <span class="orange">9</span> remaining requirements</h1>
+<h1>You have <span class="orange">9</span> incomplete requirements</h1>
 
 <h3>Note, the following data is static (for now)</h3>
 
 <div id="legend">
     <div class="ui-state-default">Completed Requirement</div>
-    <div class="ui-state-error">Remaining Requirement</div>
+    <div class="ui-state-error">Incomplete Requirement</div>
 </div>
 
+<input type="checkbox" name="showCompletedCourses" checked onclick="audit.toggleCompletedCourses($(this));"><label for="showCompletedCourses">Show completed courses</label>
+
 <div id="DEGREE_AUDIT">
-    <h3>Computer Science Major Requirements (5/18 remaining)</h3>
+    <h3>Computer Science Major Requirements (5/18 incomplete)</h3>
     <div>
         <ul class="course_list">
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">CS 1200 - Computer Science/Information Science Overview 1<input type="hidden" value="2"/></li>
@@ -34,7 +36,7 @@
         </ul>
     </div>
 
-    <h3>CS Additional Courses for BS (1/7 remaining)</h3>
+    <h3>CS Additional Courses for BS (1/7 incomplete)</h3>
     <div>
         <ul class="course_list">
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">MATH 2331 - Linear Algebra</li>
@@ -47,7 +49,7 @@
         </ul>
     </div>
 
-    <h3>Computer Science English Requirement (0/3 remaining)</h3>
+    <h3>Computer Science English Requirement (0/3 incomplete)</h3>
     <div>
         <ul class="course_list">
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">ENGL 1111 - College Writing</li>
@@ -56,7 +58,7 @@
         </ul>
     </div>
 
-    <h3>General Electives (2/8 remaining)</h3>
+    <h3>General Electives (2/8 incomplete)</h3>
     <div>
         <ul class="course_list">
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">General Elective 1</li>
@@ -70,7 +72,7 @@
         </ul>    
     </div>
 
-    <h3>NU Core (1/12 remaining)</h3>
+    <h3>NU Core (1/12 incomplete)</h3>
     <div>
         <ul class="course_list">
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">College Writing</li>
