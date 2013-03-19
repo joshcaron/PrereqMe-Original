@@ -6,7 +6,7 @@
 
 <div id="legend">
     <div class="ui-state-default">Completed Requirement</div>
-    <div class="ui-state-highlight">Remaining Requirement</div>
+    <div class="ui-state-error">Remaining Requirement</div>
 </div>
 
 <div id="DEGREE_AUDIT">
@@ -25,12 +25,12 @@
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">CS 3800 - Theory of Computation<input type="hidden" value="24"/></li>
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">CS 3600 - Systems and Networks<input type="hidden" value="23"/></li>
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">CS 4400 - Programming Languages<input type="hidden" value="30"/></li>
-            <li class="ui-state-highlight" onclick="audit.shouldGoToCourse($(this));">CS 4500 - Software Development<input type="hidden" value="32"/></li>
+            <li class="ui-state-error" onclick="audit.shouldGoToCourse($(this));">CS 4500 - Software Development<input type="hidden" value="32"/></li>
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">CS 4800 - Algorithms and Data<input type="hidden" value="44"/></li>
-            <li class="ui-state-highlight" onclick="audit.shouldGoToCourse($(this));">CS 4000 - Senior Seminar<input type="hidden" value="25"/></li>
-            <li class="ui-state-highlight" onclick="audit.shouldGoToCourse($(this));">Computer Science Capstone</li>
-            <li class="ui-state-highlight" onclick="audit.shouldGoToCourse($(this));">Computer Science Upper Division Elective 1</li>
-            <li class="ui-state-highlight" onclick="audit.shouldGoToCourse($(this));">Computer Science Upper Division Elective 2</li>
+            <li class="ui-state-error" onclick="audit.shouldGoToCourse($(this));">CS 4000 - Senior Seminar<input type="hidden" value="25"/></li>
+            <li class="ui-state-error" onclick="audit.shouldGoToCourse($(this));">Computer Science Capstone</li>
+            <li class="ui-state-error" onclick="audit.shouldGoToCourse($(this));">Computer Science Upper Division Elective 1</li>
+            <li class="ui-state-error" onclick="audit.shouldGoToCourse($(this));">Computer Science Upper Division Elective 2</li>
         </ul>
     </div>
 
@@ -43,7 +43,7 @@
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">Science Requirement 1</li>
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">Science Requirement 2</li>
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">Science Requirement 3</li>
-            <li class="ui-state-highlight" onclick="audit.shouldGoToCourse($(this));">Science Requirement 4</li>
+            <li class="ui-state-error" onclick="audit.shouldGoToCourse($(this));">Science Requirement 4</li>
         </ul>
     </div>
 
@@ -65,8 +65,8 @@
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">General Elective 4</li>
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">General Elective 5</li>
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">General Elective 6</li>
-            <li class="ui-state-highlight" onclick="audit.shouldGoToCourse($(this));">General Elective 7</li>
-            <li class="ui-state-highlight" onclick="audit.shouldGoToCourse($(this));">General Elective 8</li>
+            <li class="ui-state-error" onclick="audit.shouldGoToCourse($(this));">General Elective 7</li>
+            <li class="ui-state-error" onclick="audit.shouldGoToCourse($(this));">General Elective 8</li>
         </ul>    
     </div>
 
@@ -84,7 +84,7 @@
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">Capstone / Writing Intensive II</li>
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">Experiential Learning</li>
             <li class="ui-state-default" onclick="audit.shouldGoToCourse($(this));">Cooperative Education</li>
-            <li class="ui-state-highlight" onclick="audit.shouldGoToCourse($(this));">General Electives</li>
+            <li class="ui-state-error" onclick="audit.shouldGoToCourse($(this));">General Electives</li>
         </ul>    
     </div>
 </div>
