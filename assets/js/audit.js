@@ -32,15 +32,15 @@ var audit = {
     {
         var completedCourses = $("#DEGREE_AUDIT li.ui-state-error");
 
-        if(checkbox.attr('checked'))
+        if(checkbox.checked === true)
         {
             completedCourses.show('blind', {}, 250, null);
-            checkbox.attr('checked', true);
+            checkbox.checked = true;
         }
         else
         {
             completedCourses.hide('blind', {}, 250, null);
-            checkbox.attr('checked', false);
+            checkbox.checked = false;
         }
     }
 };
