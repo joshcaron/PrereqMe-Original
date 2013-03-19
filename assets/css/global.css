@@ -112,6 +112,6 @@ select { border-color:#999; }
 #AUDIT #legend div { display:inline-block; width:200px; margin:0px 10px 10px 10px; padding:3px; }
 #AUDIT #DEGREE_AUDIT { margin:15px 0px; }
 #AUDIT #DEGREE_AUDIT ul.course_list { padding:0px; }
-#AUDIT #DEGREE_AUDIT li { margin:10px 0px; padding:3px; list-style-type:none; }
+#AUDIT #DEGREE_AUDIT li { margin:10px 0px; padding:3px; list-style-type:none; cursor:pointer; }
 
 
