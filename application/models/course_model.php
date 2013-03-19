@@ -43,12 +43,6 @@ class Course_model extends CI_Model
         {
             $code = preg_replace("/[^0-9,.]/", "", $query);
 
-            $midPoint = strrpos($query, '-');
-            if($midPoint !== FALSE)
-            {
-                $query = substr($query, $midPoint + 1);
-            }
-
             $this->db->select('pm_course.*, pm_dept.code as deptCode');
             $this->db->join('pm_dept', 'pm_dept.id = pm_course.deptId');
             $this->db->where('pm_dept.schoolId', $collegeId);
