@@ -35,10 +35,12 @@ var audit = {
         if(checkbox.attr('checked'))
         {
             completedCourses.show('blind', {}, 250, null);
+            checkbox.attr('checked', true);
         }
         else
         {
             completedCourses.hide('blind', {}, 250, null);
+            checkbox.attr('checked', false);
         }
     }
 };
