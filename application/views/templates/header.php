@@ -81,7 +81,7 @@ BASE_URL = '<?php echo base_url()?>'
                             </tr>
                             <?php if($loginError): ?>
                                 <tr>
-                                    <td class="error" colspan="2" >Incorrect username/password combination. Please try again.</td>
+                                    <td class="error" colspan="3" >Incorrect username/password combination. Please try again.</td>
                                 </tr>
                             <?php endif ?>
                             <tr>
