@@ -19,7 +19,7 @@ var audit = {
     //Loads view for that course
     shouldGoToCourse : function(courseLIElement)
     {
-        var courseId = myplan.courseIdFromLI(courseLIElement);
+        var courseId = audit.courseIdFromLI(courseLIElement);
 
         if(courseId !== 0)
         {
