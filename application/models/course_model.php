@@ -46,7 +46,7 @@ class Course_model extends CI_Model
             $midPoint = strrpos($query, '-');
             if($midPoint !== FALSE)
             {
-                $query = substr($query, $midPoint + 1);
+                $query = trim(substr($query, $midPoint + 1));
             }
             print_r($query);
 
