@@ -24,11 +24,12 @@
     <p id="description" class="fl"><?php echo $course->description ?></p>
 </div>
 
+<div id="infovis">
 <?php if(count($course->prereqs) === 0): ?>
 <p>This class does not have any prerequesites</p>
 <?php endif?>
 
-<div id="infovis"></div>
+</div>
 
 <script>
 //Initializes spacetree
