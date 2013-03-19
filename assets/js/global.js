@@ -3,8 +3,8 @@ var global = {
     //Initializes the search bar autocomplete in the header
     initializeSearchBarAutocomplete : function()
     {
-        var queryElement = $('#HEADER #search_small #query').first();
-        var schoolId = $('#HEADER #search_small .college_id').first().val();
+        var queryElement = $('#search_small #query').first();
+        var schoolId = $('#search_small .college_id').first().val();
 
         var searchUrl = BASE_URL + "index.php/home/search?collegeId=" + schoolId.toString();
 
