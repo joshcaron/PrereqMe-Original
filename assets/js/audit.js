@@ -1,4 +1,4 @@
-var dashboard = {
+var audit = {
 
     //Gets the courseId from the course LI element
     courseIdFromLI : function(courseLIElement)
