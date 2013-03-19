@@ -1,6 +1,7 @@
 <div id="MY_PLAN">
     <div id="SEMESTERS" class="fl">
-        <div class="header">Your semesters:</div>
+        <div class="header">Your semesters</div>
+        <div class="helper_text">Click on a course to go to its detail page</div>
         
         <div id="ADD_SEMESTER" class="box">
             <div class="header">Add a semester</div>
