@@ -43,11 +43,11 @@ class Course_model extends CI_Model
         {
             //$code = preg_replace("/[^0-9,.]/", "", $query);
 
-            $midPoint = strrpos($query, '-');
+            /*$midPoint = strrpos($query, '-');
             if($midPoint !== FALSE)
             {
                 $query = substr($query, $midPoint + 1);
-            }
+            }*/
             print_r($query);
 
             $this->db->select('pm_course.*, pm_dept.code as deptCode');
