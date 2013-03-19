@@ -37,9 +37,9 @@
                     </div>
                 </div>
                 <div class="error"><?php echo form_error('query'); ?></div>
-                <div>
+                <!--<div>
                     <input type="submit" value="Search"/>
-                </div>
+                </div>-->
             </form>
 
         </div>
