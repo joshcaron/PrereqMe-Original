@@ -30,7 +30,7 @@ var audit = {
     //Toggles whether to show completed requirements or not
     toggleCompletedCourses : function(checkbox)
     {
-        var completedCourses = $("#DEGREE_AUDIT li.ui-state-error");
+        var completedCourses = $("#DEGREE_AUDIT li.ui-state-default");
 
         if(checkbox.checked === true)
         {
