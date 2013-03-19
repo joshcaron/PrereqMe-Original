@@ -79,7 +79,7 @@ BASE_URL = '<?php echo base_url()?>'
                                 <td><input type="password" name="password" /></td>
                                 <td><input type="submit" value="Log In" /></td>
                             </tr>
-                            <?php if($loginError): ?>
+                            <?php if(isset($loginError) AND $loginError): ?>
                                 <tr>
                                     <td class="error" colspan="3" >Incorrect username/password combination. Please try again.</td>
                                 </tr>
