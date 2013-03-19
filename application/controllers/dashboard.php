@@ -96,7 +96,7 @@ class Dashboard extends PM_Controller
     //Expected params in post: title
     public function add_semester()
     {
-        $this->form_validation->set_rules('year', 'Year', 'required');
+        $this->form_validation->set_rules('year', 'Year', 'required|greater_than[0]');
         $this->form_validation->set_rules('semesterId', 'Semester', 'callback_duplicate_semester');
 
         if( $this->form_validation->run())
