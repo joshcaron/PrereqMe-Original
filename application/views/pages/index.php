@@ -7,7 +7,7 @@
 
 <div id="HOME">
     <div id="left_box" class="fl">
-        <h1 class="helper_text">PrereqMe helps you to find prerequisites for specific classes, plan out your courses, and keep track of how you’re doing with regards to your major.</h1>
+        <h1 class="helper_text">Having a hard time keeping track of all the prerequisites to your courses? Join PrereqMe today for FREE and start planning out your college experience!</h1>
         <div id="search_large">
 
             <?php echo form_open('course/search_results', array('id'=>'index_search')); ?>
