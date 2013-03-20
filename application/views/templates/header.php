@@ -85,7 +85,7 @@ BASE_URL = '<?php echo base_url()?>'
                                 </tr>
                             <?php endif ?>
                             <tr>
-                                <td id="forgot"><a href="">Forgot your password?</a></td>
+                                <td></td><td id="forgot"><a href="">Forgot your password?</a></td>
                             </tr>
                         </table>
                     </form>
@@ -99,10 +99,10 @@ BASE_URL = '<?php echo base_url()?>'
             <div id="content" class="cf">
                 <div id="DASHBOARD_LINKS" class="fl">
                     <ul class="cf">
-                        <li class="fl"><a class="menu_item <?php if(isset($selectedNav) AND $selectedNav === 'my_plan'){echo ' selected"';} else {echo '" href=', base_url('index.php/dashboard/my_plan');}?>>My Plan</a></li>  
-                        <li class="fl"><a class="menu_item <?php if(isset($selectedNav) AND $selectedNav === 'audit'){echo ' selected"';} else {echo '" href=', base_url('index.php/dashboard/audit');}?>>Audit</a></li> 
-                        <li class="fl browse"><a class="menu_item <?php if(isset($selectedNav) AND $selectedNav === 'browse'){echo ' selected"';} echo '" href=', base_url('index.php/dashboard/browse');?>>Browse Courses</a></li>  
-                        <li class="fl"><a class="menu_item <?php if(isset($selectedNav) AND $selectedNav === 'help'){echo ' selected"';} else {echo '" href=', base_url('index.php/dashboard/help');}?>>Help</a></li> 
+                        <li class="fl"><a class="menu_item <?php if(isset($selectedNav) AND $selectedNav === 'my_plan'){echo ' selected"';} else {echo '" href=', base_url('index.php/dashboard/my_plan');}?>>My Plan</a></li>
+                        <li class="fl"><a class="menu_item <?php if(isset($selectedNav) AND $selectedNav === 'audit'){echo ' selected"';} else {echo '" href=', base_url('index.php/dashboard/audit');}?>>Audit</a></li>
+                        <li class="fl browse"><a class="menu_item <?php if(isset($selectedNav) AND $selectedNav === 'browse'){echo ' selected"';} echo '" href=', base_url('index.php/dashboard/browse');?>>Browse Courses</a></li>
+                        <li class="fl"><a class="menu_item <?php if(isset($selectedNav) AND $selectedNav === 'help'){echo ' selected"';} else {echo '" href=', base_url('index.php/dashboard/help');}?>>Help</a></li>
                     </ul>
                 </div>
 
