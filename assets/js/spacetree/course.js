@@ -26,7 +26,7 @@ var Log = {
 };
 
 //implement an edge type  
-$jit.Viz.Plot.EdgeTypes.implement({  
+$jit.ST.Plot.EdgeTypes.implement({  
   'reverseArrow': {  
     'render' : function(adj, canvas) {
             var from = adj.nodeFrom.pos.getc(true),
