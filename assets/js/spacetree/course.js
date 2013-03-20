@@ -34,7 +34,7 @@ $jit.ST.Plot.EdgeTypes.implement({
                 dim = adj.getData('dim');
 
             var adjustedFrom = from;
-            adjustedFrom.x = from.x - 100;
+            adjustedFrom.x = from.x;
 
             this.edgeHelper.arrow.render(adjustedFrom, to, dim, true, this.viz.canvas);
     }  
