@@ -25,6 +25,20 @@ var Log = {
   }
 };
 
+//implement an edge type  
+$jit.Viz.Plot.EdgeTypes.implement({  
+  'reverseArrow': {  
+    'render' : function(adj, canvas) {
+            var from = adj.nodeFrom.pos.getc(true),
+                to = adj.nodeTo.pos.getc(true),
+                dim = adj.getData('dim'),
+                direction = adj.data.$direction,
+                inv = (direction && direction.length > 1 && direction[0] != adj.nodeFrom.id);
+
+            EdgeHelper.arrow.render(from, to, dim, true, canvas);
+    }  
+  }  
+}); 
 
 function initWithJSON(json)
 {
@@ -65,7 +79,7 @@ function initWithJSON(json)
         },
         
         Edge: {
-            type: 'arrow',
+            type: 'reverseArrow',
             color: '#000',
             overridable: true
         },
