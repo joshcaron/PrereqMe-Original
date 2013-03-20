@@ -39,8 +39,7 @@ select { border-color:#999; }
                             margin-bottom:5px;
                             padding:6px 15px 4px;
                             border-radius:12px; border:1px solid #000;
-                            background-image:-we
-                            bkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
+                            background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
 #search_small .magnifying_small { width:23px;
                                   height:23px;
                                   background: url('../img/search_icon_small.png');
