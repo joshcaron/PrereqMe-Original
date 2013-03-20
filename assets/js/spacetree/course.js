@@ -33,7 +33,7 @@ $jit.ST.Plot.EdgeTypes.implement({
                 to = adj.nodeTo.pos,
                 dim = adj.getData('dim');
 
-            this.edgeHelper.arrow.render(to, from, dim, false, this.viz.canvas);
+            this.edgeHelper.arrow.render(from, to, dim, false, this.viz.canvas);
     }  
   }  
 }); 
