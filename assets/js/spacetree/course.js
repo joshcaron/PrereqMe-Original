@@ -33,7 +33,7 @@ $jit.ST.Plot.EdgeTypes.implement({
                 to = adj.nodeTo.pos,
                 dim = adj.getData('dim');
 
-            this.edgeHelper.arrow.render(from, to, dim, false, this.viz.canvas);
+            this.edgeHelper.arrow.render(from, to, dim, true, this.viz.canvas);
     }  
   }  
 }); 
@@ -77,7 +77,7 @@ function initWithJSON(json)
         },
         
         Edge: {
-            type: 'reverseArrow',
+            type: 'bezier',
             color: '#000',
             overridable: true
         },
