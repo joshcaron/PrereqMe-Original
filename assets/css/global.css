@@ -35,9 +35,23 @@ select { border-color:#999; }
 
 /* Small search in header */
 #search_small { display:inline-block; margin:4px 0px 0px 322px;}
-#search_small #search_box { height:25px; margin-bottom:5px; padding:6px 15px 4px; border-radius:12px; border:1px solid #000; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
-#search_small .magnifying_small { width:23px; height:23px; background: url('../img/search_icon_small.png'); background-size:23px 23px; }
-#search_small #query { width:204px; height:13px; padding:5px 15px; font-size:16px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
+#search_small #search_box { height:25px;
+                            margin-bottom:5px;
+                            padding:6px 15px 4px;
+                            border-radius:12px; border:1px solid #000;
+                            background-image:-we
+                            bkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
+#search_small .magnifying_small { width:23px;
+                                  height:23px;
+                                  background: url('../img/search_icon_small.png');
+                                  background-size:23px 23px; }
+#search_small #query { width:204px;
+                       height:13px;
+                       padding:5px 15px;
+                       font-size:16px;
+                       border:none;
+                       background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%);
+                       outline:0; }
 
 /* Dashboard Links  */
 #USER_HEADING { height:45px; background-color:#5cc; }
@@ -48,7 +62,8 @@ select { border-color:#999; }
 #DASHBOARD_LINKS a { display:block; padding:9px; text-decoration:none;}
 #DASHBOARD_LINKS a:hover,
 #DASHBOARD_LINKS a.menu_item { height:31px; color:#000; }
-#DASHBOARD_LINKS a.menu_item.selected { position:relative; top:-8px; padding-top:13px; border-radius:8px 4px 0px 0px; background-color:#ffaa00;}
+#DASHBOARD_LINKS a.menu_item.selected { position:relative; top:-8px; padding-top:13px;
+                                        border-radius:8px 8px 0px 0px; background-color:#ffaa00;}
 #DASHBOARD_LINKS a.menu_item.selected { cursor:default; }
 #DASHBOARD_LINKS .browse a.selected { cursor:pointer; }
 
@@ -62,9 +77,13 @@ select { border-color:#999; }
 
 /* Home */
 #HOME #left_box { width:636px; }
+#HOME #left_box .helper_text { font-size:20px; }
 #HOME #search_large { margin-top:80px; }
 #HOME #search_large #college_id { width:532px; margin:0px 0px 5px 31px; font-size:26px; }
-#HOME #search_large #search_box { height:66px; margin-bottom:5px; padding:10px 24px 4px 24px; border-radius:35px; border:1px solid #000; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
+#HOME #search_large #search_box { height:66px; margin-bottom:5px;
+                                  padding:10px 24px 4px 24px; border-radius:35px;
+                                  border:1px solid #000;
+                                  background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); }
 #HOME #search_large .magnifying_large { width:56px; height:56px; background: url('../img/search_icon.png'); background-size:56px 56px; }
 #HOME #search_large #query { width:500px; height:50px; padding:5px 15px; font-size:32px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
 #HOME #sign_up td { width:196px; }
