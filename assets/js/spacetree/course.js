@@ -32,9 +32,8 @@ $jit.ST.Plot.EdgeTypes.implement({
             var from = adj.nodeFrom.pos.getc(true),
                 to = adj.nodeTo.pos.getc(true),
                 dim = adj.getData('dim'),
-                direction = adj.data.$direction,
-                //inv = (direction && direction.length > 1 && direction[0] != adj.nodeFrom.id);
-
+                direction = adj.data.$direction;
+                
             this.edgeHelper.arrow.render(from, to, dim, true, canvas);
     }  
   }  
