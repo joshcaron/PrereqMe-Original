@@ -29,12 +29,14 @@ var Log = {
 $jit.ST.Plot.EdgeTypes.implement({  
   'reverseArrow': {  
     'render' : function(adj, canvas) {
-            var from = adj.nodeFrom.pos.getc(true),
-                to = adj.nodeTo.pos.getc(true),
-                dim = adj.getData('dim'),
-                direction = adj.data.$direction;
-                
-            this.edgeHelper.arrow.render(from, to, dim, true, canvas);
+            var from = adj.nodeFrom.pos,
+                to = adj.nodeTo.pos,
+                dim = adj.getData('dim');
+
+            var adjustedFrom = from.clone();
+            adjustedFrom.x = from.x;
+
+            this.edgeHelper.arrow.render(adjustedFrom, to, dim, true, this.viz.canvas);
     }  
   }  
 }); 
