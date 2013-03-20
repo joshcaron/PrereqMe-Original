@@ -29,8 +29,8 @@ var Log = {
 $jit.ST.Plot.EdgeTypes.implement({  
   'reverseArrow': {  
     'render' : function(adj, canvas) {
-            var from = adj.nodeFrom.pos,
-                to = adj.nodeTo.pos,
+            var from = adj.nodeFrom,
+                to = adj.nodeTo,
                 dim = adj.getData('dim');
 
             this.edgeHelper.arrow.render(from, to, dim, true, this.viz.canvas);
