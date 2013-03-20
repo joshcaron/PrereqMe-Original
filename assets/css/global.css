@@ -24,13 +24,14 @@ select { border-color:#999; }
 .ui-autocomplete { max-height:200px; overflow-y:auto; overflow-x:hidden; }
 
 /* Header */
-#HEADER { height:84px; background-color:#006363; }
+#HEADER { min-height:84px; background-color:#006363; }
 #HEADER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 #HEADER #CONTENT #logo { width:389px; position:relative; font-size:18px;}
 #HEADER #CONTENT #logo a { text-decoration:none; }
 #HEADER #CONTENT #logo a:hover { text-decoration:none; }
 #HEADER #CONTENT #logo #tagline { position:absolute; right:0px; top:32px; }
 #HEADER #CONTENT #login #forgot a { font-size:14px; }
+#HEADER #CONTENT #login .error { font-size:14px; }
 
 /* Small search in header */
 #search_small { display:inline-block; margin:4px 0px 0px 322px;}
@@ -112,6 +113,6 @@ select { border-color:#999; }
 #AUDIT #legend div { display:inline-block; width:200px; margin:0px 10px 10px 10px; padding:3px; }
 #AUDIT #DEGREE_AUDIT { margin:15px 0px; }
 #AUDIT #DEGREE_AUDIT ul.course_list { padding:0px; }
-#AUDIT #DEGREE_AUDIT li { margin:10px 0px; padding:3px; list-style-type:none; }
+#AUDIT #DEGREE_AUDIT li { margin:10px 0px; padding:3px; list-style-type:none; cursor:pointer; }
 
 

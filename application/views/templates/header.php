@@ -28,7 +28,7 @@ BASE_URL = '<?php echo base_url()?>'
 <script src=<?php echo js_url(), 'home.js'?> ></script>
 <script src=<?php echo js_url(), 'my_plan.js'?> ></script>
 <script src=<?php echo js_url(), 'browse.js'?> ></script>
-<script src=<?php echo js_url(), 'dashboard.js'?> ></script>
+<script src=<?php echo js_url(), 'audit.js'?> ></script>
 <script src=<?php echo js_url(), 'spacetree/jit-yc.js'?> ></script>
 <script src=<?php echo js_url(), 'spacetree/jit.js'?> ></script>
 <script src=<?php echo js_url(), 'spacetree/course.js'?> ></script>
@@ -79,8 +79,14 @@ BASE_URL = '<?php echo base_url()?>'
                                 <td><input type="password" name="password" /></td>
                                 <td><input type="submit" value="Log In" /></td>
                             </tr>
+                            <?php if(isset($loginError) AND $loginError): ?>
+                                <tr>
+                                    <td class="error" colspan="3" >Incorrect username/password combination. Please try again.</td>
+                                </tr>
+                            <?php endif ?>
                             <tr>
                                 <td id="forgot"><a href="">Forgot your password?</a></td>
+                            </tr>
                         </table>
                     </form>
                 </div>
