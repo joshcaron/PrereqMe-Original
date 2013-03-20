@@ -45,7 +45,7 @@ BASE_URL = '<?php echo base_url()?>'
                         <?php
                             if(isset($user))
                             {
-                                echo base_url('index.php/dashboard');
+                                echo base_url('index.php/dashboard/my_plan');
                             }
                             else
                             {
