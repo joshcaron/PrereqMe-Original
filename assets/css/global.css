@@ -76,7 +76,7 @@ select { border-color:#999; }
 #FOOTER #CONTENT { width:1250px; margin:0px auto; padding:8px 15px 0px; }
 
 /* Home */
-#HOME { width:1110px;}
+#HOME { width:1110px !important; }
 #HOME #left_box { width:636px; }
 #HOME #left_box .helper_text { font-size:20px; }
 #HOME #search_large { margin-top:80px; }
