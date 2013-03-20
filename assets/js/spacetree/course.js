@@ -33,7 +33,7 @@ $jit.ST.Plot.EdgeTypes.implement({
                 to = adj.nodeTo.pos,
                 dim = adj.getData('dim');
 
-            var adjustedFrom = from;
+            var adjustedFrom = from.clone();
             adjustedFrom.x = from.x;
 
             this.edgeHelper.arrow.render(adjustedFrom, to, dim, true, this.viz.canvas);
