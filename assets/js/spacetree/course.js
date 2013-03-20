@@ -66,6 +66,7 @@ function initWithJSON(json)
         
         Edge: {
             type: 'arrow',
+            color: #000,
             overridable: true
         },
 
