@@ -137,4 +137,7 @@ select { border-color:#999; }
 #AUDIT #DEGREE_AUDIT ul.course_list { padding:0px; }
 #AUDIT #DEGREE_AUDIT li { margin:10px 0px; padding:3px; list-style-type:none; cursor:pointer; }
 
-
+/* Forgot Password */
+#FORGOT{ text-align: center; }
+#forgot_box { margin-top: 50px; margin-bottom: 50px; }
+#forgot_box label { font-weight: bold; margin-right: 10px;}

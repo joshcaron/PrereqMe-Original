@@ -97,5 +97,23 @@ var home = {
 
             submit_button.prop('disabled', true);
         }
+    },
+
+    forgot_password : function() {
+        var text = "An email is being sent! Check your inbox in 50 years.";
+        var mydiv = $('<div id="alert"></div>');
+        mydiv.text(text);
+        var dialogueData = mydiv;
+        dialogueData.dialog({
+            resizable: false,
+            minHeight:140,
+            minWidth:387,
+            modal: true,
+            buttons: {
+                "Okay": function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        }); 
     }
 };

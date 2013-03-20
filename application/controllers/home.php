@@ -144,6 +144,15 @@ class Home extends PM_Controller
         unset($user);
         redirect('/home/index');
     }
+
+    // 
+    public function forgot_password() 
+    {
+        $data['title'] = 'Forgot Password';
+        $this->load->view('templates/header', $data);
+        $this->load->view('pages/forgot');
+        $this->load->view('templates/footer');
+    }
 }
 
 

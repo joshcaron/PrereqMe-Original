@@ -85,7 +85,7 @@ BASE_URL = '<?php echo base_url()?>'
                                 </tr>
                             <?php endif ?>
                             <tr>
-                                <td></td><td id="forgot"><a href="">Forgot your password?</a></td>
+                                <td></td><td id="forgot"><a href="<?php echo base_url('index.php/home/forgot_password'); ?>">Forgot your password?</a></td>
                             </tr>
                         </table>
                     </form>
