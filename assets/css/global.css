@@ -68,7 +68,7 @@ select { border-color:#999; }
 #HOME #search_large #query { width:500px; height:50px; padding:5px 15px; font-size:32px; border:none; background-image:-webkit-linear-gradient(top, rgb(243, 243, 244) 0px, rgb(222, 224, 226) 100%); outline:0; }
 #HOME #sign_up td { width:196px; }
 #HOME #sign_up input { font-size:16px; padding:5px; }
-#HOME #sign_up input.wide { width:243px; }
+#HOME #sign_up input.wide { width:243px; height:10px;}
 #HOME #sign_up select { font-size:19px; }
 
 /* Search Results */
