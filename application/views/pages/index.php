@@ -1,7 +1,7 @@
 <?php if(isset($user)): ?>
     <script>
     //If user is logged in, redirect to dashboard
-    window.location.href = BASE_URL + 'index.php/dashboard';
+    window.location.href = BASE_URL + 'index.php/dashboard/my_plan';
     </script>
 <?php endif ?>
 
