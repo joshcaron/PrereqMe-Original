@@ -65,7 +65,7 @@ function initWithJSON(json)
         },
         
         Edge: {
-            type: 'bezier',
+            type: 'arrow',
             overridable: true
         },
 
