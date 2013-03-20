@@ -29,7 +29,7 @@ select { border-color:#999; }
 #HEADER #CONTENT #logo { width:500px; position:relative; font-size:18px; font-style: italic; }
 #HEADER #CONTENT #logo a { text-decoration:none; }
 #HEADER #CONTENT #logo a:hover { text-decoration:none; }
-#HEADER #CONTENT #logo #tagline { position:absolute; right:0px; top:32px; }
+#HEADER #CONTENT #logo #tagline { position:absolute; right:0px; top:32px; font-style: italic; }
 #HEADER #CONTENT #login #forgot a { font-size:14px; padding:3px;}
 #HEADER #CONTENT #login .error { font-size:14px; }
 
@@ -94,7 +94,10 @@ select { border-color:#999; }
 /* Search Results */
 #SEARCH_RESULTS #results_text { font-size: 24px; }
 #SEARCH_RESULTS #content { width:700px; margin:auto; }
-#SEARCH_RESULTS #content .course { margin:8px 0px; padding:10px; color:#000; border:1px solid #000000; cursor:pointer; background-color: #fff; border-radius: 10px;}
+#SEARCH_RESULTS #content .course { margin:8px 0px; padding:10px;
+                                   color:#000; border:1px solid #000000;
+                                   cursor:pointer; background-color: #fff;
+                                   border-radius: 10px; opacity: .9;}
 
 /* Course Detail */
 #COURSE_DETAIL #infovis { position:relative; height:275px; margin:72px auto 5px; overflow:hidden; background-color:#5cc; border:6px ridge rgb(238, 238, 238); }
