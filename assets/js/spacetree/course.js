@@ -50,7 +50,7 @@ function initWithJSON(json)
         //set animation transition type
         transition: $jit.Trans.Quart.easeInOut,
         //set distance between node and its children
-        levelDistance: 50,
+        levelDistance: 150,
         //set xoffset
         offsetX: -400,
         //set orientation
