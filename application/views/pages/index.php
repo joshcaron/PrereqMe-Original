@@ -12,7 +12,7 @@
 
             <?php echo form_open('course/search_results', array('id'=>'index_search')); ?>
                 <select id="college_id" name="collegeId" onchange="home.changedSearchSchool(this.value)">
-                    <option value="0" selected>Select your school to find a course</option>
+                    <option value="0" selected>First select your school</option>
 
                     <?php foreach($schools as $school): ?>
                         <option value=<?php echo $school->id?> ><?php echo $school->title?></option>
