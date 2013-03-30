@@ -62,8 +62,8 @@ function initWithJSON(json)
 
         //enable panning
         Navigation: {
-          enable:true,
-          panning:true
+          enable:false,
+          panning:false
         },
         //set node and edge styles
         //set overridable=true for styling individual
