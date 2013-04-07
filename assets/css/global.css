@@ -117,8 +117,8 @@ select { border-color:#999; }
 #MY_PLAN .box .header {color: #000;}
 #MY_PLAN ul { position:relative; min-height:30px; padding:0px; }
 #MY_PLAN li { position:relative; margin:8px; padding:10px; list-style-type:none; cursor:move; }
-#MY_PLAN ul .delete { position:absolute; top:-14px; right:7px; width:15px; height:15px; background-image: url('/assets/img/x.png'); cursor:pointer;}
-#MY_PLAN li .delete { position:absolute; top:5px; right:4px; width:15px; height:15px; background-image:url('/assets/img/x.png'); cursor:pointer;}
+#MY_PLAN ul .delete { position:absolute; top:-14px; right:7px; width:15px; height:15px; background-image: url('../img/x.png'); cursor:pointer;}
+#MY_PLAN li .delete { position:absolute; top:5px; right:4px; width:15px; height:15px; background-image:url('../img/x.png'); cursor:pointer;}
 #MY_PLAN li.ui-state-highlight { cursor:default; }
 #MY_PLAN #COURSE_DUMP #search { font-size:24px; }
 #dialog-delete-semester { height:77px; font-size:14px;}
